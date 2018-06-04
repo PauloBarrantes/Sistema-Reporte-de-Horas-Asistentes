@@ -1,0 +1,13 @@
+C:\Users\Paulo\source\repos\RHA\RHA\bin\Debug\RHA.exe.config
+C:\Users\Paulo\source\repos\RHA\RHA\bin\Debug\RHA.exe
+C:\Users\Paulo\source\repos\RHA\RHA\bin\Debug\RHA.pdb
+C:\Users\Paulo\source\repos\RHA\RHA\bin\Debug\MaterialSkin.dll
+C:\Users\Paulo\source\repos\RHA\RHA\obj\Debug\RHA.csprojAssemblyReference.cache
+C:\Users\Paulo\source\repos\RHA\RHA\obj\Debug\RHA.Login.resources
+C:\Users\Paulo\source\repos\RHA\RHA\obj\Debug\RHA.Properties.Resources.resources
+C:\Users\Paulo\source\repos\RHA\RHA\obj\Debug\RHA.csproj.GenerateResource.cache
+C:\Users\Paulo\source\repos\RHA\RHA\obj\Debug\RHA.csproj.CoreCompileInputs.cache
+C:\Users\Paulo\source\repos\RHA\RHA\obj\Debug\RHA.csproj.CopyComplete
+C:\Users\Paulo\source\repos\RHA\RHA\obj\Debug\RHA.exe
+C:\Users\Paulo\source\repos\RHA\RHA\obj\Debug\RHA.pdb
+C:\Users\Paulo\source\repos\RHA\RHA\obj\Debug\RHA.AgregarAsistente.resources
