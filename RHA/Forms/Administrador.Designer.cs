@@ -1,6 +1,6 @@
 ﻿namespace RHA
 {
-    partial class AgregarAsistente
+    partial class Administrador
     {
         /// <summary>
         /// Required designer variable.
@@ -28,100 +28,100 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
-            this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
-            this.tabInicio = new System.Windows.Forms.TabPage();
-            this.tabAsistentes = new System.Windows.Forms.TabPage();
-            this.tabProyectos = new System.Windows.Forms.TabPage();
-            this.tabBalance = new System.Windows.Forms.TabPage();
-            this.materialTabControl1.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Administrador));
+            this.pnSideBar = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnInicio = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.pnSideBar.SuspendLayout();
             this.SuspendLayout();
             // 
-            // materialTabSelector1
+            // pnSideBar
             // 
-            this.materialTabSelector1.BaseTabControl = this.materialTabControl1;
-            this.materialTabSelector1.Depth = 0;
-            this.materialTabSelector1.Location = new System.Drawing.Point(0, 63);
-            this.materialTabSelector1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialTabSelector1.Name = "materialTabSelector1";
-            this.materialTabSelector1.Size = new System.Drawing.Size(877, 34);
-            this.materialTabSelector1.TabIndex = 33;
-            this.materialTabSelector1.Text = "materialTabSelector1";
-            this.materialTabSelector1.Click += new System.EventHandler(this.materialTabSelector1_Click);
+            this.pnSideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(51)))), ((int)(((byte)(88)))));
+            this.pnSideBar.Controls.Add(this.button2);
+            this.pnSideBar.Controls.Add(this.btnInicio);
+            this.pnSideBar.Location = new System.Drawing.Point(-1, 41);
+            this.pnSideBar.Name = "pnSideBar";
+            this.pnSideBar.Size = new System.Drawing.Size(207, 546);
+            this.pnSideBar.TabIndex = 0;
             // 
-            // materialTabControl1
+            // panel1
             // 
-            this.materialTabControl1.Controls.Add(this.tabInicio);
-            this.materialTabControl1.Controls.Add(this.tabAsistentes);
-            this.materialTabControl1.Controls.Add(this.tabProyectos);
-            this.materialTabControl1.Controls.Add(this.tabBalance);
-            this.materialTabControl1.Depth = 0;
-            this.materialTabControl1.Location = new System.Drawing.Point(0, 99);
-            this.materialTabControl1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialTabControl1.Name = "materialTabControl1";
-            this.materialTabControl1.SelectedIndex = 0;
-            this.materialTabControl1.Size = new System.Drawing.Size(877, 489);
-            this.materialTabControl1.TabIndex = 34;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(878, 41);
+            this.panel1.TabIndex = 1;
             // 
-            // tabInicio
+            // btnInicio
             // 
-            this.tabInicio.Location = new System.Drawing.Point(4, 22);
-            this.tabInicio.Name = "tabInicio";
-            this.tabInicio.Padding = new System.Windows.Forms.Padding(3);
-            this.tabInicio.Size = new System.Drawing.Size(869, 463);
-            this.tabInicio.TabIndex = 0;
-            this.tabInicio.Text = "Inicio";
-            this.tabInicio.UseVisualStyleBackColor = true;
+            this.btnInicio.FlatAppearance.BorderSize = 0;
+            this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInicio.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInicio.ForeColor = System.Drawing.Color.White;
+            this.btnInicio.Image = ((System.Drawing.Image)(resources.GetObject("btnInicio.Image")));
+            this.btnInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInicio.Location = new System.Drawing.Point(0, 104);
+            this.btnInicio.Name = "btnInicio";
+            this.btnInicio.Size = new System.Drawing.Size(206, 46);
+            this.btnInicio.TabIndex = 2;
+            this.btnInicio.Text = "Inicio";
+            this.btnInicio.UseVisualStyleBackColor = true;
             // 
-            // tabAsistentes
+            // button1
             // 
-            this.tabAsistentes.Location = new System.Drawing.Point(4, 22);
-            this.tabAsistentes.Name = "tabAsistentes";
-            this.tabAsistentes.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAsistentes.Size = new System.Drawing.Size(869, 463);
-            this.tabAsistentes.TabIndex = 1;
-            this.tabAsistentes.Text = "Lista de Asistentes";
-            this.tabAsistentes.UseVisualStyleBackColor = true;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(301, 200);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(206, 46);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Inicio";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // tabProyectos
+            // button2
             // 
-            this.tabProyectos.Location = new System.Drawing.Point(4, 22);
-            this.tabProyectos.Name = "tabProyectos";
-            this.tabProyectos.Size = new System.Drawing.Size(869, 463);
-            this.tabProyectos.TabIndex = 2;
-            this.tabProyectos.Text = "Lista de Proyectos";
-            this.tabProyectos.UseVisualStyleBackColor = true;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(3, 486);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(206, 46);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "     Cerrar Sesión";
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // tabBalance
-            // 
-            this.tabBalance.Location = new System.Drawing.Point(4, 22);
-            this.tabBalance.Name = "tabBalance";
-            this.tabBalance.Size = new System.Drawing.Size(869, 463);
-            this.tabBalance.TabIndex = 3;
-            this.tabBalance.Text = "Balance";
-            this.tabBalance.UseVisualStyleBackColor = true;
-            // 
-            // AgregarAsistente
+            // Administrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(876, 585);
-            this.Controls.Add(this.materialTabControl1);
-            this.Controls.Add(this.materialTabSelector1);
-            this.Name = "AgregarAsistente";
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnSideBar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "Administrador";
             this.Text = "Administrador";
             this.Load += new System.EventHandler(this.AgregarAsistente_Load);
-            this.materialTabControl1.ResumeLayout(false);
+            this.pnSideBar.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private MaterialSkin.Controls.MaterialTabSelector materialTabSelector1;
-        private MaterialSkin.Controls.MaterialTabControl materialTabControl1;
-        private System.Windows.Forms.TabPage tabInicio;
-        private System.Windows.Forms.TabPage tabAsistentes;
-        private System.Windows.Forms.TabPage tabProyectos;
-        private System.Windows.Forms.TabPage tabBalance;
+
+        private System.Windows.Forms.Panel pnSideBar;
+        private System.Windows.Forms.Button btnInicio;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }
