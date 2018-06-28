@@ -60,3 +60,4 @@ C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.For
 C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.Forms.Asistentes.PerfilAs.resources
 C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.Forms.Asistentes.ReporteHorasAs.resources
 C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.csprojResolveAssemblyReference.cache
+C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.Forms.Login.CambiarContraseña.resources

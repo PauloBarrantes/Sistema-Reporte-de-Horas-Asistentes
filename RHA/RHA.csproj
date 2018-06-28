@@ -146,6 +146,12 @@
     <Compile Include="Forms\Asistentes\ReporteHorasAs.Designer.cs">
       <DependentUpon>ReporteHorasAs.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Login\CambiarContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login\CambiarContraseña.Designer.cs">
+      <DependentUpon>CambiarContraseña.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Login\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Asistentes\ReporteHorasAs.resx">
       <DependentUpon>ReporteHorasAs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login\CambiarContraseña.resx">
+      <DependentUpon>CambiarContraseña.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
