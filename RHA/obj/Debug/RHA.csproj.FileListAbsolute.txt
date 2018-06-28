@@ -32,9 +32,6 @@ C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\bin\Debug\LiveCha
 C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\bin\Debug\MaterialSkin.dll
 C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\bin\Debug\LiveCharts.WinForms.pdb
 C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\bin\Debug\LiveCharts.WinForms.xml
-C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.csprojResolveAssemblyReference.cache
-C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.AgregarAsistente.resources
-C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.Login.resources
 C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.Properties.Resources.resources
 C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.csproj.GenerateResource.cache
 C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.csproj.CoreCompileInputs.cache
@@ -47,3 +44,14 @@ C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\bin\Debug\Simplif
 C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\bin\Debug\Simplify.Windows.Forms.dll
 C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\bin\Debug\Simplify.Resources.xml
 C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\bin\Debug\Simplify.Windows.Forms.xml
+C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.Administrador.resources
+C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.Forms.Administrador.InicioAdministrador.resources
+C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\bin\Debug\MetroFramework.Design.dll
+C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\bin\Debug\MetroFramework.dll
+C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.Forms.Administrador.ListaAsistentes.resources
+C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.Forms.Administrador.ListaBalance.resources
+C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.Forms.Administrador.ListaProyectos.resources
+C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.csprojResolveAssemblyReference.cache
+C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.Forms.Asistentes.Asistente.resources
+C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.Forms.Login.Login.resources

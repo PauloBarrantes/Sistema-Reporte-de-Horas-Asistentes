@@ -74,42 +74,103 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\AccesoBaseDatos.cs" />
-    <Compile Include="Forms\Administrador.cs">
+    <Compile Include="DB_BYTEMEDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_BYTEMEDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Administrador\Administrador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Administrador.Designer.cs">
+    <Compile Include="Forms\Administrador\Administrador.Designer.cs">
       <DependentUpon>Administrador.cs</DependentUpon>
     </Compile>
     <Compile Include="Class\Empleado.cs" />
-    <Compile Include="Forms\Login.cs">
+    <Compile Include="Forms\Administrador\InicioAdministrador.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Administrador\InicioAdministrador.Designer.cs">
+      <DependentUpon>InicioAdministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Administrador\ListaAsistentes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Administrador\ListaAsistentes.Designer.cs">
+      <DependentUpon>ListaAsistentes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Administrador\ListaBalance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Administrador\ListaBalance.Designer.cs">
+      <DependentUpon>ListaBalance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Administrador\ListaProyectos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Administrador\ListaProyectos.Designer.cs">
+      <DependentUpon>ListaProyectos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Asistentes\Asistente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Login.Designer.cs">
+    <Compile Include="Forms\Asistentes\Asistente.Designer.cs">
+      <DependentUpon>Asistente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\Administrador.resx">
+    <EmbeddedResource Include="Forms\Administrador\Administrador.resx">
       <DependentUpon>Administrador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Login.resx">
+    <EmbeddedResource Include="Forms\Administrador\InicioAdministrador.resx">
+      <DependentUpon>InicioAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Administrador\ListaAsistentes.resx">
+      <DependentUpon>ListaAsistentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Administrador\ListaBalance.resx">
+      <DependentUpon>ListaBalance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Administrador\ListaProyectos.resx">
+      <DependentUpon>ListaProyectos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Asistentes\Asistente.resx">
+      <DependentUpon>Asistente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
+    <None Include="DB_BYTEMEDataSet.xsc">
+      <DependentUpon>DB_BYTEMEDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DB_BYTEMEDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_BYTEMEDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB_BYTEMEDataSet.xss">
+      <DependentUpon>DB_BYTEMEDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -124,6 +185,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Forms\Secreataria\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
