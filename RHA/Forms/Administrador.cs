@@ -12,16 +12,12 @@ using MaterialSkin.Controls;
 
 namespace RHA
 {
-    public partial class AgregarAsistente : MaterialForm
+    public partial class Administrador : Form
     {
-        public AgregarAsistente()
+        public Administrador()
         {
             InitializeComponent();
-            MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
-            materialSkinManager.AddFormToManage(this);
-           // materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
-           // materialSkinManager.ColorScheme = new ColorScheme(Primary.Blue600, Primary.Blue800, Primary.Blue500, Accent.LightBlue200, TextShade.WHITE);
-           
+
         }
 
         private void AgregarAsistente_Load(object sender, EventArgs e)
@@ -51,6 +47,11 @@ namespace RHA
         }
 
         private void materialTabSelector1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabInicio_Click(object sender, EventArgs e)
         {
 
         }
