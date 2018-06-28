@@ -52,6 +52,11 @@ C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\bin\Debug\MetroFr
 C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.Forms.Administrador.ListaAsistentes.resources
 C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.Forms.Administrador.ListaBalance.resources
 C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.Forms.Administrador.ListaProyectos.resources
-C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.csprojResolveAssemblyReference.cache
 C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.Forms.Asistentes.Asistente.resources
 C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.Forms.Login.Login.resources
+C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.Forms.Asistentes.BalanceHorasAs.resources
+C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.Forms.Asistentes.Horario.resources
+C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.Forms.Asistentes.InicioAs.resources
+C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.Forms.Asistentes.PerfilAs.resources
+C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.Forms.Asistentes.ReporteHorasAs.resources
+C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.csprojResolveAssemblyReference.cache

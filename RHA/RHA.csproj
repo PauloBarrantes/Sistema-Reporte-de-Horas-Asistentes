@@ -116,6 +116,36 @@
     <Compile Include="Forms\Asistentes\Asistente.Designer.cs">
       <DependentUpon>Asistente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Asistentes\BalanceHorasAs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Asistentes\BalanceHorasAs.Designer.cs">
+      <DependentUpon>BalanceHorasAs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Asistentes\Horario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Asistentes\Horario.Designer.cs">
+      <DependentUpon>Horario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Asistentes\InicioAs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Asistentes\InicioAs.Designer.cs">
+      <DependentUpon>InicioAs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Asistentes\PerfilAs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Asistentes\PerfilAs.Designer.cs">
+      <DependentUpon>PerfilAs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Asistentes\ReporteHorasAs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Asistentes\ReporteHorasAs.Designer.cs">
+      <DependentUpon>ReporteHorasAs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Login\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +171,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Asistentes\Asistente.resx">
       <DependentUpon>Asistente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Asistentes\BalanceHorasAs.resx">
+      <DependentUpon>BalanceHorasAs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Asistentes\Horario.resx">
+      <DependentUpon>Horario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Asistentes\InicioAs.resx">
+      <DependentUpon>InicioAs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Asistentes\PerfilAs.resx">
+      <DependentUpon>PerfilAs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Asistentes\ReporteHorasAs.resx">
+      <DependentUpon>ReporteHorasAs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

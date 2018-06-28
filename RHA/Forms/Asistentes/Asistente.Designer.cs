@@ -32,11 +32,18 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
             this.pnSideBar = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.lblNombreAsistente = new System.Windows.Forms.Label();
+            this.btnHorarioAs = new System.Windows.Forms.Button();
+            this.btnBalanceAs = new System.Windows.Forms.Button();
+            this.btnReporteAs = new System.Windows.Forms.Button();
+            this.btnPerfilAs = new System.Windows.Forms.Button();
+            this.btnInicioAs = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.balanceHorasAs1 = new RHA.Forms.Asistentes.BalanceHorasAs();
+            this.reporteHorasAs1 = new RHA.Forms.Asistentes.ReporteHorasAs();
+            this.perfilAs1 = new RHA.Forms.Asistentes.PerfilAs();
+            this.inicioAs1 = new RHA.Forms.Asistentes.InicioAs();
+            this.horario2 = new RHA.Forms.Asistentes.Horario();
             this.panel1.SuspendLayout();
             this.pnSideBar.SuspendLayout();
             this.SuspendLayout();
@@ -49,6 +56,9 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(878, 41);
             this.panel1.TabIndex = 3;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
             // 
             // btnExit
             // 
@@ -67,31 +77,113 @@
             // pnSideBar
             // 
             this.pnSideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(51)))), ((int)(((byte)(88)))));
-            this.pnSideBar.Controls.Add(this.button4);
-            this.pnSideBar.Controls.Add(this.button3);
-            this.pnSideBar.Controls.Add(this.button2);
-            this.pnSideBar.Controls.Add(this.button1);
+            this.pnSideBar.Controls.Add(this.lblNombreAsistente);
+            this.pnSideBar.Controls.Add(this.btnHorarioAs);
+            this.pnSideBar.Controls.Add(this.btnBalanceAs);
+            this.pnSideBar.Controls.Add(this.btnReporteAs);
+            this.pnSideBar.Controls.Add(this.btnPerfilAs);
+            this.pnSideBar.Controls.Add(this.btnInicioAs);
             this.pnSideBar.Controls.Add(this.btnCerrar);
             this.pnSideBar.Location = new System.Drawing.Point(-1, 40);
             this.pnSideBar.Name = "pnSideBar";
-            this.pnSideBar.Size = new System.Drawing.Size(207, 546);
+            this.pnSideBar.Size = new System.Drawing.Size(207, 586);
             this.pnSideBar.TabIndex = 2;
             // 
-            // button1
+            // lblNombreAsistente
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(1, 114);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(206, 60);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Inicio";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
+            this.lblNombreAsistente.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreAsistente.ForeColor = System.Drawing.Color.White;
+            this.lblNombreAsistente.Location = new System.Drawing.Point(0, 30);
+            this.lblNombreAsistente.Name = "lblNombreAsistente";
+            this.lblNombreAsistente.Size = new System.Drawing.Size(207, 23);
+            this.lblNombreAsistente.TabIndex = 13;
+            this.lblNombreAsistente.Text = "Nombre";
+            this.lblNombreAsistente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnHorarioAs
+            // 
+            this.btnHorarioAs.FlatAppearance.BorderSize = 0;
+            this.btnHorarioAs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHorarioAs.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHorarioAs.ForeColor = System.Drawing.Color.White;
+            this.btnHorarioAs.Image = ((System.Drawing.Image)(resources.GetObject("btnHorarioAs.Image")));
+            this.btnHorarioAs.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnHorarioAs.Location = new System.Drawing.Point(-2, 373);
+            this.btnHorarioAs.Name = "btnHorarioAs";
+            this.btnHorarioAs.Size = new System.Drawing.Size(207, 60);
+            this.btnHorarioAs.TabIndex = 12;
+            this.btnHorarioAs.Text = "Horario";
+            this.btnHorarioAs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHorarioAs.UseVisualStyleBackColor = true;
+            this.btnHorarioAs.Click += new System.EventHandler(this.btnHorarioAs_Click);
+            // 
+            // btnBalanceAs
+            // 
+            this.btnBalanceAs.FlatAppearance.BorderSize = 0;
+            this.btnBalanceAs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBalanceAs.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBalanceAs.ForeColor = System.Drawing.Color.White;
+            this.btnBalanceAs.Image = ((System.Drawing.Image)(resources.GetObject("btnBalanceAs.Image")));
+            this.btnBalanceAs.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBalanceAs.Location = new System.Drawing.Point(0, 309);
+            this.btnBalanceAs.Name = "btnBalanceAs";
+            this.btnBalanceAs.Size = new System.Drawing.Size(207, 60);
+            this.btnBalanceAs.TabIndex = 11;
+            this.btnBalanceAs.Text = "Balance Horas";
+            this.btnBalanceAs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBalanceAs.UseVisualStyleBackColor = true;
+            this.btnBalanceAs.Click += new System.EventHandler(this.btnBalanceAs_Click);
+            // 
+            // btnReporteAs
+            // 
+            this.btnReporteAs.FlatAppearance.BorderSize = 0;
+            this.btnReporteAs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReporteAs.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReporteAs.ForeColor = System.Drawing.Color.White;
+            this.btnReporteAs.Image = ((System.Drawing.Image)(resources.GetObject("btnReporteAs.Image")));
+            this.btnReporteAs.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnReporteAs.Location = new System.Drawing.Point(0, 243);
+            this.btnReporteAs.Name = "btnReporteAs";
+            this.btnReporteAs.Size = new System.Drawing.Size(207, 60);
+            this.btnReporteAs.TabIndex = 10;
+            this.btnReporteAs.Text = "Reportar Horas";
+            this.btnReporteAs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReporteAs.UseVisualStyleBackColor = true;
+            this.btnReporteAs.Click += new System.EventHandler(this.btnReporteAs_Click);
+            // 
+            // btnPerfilAs
+            // 
+            this.btnPerfilAs.FlatAppearance.BorderSize = 0;
+            this.btnPerfilAs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPerfilAs.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPerfilAs.ForeColor = System.Drawing.Color.White;
+            this.btnPerfilAs.Image = ((System.Drawing.Image)(resources.GetObject("btnPerfilAs.Image")));
+            this.btnPerfilAs.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPerfilAs.Location = new System.Drawing.Point(0, 180);
+            this.btnPerfilAs.Name = "btnPerfilAs";
+            this.btnPerfilAs.Size = new System.Drawing.Size(207, 60);
+            this.btnPerfilAs.TabIndex = 9;
+            this.btnPerfilAs.Text = "Perfil";
+            this.btnPerfilAs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPerfilAs.UseVisualStyleBackColor = true;
+            this.btnPerfilAs.Click += new System.EventHandler(this.btnPerfilAs_Click);
+            // 
+            // btnInicioAs
+            // 
+            this.btnInicioAs.FlatAppearance.BorderSize = 0;
+            this.btnInicioAs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInicioAs.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInicioAs.ForeColor = System.Drawing.Color.White;
+            this.btnInicioAs.Image = ((System.Drawing.Image)(resources.GetObject("btnInicioAs.Image")));
+            this.btnInicioAs.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnInicioAs.Location = new System.Drawing.Point(1, 114);
+            this.btnInicioAs.Name = "btnInicioAs";
+            this.btnInicioAs.Size = new System.Drawing.Size(206, 60);
+            this.btnInicioAs.TabIndex = 8;
+            this.btnInicioAs.Text = "Inicio";
+            this.btnInicioAs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInicioAs.UseVisualStyleBackColor = true;
+            this.btnInicioAs.Click += new System.EventHandler(this.btnInicioAs_Click);
             // 
             // btnCerrar
             // 
@@ -101,7 +193,7 @@
             this.btnCerrar.ForeColor = System.Drawing.Color.White;
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
             this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCerrar.Location = new System.Drawing.Point(3, 486);
+            this.btnCerrar.Location = new System.Drawing.Point(3, 527);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(204, 46);
             this.btnCerrar.TabIndex = 4;
@@ -109,61 +201,55 @@
             this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCerrar.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // balanceHorasAs1
             // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.Location = new System.Drawing.Point(0, 180);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(207, 60);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Perfil";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = true;
+            this.balanceHorasAs1.Location = new System.Drawing.Point(206, 40);
+            this.balanceHorasAs1.Name = "balanceHorasAs1";
+            this.balanceHorasAs1.Size = new System.Drawing.Size(672, 586);
+            this.balanceHorasAs1.TabIndex = 9;
             // 
-            // button3
+            // reporteHorasAs1
             // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.Location = new System.Drawing.Point(0, 243);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(207, 60);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "Reportar Horas";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = true;
+            this.reporteHorasAs1.Location = new System.Drawing.Point(207, 40);
+            this.reporteHorasAs1.Name = "reporteHorasAs1";
+            this.reporteHorasAs1.Size = new System.Drawing.Size(672, 586);
+            this.reporteHorasAs1.TabIndex = 6;
             // 
-            // button4
+            // perfilAs1
             // 
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.Location = new System.Drawing.Point(0, 309);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(207, 60);
-            this.button4.TabIndex = 11;
-            this.button4.Text = "Balance Horas";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = true;
+            this.perfilAs1.Location = new System.Drawing.Point(206, 40);
+            this.perfilAs1.Name = "perfilAs1";
+            this.perfilAs1.Size = new System.Drawing.Size(672, 586);
+            this.perfilAs1.TabIndex = 5;
             // 
-            
+            // inicioAs1
+            // 
+            this.inicioAs1.Location = new System.Drawing.Point(206, 40);
+            this.inicioAs1.Name = "inicioAs1";
+            this.inicioAs1.Size = new System.Drawing.Size(672, 586);
+            this.inicioAs1.TabIndex = 4;
+            // 
+            // horario2
+            // 
+            this.horario2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.horario2.Location = new System.Drawing.Point(206, 40);
+            this.horario2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.horario2.Name = "horario2";
+            this.horario2.Size = new System.Drawing.Size(672, 586);
+            this.horario2.TabIndex = 8;
+            // 
+            // Asistente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(876, 585);
+            this.ClientSize = new System.Drawing.Size(876, 625);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnSideBar);
+            this.Controls.Add(this.horario2);
+            this.Controls.Add(this.balanceHorasAs1);
+            this.Controls.Add(this.reporteHorasAs1);
+            this.Controls.Add(this.perfilAs1);
+            this.Controls.Add(this.inicioAs1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Asistente";
             this.Text = "Form1";
@@ -179,10 +265,17 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Panel pnSideBar;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnInicioAs;
+        private System.Windows.Forms.Button btnBalanceAs;
+        private System.Windows.Forms.Button btnReporteAs;
+        private System.Windows.Forms.Button btnPerfilAs;
         private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.Button btnHorarioAs;
+        private System.Windows.Forms.Label lblNombreAsistente;
+        private InicioAs inicioAs1;
+        private PerfilAs perfilAs1;
+        private ReporteHorasAs reporteHorasAs1;
+        private Horario horario2;
+        private BalanceHorasAs balanceHorasAs1;
     }
 }
