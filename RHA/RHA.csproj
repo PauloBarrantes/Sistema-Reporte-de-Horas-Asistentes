@@ -74,11 +74,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\AccesoBaseDatos.cs" />
-    <Compile Include="DB_BYTEMEDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DB_BYTEMEDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Administrador\Administrador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,17 +199,6 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="DB_BYTEMEDataSet.xsc">
-      <DependentUpon>DB_BYTEMEDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="DB_BYTEMEDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DB_BYTEMEDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DB_BYTEMEDataSet.xss">
-      <DependentUpon>DB_BYTEMEDataSet.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
