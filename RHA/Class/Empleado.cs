@@ -8,5 +8,24 @@ namespace RHA
 {
     class Empleado
     {
+        AccesoBaseDatos db;
+
+        public Empleado(){
+            db = new AccesoBaseDatos();
+        }
+
+        public bool agregarAsistentes(string email, string password, string nombre, string apellido1, string apellido2, string carne, string cedula, string carrera, string telefono, int horasAcumuladas) {
+            bool retorno = false;
+            int resultado = db.agregarAsistente(email, password, nombre, apellido1, apellido2, carne, cedula, carrera, telefono, horasAcumuladas);
+            
+            if (resultado == 1) {
+                retorno = true;
+            }
+            return retorno;
+        }
+
+        public bool login(string email, string password) {
+            return db.login(email, password);
+        }
     }
 }

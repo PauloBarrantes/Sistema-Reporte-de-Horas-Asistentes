@@ -36,9 +36,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtEmail = new MetroFramework.Controls.MetroTextBox();
             this.txtPassword = new MetroFramework.Controls.MetroTextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.linkOlvide = new MetroFramework.Controls.MetroLink();
-            this.metroCheckBox1 = new MetroFramework.Controls.MetroCheckBox();
+            this.cbRememberMe = new MetroFramework.Controls.MetroCheckBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,17 +50,21 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(394, 40);
             this.panel1.TabIndex = 0;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
             // 
             // button1
             // 
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(353, 3);
+            this.button1.Location = new System.Drawing.Point(360, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(31, 33);
             this.button1.TabIndex = 2;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -80,7 +84,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(205, 24);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Correo Electronico";
+            this.label2.Text = "Correo Electrónico";
             // 
             // label3
             // 
@@ -153,19 +157,20 @@
             this.txtPassword.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtPassword.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // button2
+            // btnLogin
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(153)))), ((int)(((byte)(142)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(88, 390);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(209, 43);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Iniciar Sesión";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(153)))), ((int)(((byte)(142)))));
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Location = new System.Drawing.Point(88, 390);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(209, 43);
+            this.btnLogin.TabIndex = 6;
+            this.btnLogin.Text = "Iniciar Sesión";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // linkOlvide
             // 
@@ -176,24 +181,24 @@
             this.linkOlvide.Text = "Olvide la contraseña";
             this.linkOlvide.UseSelectable = true;
             // 
-            // metroCheckBox1
+            // cbRememberMe
             // 
-            this.metroCheckBox1.AutoSize = true;
-            this.metroCheckBox1.Location = new System.Drawing.Point(146, 346);
-            this.metroCheckBox1.Name = "metroCheckBox1";
-            this.metroCheckBox1.Size = new System.Drawing.Size(83, 15);
-            this.metroCheckBox1.TabIndex = 8;
-            this.metroCheckBox1.Text = "Recordame";
-            this.metroCheckBox1.UseSelectable = true;
+            this.cbRememberMe.AutoSize = true;
+            this.cbRememberMe.Location = new System.Drawing.Point(146, 346);
+            this.cbRememberMe.Name = "cbRememberMe";
+            this.cbRememberMe.Size = new System.Drawing.Size(83, 15);
+            this.cbRememberMe.TabIndex = 8;
+            this.cbRememberMe.Text = "Recordame";
+            this.cbRememberMe.UseSelectable = true;
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(393, 521);
-            this.Controls.Add(this.metroCheckBox1);
+            this.Controls.Add(this.cbRememberMe);
             this.Controls.Add(this.linkOlvide);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label3);
@@ -219,8 +224,8 @@
         private System.Windows.Forms.Label label3;
         private MetroFramework.Controls.MetroTextBox txtEmail;
         private MetroFramework.Controls.MetroTextBox txtPassword;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnLogin;
         private MetroFramework.Controls.MetroLink linkOlvide;
-        private MetroFramework.Controls.MetroCheckBox metroCheckBox1;
+        private MetroFramework.Controls.MetroCheckBox cbRememberMe;
     }
 }

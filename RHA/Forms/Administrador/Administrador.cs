@@ -74,7 +74,6 @@ namespace RHA
            
 
         }
-        int mouseX = 0, mouseY = 0;
         bool mouseDown;
         Point lastLocation;
 
@@ -99,6 +98,11 @@ namespace RHA
         {
             mouseDown = true;
             lastLocation = e.Location;
+        }
+
+        private void inicioAdministrador1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -169,6 +169,7 @@
             this.inicioAdministrador1.Name = "inicioAdministrador1";
             this.inicioAdministrador1.Size = new System.Drawing.Size(666, 543);
             this.inicioAdministrador1.TabIndex = 2;
+            this.inicioAdministrador1.Load += new System.EventHandler(this.inicioAdministrador1_Load);
             // 
             // listaProyectos1
             // 

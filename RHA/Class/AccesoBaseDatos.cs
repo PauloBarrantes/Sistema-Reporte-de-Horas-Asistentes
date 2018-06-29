@@ -112,7 +112,7 @@ namespace RHA
          Recibe: el nombre del o los estudiantes que se va a eliminar
          Modifica: Elimina las tuplas que coincidan con el nombre recibido por parámetro
          Retorna: el tipo de error que generó la consulta o cero si la ejecución fue exitosa*/
-        public int eliminarEstudiante(string nombre)
+        public int eliminarEmpleado(string nombre)
         {
             int error = 0;
             using (SqlConnection con = new SqlConnection(conexion))
@@ -151,7 +151,7 @@ namespace RHA
          Modifica: Agrega en la base de datos un nuevo usuario
          Retorna: 1 si se pudo guardar el nuevo usuario, un número diferente a cero que corresponde al número de error
          si no se pudo insertar*/
-        public int agregarUsuario(string usuario, string password, string cedula)
+        public int agregarAsistente(string email, string password, string nombre, string apellido1, string apellido2, string carne, string cedula, string carrera, string telefono, int horasAcumuladas)
         {
             int error = 0;
             using (SqlConnection con = new SqlConnection(conexion))
@@ -159,17 +159,24 @@ namespace RHA
                 /*El sqlCommand recibe como primer parámetro el nombre del procedimiento almacenado, 
                  * de segundo parámetro recibe el sqlConnection
                 */
-                using (SqlCommand cmd = new SqlCommand("agregarUsuario", con))
+                using (SqlCommand cmd = new SqlCommand("AgregarAsistente", con))
                 {
                     try
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
                         //Se preparan los parámetros que recibe el procedimiento almacenado
-                        cmd.Parameters.Add("@pLogin", SqlDbType.VarChar).Value = usuario;
-                        cmd.Parameters.Add("@pPassword", SqlDbType.VarChar).Value = password;
+                        cmd.Parameters.Add("@email", SqlDbType.VarChar).Value = email;
+                        cmd.Parameters.Add("@contraseña", SqlDbType.VarChar).Value = password;
+                        cmd.Parameters.Add("@nombre", SqlDbType.VarChar).Value = nombre;
+                        cmd.Parameters.Add("@apellido1", SqlDbType.VarChar).Value = apellido1;
+                        cmd.Parameters.Add("@apellido2", SqlDbType.VarChar).Value = apellido2;
+                        cmd.Parameters.Add("@carne", SqlDbType.VarChar).Value = carne;
                         cmd.Parameters.Add("@cedula", SqlDbType.VarChar).Value = cedula;
-
+                        cmd.Parameters.Add("@carrera", SqlDbType.VarChar).Value = carrera;
+                        cmd.Parameters.Add("@telefono", SqlDbType.VarChar).Value = telefono;
+                        cmd.Parameters.Add("@horasAcumuladas", SqlDbType.Int).Value = horasAcumuladas;
+                      
                         //se prepara el parámetro de retorno del procedimiento almacenado
                         cmd.Parameters.Add("@estado", SqlDbType.Bit).Direction = ParameterDirection.Output;
 
