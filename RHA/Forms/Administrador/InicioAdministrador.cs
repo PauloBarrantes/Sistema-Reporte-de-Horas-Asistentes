@@ -16,5 +16,10 @@ namespace RHA.Forms.Administrador
         {
             InitializeComponent();
         }
+
+        private void InicioAdministrador_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -48,6 +48,7 @@
             this.Controls.Add(this.lblBienvenido);
             this.Name = "InicioAdministrador";
             this.Size = new System.Drawing.Size(672, 539);
+            this.Load += new System.EventHandler(this.InicioAdministrador_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

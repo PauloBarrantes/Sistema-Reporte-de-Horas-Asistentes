@@ -19,7 +19,8 @@ namespace RHA.Forms.Administrador
 
         private void btnAgregarAsistentes_Click(object sender, EventArgs e)
         {
-
+            
+            this.Hide();
         }
     }
 }

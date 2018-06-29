@@ -5,19 +5,18 @@ USE DB_BYTEME;
 ---------------------------------------------------------------------------------------------
 CREATE TABLE Empleado(
 	Email varchar(100) not null primary key,
-	Contrase�a varchar (255) not null,
+	Contrasena varchar (255) not null,
 	NombreEmp binary(64) not null,
 	Apellido1 varchar(60) not null,
-	Apellido2 varchar(60)
-	salt UNIQUEIDENTIFIER
-);
+	Apellido2 varchar(60),
+	salt UNIQUEIDENTIFIER);
 
 CREATE TABLE Asistente(
 	Email varchar(100) not null ,
-	Carn� varchar(6) not null,
-	C�dula varchar(9) not null,
+	Carne varchar(6) not null,
+	Cedula varchar(9) not null,
 	Carrera varchar(50),
-	Tel�fono varchar(8),
+	Telefono varchar(8),
 	HorasAcumuladas int ,
 
 
@@ -45,10 +44,10 @@ CREATE TABLE Proyecto(
 
 CREATE TABLE Periodo(
 	Ciclo varchar(25) not null,
-	A�o int  not null,
+	Anno int  not null,
 
 
-	PRIMARY KEY (Ciclo,A�o)
+	PRIMARY KEY (Ciclo,Anno)
 );
 
 CREATE TABLE BloqueDeReporte(
@@ -65,11 +64,11 @@ CREATE TABLE BloqueDeReporte(
 CREATE TABLE HorarioDelPeriodo(
 	Email varchar(100) not null,
 	Ciclo varchar(25) not null,
-	A�o int not null,
+	Anno int not null,
 
 
-	PRIMARY KEY (Email, Ciclo, A�o),
-	FOREIGN KEY (Ciclo, A�o) REFERENCES Periodo(Ciclo, A�o),
+	PRIMARY KEY (Email, Ciclo, Anno),
+	FOREIGN KEY (Ciclo, Anno) REFERENCES Periodo(Ciclo, Anno),
 	FOREIGN KEY (Email) REFERENCES Asistente(Email)
 
 
@@ -78,14 +77,14 @@ CREATE TABLE HorarioDelPeriodo(
 CREATE TABLE BloqueDeHorario (
 	Email varchar(100) not null,
 	Ciclo varchar(25) not null,
-	A�o int not null,
+	Anno int not null,
 	Dia date not null,
 	HoraInicial time not null,
 	HoraFinal time not null,
 
 
-	PRIMARY KEY (Email, Ciclo, A�o,Dia, HoraInicial),
-	FOREIGN KEY (Email,Ciclo, A�o) REFERENCES HorarioDelPeriodo(Email,Ciclo, A�o),
+	PRIMARY KEY (Email, Ciclo, Anno,Dia, HoraInicial),
+	FOREIGN KEY (Email,Ciclo, Anno) REFERENCES HorarioDelPeriodo(Email,Ciclo, Anno),
 	CONSTRAINT inicioNormal CHECK (HoraInicial >= '08:00:00.0000000' AND HoraInicial <= '17:00:00.0000000 ') ,
 	CONSTRAINT finNormal CHECK (HoraFinal >= '08:00:00.0000000' AND HoraFinal <= '17:00:00.0000000 ')
 
@@ -95,17 +94,26 @@ CREATE TABLE Nombramiento(
 	Email varchar(100) not null,
 	ID varchar (10) not null,
 	Ciclo varchar(25) not null,
-	A�o int not null,
+	Anno int not null,
 	CantidadHoras int not null,
 	EntidadNombradora int  not null,
 	TipoAsistente int not null,
 
-	FOREIGN KEY (Ciclo, A�o) REFERENCES Periodo(Ciclo, A�o),
+	FOREIGN KEY (Ciclo, Anno) REFERENCES Periodo(Ciclo, Anno),
 	FOREIGN KEY (Email) REFERENCES Asistente(Email),
-	PRIMARY KEY (Email,Ciclo, A�o, ID )
+	PRIMARY KEY (Email,Ciclo, Anno, ID )
 
 );
 
+DROP Table Nombramiento;
+DROP TABLE BloqueDeHorario;
+DROP TABLE HorarioDelPeriodo;
+DROP TABLE BloqueDeReporte;
+DROP TABLE Periodo;
+DROP TABLE Proyecto;
+DROP TABLE Admin;
+DROP TABLE Asistente;
+DROP TABLE Empleado;
 
 
 ---------------------------------------------------------------------------------------------
@@ -121,14 +129,14 @@ GO
 CREATE PROCEDURE AgregarAsistente
 	--Parametros
 	@email varchar(100),
-	@contrase�a Nvarchar(50),
+	@contrasena Nvarchar(50),
 	@nombre varchar(50),
 	@apellido1 varchar(60),
 	@apellido2 varchar(60),
-	@carn� varchar(6) ,
-	@c�dula varchar(9) ,
+	@carne varchar(6) ,
+	@cedula varchar(9) ,
 	@carrera varchar(50),
-	@tel�fono varchar(8),
+	@telefono varchar(8),
 	@horasAcumuladas int
 AS
 
@@ -136,14 +144,16 @@ BEGIN
 	DECLARE @salt UNIQUEIDENTIFIER=NEWID()
 
 	BEGIN TRY
-		INSERT INTO Empleado VALUES(@email, HASHBYTES('SHA2_512', @contrase�a+CAST(@salt AS NVARCHAR(36))),
+		INSERT INTO Empleado VALUES(@email, HASHBYTES('SHA2_512', @contrasena+CAST(@salt AS NVARCHAR(36))),
 		@nombre,@apellido1,@apellido2, @salt);
 	END TRY
 
 
 
-	INSERT INTO Asistente VALUES(@email,@carn�, @c�dula,@carrera ,@tel�fono,@horasAcumuladas);
+	INSERT INTO Asistente VALUES(@email,@carne, @cedula,@carrera ,@telefono,@horasAcumuladas);
 END;
+
+DROP PROCEDURE AgregarAsistente
 
 EXEC AgregarAsistente 'paulobarrantes@gmail.com', '123456', 'Paulo','Barrantes','Aguilar',
 						'B60930', '117080092', 'Computacion', '83096579','50'
@@ -186,7 +196,7 @@ CREATE PROCEDURE AgregarNombramiento
 	@email varchar(100),
 	@id varchar (10),
 	@ciclo varchar(25),
-	@a�o int,
+	@anno int,
 	@cantidadHoras int,
 	@entidadNombradora int,
 	@tipoAsistente int
@@ -198,7 +208,7 @@ BEGIN
 		@email,
 		@id ,
 		@ciclo,
-		@a�o ,
+		@anno ,
 		@cantidadHoras,
 		@entidadNombradora,
 		@tipoAsistente
@@ -208,10 +218,7 @@ END;
 -------------------------Procedimiento Almacenado 5 ------------------------------
 
 
-CREATE PROCEDURE Login
-	@loginEmail Varchar(100)
-	@loginPassword Varchar(255)
-	@isInDB bit = 0 OUTPUT
+CREATE PROCEDURE Login @loginEmail Varchar(100), @loginPassword Varchar(255), @isInDB bit = 0 OUTPUT
 AS
 BEGIN
 
@@ -220,7 +227,7 @@ BEGIN
 	IF EXIST (SELECT TOP 1 Email From Empleado Where Email = @loginEmail)
 		BEGIN
 			SET @email =(SELECT TOP 1 Email From Empleado Where Email = @loginEmail
-			AND Contrase�a�=HASHBYTES('SHA2_512', @pPassword+CAST(Salt AS
+			AND Contrasena =HASHBYTES('SHA2_512', @loginPassword+CAST(Salt AS
 				NVARCHAR(36))))
 
 			IF(@email IS NULL)
