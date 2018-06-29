@@ -9,21 +9,20 @@ using System.Data;
 using System.Data.SqlClient;
 
 /*Cambiar el namespace para que funcione!!*/
-namespace LabInterfaces
+namespace RHA
 {
     class AccesoBaseDatos
     {
         /*En Initial Catalog se agrega la base de datos propia. Intregated Security es para utilizar Windows Authentication*/
-        String conexion = "Data Source=10.1.4.55; Initial Catalog=gaudyblanco; Integrated Security=SSPI";
+        //String conexion = "Data Source=10.1.4.55; Initial Catalog=gaudyblanco; Integrated Security=SSPI";
 
         /*En Initial Catalog se agrega la base de datos propia. Intregated Security = false es para utilizar SQL SERVER Authentication*/
-        //string conexion = "Data Source=10.1.4.55;User ID=Gaudy;Password=xxxxx; Initial Catalog=gaudyblanco; Integrated Security=false";
-
+        String conexion = "Data Source=10.1.4.55;User ID=b60369;Password=Folotopo98; Initial Catalog=DB_BYTEME; Integrated Security=false";
+        
         /**
          * Constructor de la clase
          */
-        public AccesoBaseDatos()
-        {
+        public AccesoBaseDatos(){
         }
 
         /**
@@ -72,8 +71,8 @@ namespace LabInterfaces
             DataTable table = new DataTable();
 
             dataAdapter.Fill(table);
-
-            return table;
+			
+			return table;
         }
 
         /*Método para ejecutar un insert, update o delete 
@@ -95,7 +94,7 @@ namespace LabInterfaces
                 //Ejecuta la consulta sql recibida por parámetro
                 cons.ExecuteNonQuery();
             }
-            catch (SqlException e)
+            catch(SqlException e)
             {
                 error = e.Number;
                 Debug.WriteLine("Error: " + error);
@@ -182,7 +181,7 @@ namespace LabInterfaces
 
                         /*Se convierte en un valor entero lo que se devuelve el procedimiento*/
                         return Convert.ToInt32(cmd.Parameters["@estado"].Value);
-
+                        
                     }
                     catch (SqlException ex)
                     {
@@ -199,7 +198,7 @@ namespace LabInterfaces
          Recibe: El usuario y contraseña que se desea verificar que está en la base de datos
          Modifica: Busca el usuario con esa contraseña en la base de datos
          Retorna: true si está en la base de datos, false sino*/
-        public bool login(string usuario, string password)
+        public bool login(string email, string password)
         {
             using (SqlConnection con = new SqlConnection(conexion))
             {
@@ -213,8 +212,8 @@ namespace LabInterfaces
                         cmd.CommandType = CommandType.StoredProcedure;
 
                         //Se preparan los parámetros que recibe el procedimiento almacenado
-                        cmd.Parameters.Add("@pLoginName", SqlDbType.VarChar).Value = usuario;
-                        cmd.Parameters.Add("@pPassword", SqlDbType.VarChar).Value = password;
+                        cmd.Parameters.Add("@loginEmail", SqlDbType.VarChar).Value = email;
+                        cmd.Parameters.Add("@loginPassword", SqlDbType.VarChar).Value = password;
 
                         //se prepara el parámetro de retorno del procedimiento almacenado
                         cmd.Parameters.Add("@isInDB", SqlDbType.Bit).Direction = ParameterDirection.Output;

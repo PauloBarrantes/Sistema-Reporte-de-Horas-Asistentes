@@ -6,10 +6,10 @@ USE DB_BYTEME;
 CREATE TABLE Empleado(
 	Email varchar(100) not null primary key,
 	Contraseña varchar (255) not null,
-	NombreEmp varchar(50) not null,
+	NombreEmp binary(64) not null,
 	Apellido1 varchar(60) not null,
 	Apellido2 varchar(60)
-
+	salt UNIQUEIDENTIFIER
 );
 
 CREATE TABLE Asistente(
@@ -121,7 +121,7 @@ GO
 CREATE PROCEDURE AgregarAsistente 
 	--Parametros
 	@email varchar(100),
-	@contraseña varchar(255),
+	@contraseña Nvarchar(50),
 	@nombre varchar(50),
 	@apellido1 varchar(60),
 	@apellido2 varchar(60),
@@ -133,7 +133,15 @@ CREATE PROCEDURE AgregarAsistente
 AS
 
 BEGIN
-	INSERT INTO Empleado VALUES(@email, @contraseña,@nombre,@apellido1,@apellido2);
+	DECLARE @salt UNIQUEIDENTIFIER=NEWID()
+	
+	BEGIN TRY 
+		INSERT INTO Empleado VALUES(@email, HASHBYTES('SHA2_512', @contraseña+CAST(@salt AS NVARCHAR(36))),
+		@nombre,@apellido1,@apellido2, @salt);
+	END TRY
+	
+	
+	
 	INSERT INTO Asistente VALUES(@email,@carné, @cédula,@carrera ,@teléfono,@horasAcumuladas);
 END;
 
@@ -197,9 +205,34 @@ BEGIN
 	);
 
 END;
+-------------------------Procedimiento Almacenado 5 ------------------------------
 
 
+CREATE PROCEDURE Login
+	@loginEmail Varchar(100)
+	@loginPassword Varchar(255)
+	@isInDB bit = 0 OUTPUT
+AS
+BEGIN 
 
+	SET NOCOUNT ON
+	@email varchar(100)
+	IF EXIST (SELECT TOP 1 Email From Empleado Where Email = @loginEmail)
+		BEGIN
+			SET @email =(SELECT TOP 1 Email From Empleado Where Email = @loginEmail
+			AND Contraseña´=HASHBYTES('SHA2_512', @pPassword+CAST(Salt AS
+				NVARCHAR(36))))
+			
+			IF(@email IS NULL)
+				SET @isInDB = 0;
+			ELSE
+				SET @isInDB = 1; 
+		END
+		
+	ELSE 
+		SET @isInDB = 0;
+
+END
 
 ---------------------------------------------------------------------------------------------
 ------------------------------ Creación de los TRIGGERS ------------------------------------
