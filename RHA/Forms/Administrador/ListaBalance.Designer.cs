@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.lblBienvenido = new System.Windows.Forms.Label();
-         
             this.SuspendLayout();
             // 
             // lblBienvenido
@@ -43,11 +41,6 @@
             this.lblBienvenido.TabIndex = 2;
             this.lblBienvenido.Text = "Balance Asistentes";
             this.lblBienvenido.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-          
-            // 
-            // dBBYTEMEDataSetBindingSource
-            // 
-        
             // 
             // ListaBalance
             // 
@@ -55,8 +48,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.lblBienvenido);
             this.Name = "ListaBalance";
-            this.Size = new System.Drawing.Size(672, 539);
-          
+            this.Size = new System.Drawing.Size(672, 586);
             this.ResumeLayout(false);
             this.PerformLayout();
 

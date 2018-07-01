@@ -7,10 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MaterialSkin;
-using MaterialSkin.Controls;
 
-namespace RHA
+namespace RHA.Forms.Administrador
 {
     public partial class Administrador : Form
     {
@@ -18,10 +16,46 @@ namespace RHA
         {
             InitializeComponent();
             btnInicio.BackColor = Color.FromArgb(12, 87, 153);
+            inicioAdministrador1.BringToFront();
+        }
+        bool mouseDown;
+        Point lastLocation;
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouseDown)
+            {
+                this.Location = new Point(
+                 (this.Location.X - lastLocation.X) + e.X, (this.Location.Y - lastLocation.Y) + e.Y);
+
+                this.Update();
+            }
+        }
+
+        private void panel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseDown = false;
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDown = true;
+            lastLocation = e.Location;
+        }
+
+
+        private void pintarBotones()
+        {
+            btnInicio.BackColor = Color.FromArgb(8, 51, 88);
+            btnAsistentes.BackColor = Color.FromArgb(8, 51, 88);
+            btnProyectos.BackColor = Color.FromArgb(8, 51, 88);
+
+            btnBalance.BackColor = Color.FromArgb(8, 51, 88);
+
 
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
 
             string message = "¿Está seguro que desea salir?";
@@ -39,7 +73,7 @@ namespace RHA
 
             }
         }
-        /// Inician los eventos de los botones del SideBar
+
         private void btnInicio_Click(object sender, EventArgs e)
         {
             pintarBotones();
@@ -52,55 +86,26 @@ namespace RHA
             pintarBotones();
             btnAsistentes.BackColor = Color.FromArgb(12, 87, 153);
             listaAsistentes1.BringToFront();
+            listaAsistentes1.reiniciar();
         }
+
         private void btnBalance_Click(object sender, EventArgs e)
         {
             pintarBotones();
             btnBalance.BackColor = Color.FromArgb(12, 87, 153);
-            listaBalance1.BringToFront();
-
+            listaBalance2.BringToFront();
         }
+
         private void btnProyectos_Click(object sender, EventArgs e)
         {
             pintarBotones();
             btnProyectos.BackColor = Color.FromArgb(12, 87, 153);
             listaProyectos1.BringToFront();
-        }
-        private void pintarBotones() {
-            btnInicio.BackColor = Color.FromArgb(8, 51, 88);
-            btnAsistentes.BackColor = Color.FromArgb(8, 51, 88);
-            btnBalance.BackColor = Color.FromArgb(8, 51, 88);
-            btnProyectos.BackColor = Color.FromArgb(8, 51, 88);
-           
+       
 
         }
-        bool mouseDown;
-        Point lastLocation;
 
-        private void panel1_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (mouseDown) {
-                this.Location = new Point(
-                 (this.Location.X - lastLocation.X) + e.X, (this.Location.Y - lastLocation.Y) + e.Y);
-
-                this.Update();
-            }
-        }
-
-        private void panel1_MouseUp(object sender, MouseEventArgs e)
-        {
-            mouseDown = false;
-        }
-
-      
-
-        private void panel1_MouseDown(object sender, MouseEventArgs e)
-        {
-            mouseDown = true;
-            lastLocation = e.Location;
-        }
-
-        private void inicioAdministrador1_Load(object sender, EventArgs e)
+        private void btnLogout_Click(object sender, EventArgs e)
         {
 
         }

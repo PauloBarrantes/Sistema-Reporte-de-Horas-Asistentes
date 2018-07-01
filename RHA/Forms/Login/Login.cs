@@ -17,6 +17,7 @@ namespace RHA.Forms.Login
         {
             InitializeComponent();
             empleado = new Empleado();
+            invisiblesLabels();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -64,22 +65,37 @@ namespace RHA.Forms.Login
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //if (txtEmail.Text != "" && txtPassword.Text != "") {
-            if (true)
+            if (txtEmail.Text != "" && txtPassword.Text != "")
+
             {
-                //if (empleado.login(txtEmail.Text, txtPassword.Text) == true) {
-                if (true)
+                if (empleado.login(txtEmail.Text, txtPassword.Text) == true)
+
                 {
+                    
                     Asistentes.Asistente asistente = new Asistentes.Asistente();
                     asistente.Show();
                     this.Hide();
                 }
+                else
+                {
+                    lblCorreoInválido.Visible = true;
+                }
+            }
+            else
+            {
+                lblFaltaCorreo.Visible = true;
+                lblFaltanCampos.Visible = true;
             }
         }
 
-        private void Login_Load(object sender, EventArgs e)
+        private void invisiblesLabels()
         {
+            lblCorreoInválido.Visible = false;
+            lblFaltaCorreo.Visible = false;
+            lblFaltanCampos.Visible = false;
+            lblNoCorreo.Visble = false;
 
         }
+
     }
 }

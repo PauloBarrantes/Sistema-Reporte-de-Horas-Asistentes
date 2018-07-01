@@ -17,7 +17,7 @@ namespace RHA
         //String conexion = "Data Source=10.1.4.55; Initial Catalog=gaudyblanco; Integrated Security=SSPI";
 
         /*En Initial Catalog se agrega la base de datos propia. Intregated Security = false es para utilizar SQL SERVER Authentication*/
-        String conexion = "Data Source=10.1.4.55;User ID=b60369;Password=Folotopo98; Initial Catalog=DB_BYTEME; Integrated Security=false";
+        String conexion = "Data Source=10.1.4.55;User ID=b60369;Password=Folotopo11; Initial Catalog=DB_BYTEME; Integrated Security=false";
         
         /**
          * Constructor de la clase

@@ -30,6 +30,7 @@
         {
             this.lblBienvenido = new System.Windows.Forms.Label();
             this.btnAgregarAsistentes = new System.Windows.Forms.Button();
+            this.agregarAsistente1 = new RHA.Forms.Administrador.AgregarAsistente();
             this.SuspendLayout();
             // 
             // lblBienvenido
@@ -58,16 +59,24 @@
             this.btnAgregarAsistentes.UseVisualStyleBackColor = false;
             this.btnAgregarAsistentes.Click += new System.EventHandler(this.btnAgregarAsistentes_Click);
             // 
+            // agregarAsistente1
+            // 
+            this.agregarAsistente1.Location = new System.Drawing.Point(1, 2);
+            this.agregarAsistente1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.agregarAsistente1.Name = "agregarAsistente1";
+            this.agregarAsistente1.Size = new System.Drawing.Size(672, 586);
+            this.agregarAsistente1.TabIndex = 0;
+            // 
             // ListaAsistentes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.Controls.Add(this.agregarAsistente1);
             this.Controls.Add(this.btnAgregarAsistentes);
             this.Controls.Add(this.lblBienvenido);
             this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ListaAsistentes";
-            this.Size = new System.Drawing.Size(672, 539);
+            this.Size = new System.Drawing.Size(672, 586);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -77,5 +86,6 @@
 
         private System.Windows.Forms.Label lblBienvenido;
         private System.Windows.Forms.Button btnAgregarAsistentes;
+        private AgregarAsistente agregarAsistente1;
     }
 }

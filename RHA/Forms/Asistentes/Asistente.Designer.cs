@@ -39,11 +39,11 @@
             this.btnPerfilAs = new System.Windows.Forms.Button();
             this.btnInicioAs = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
+            this.horario2 = new RHA.Forms.Asistentes.Horario();
             this.balanceHorasAs1 = new RHA.Forms.Asistentes.BalanceHorasAs();
             this.reporteHorasAs1 = new RHA.Forms.Asistentes.ReporteHorasAs();
             this.perfilAs1 = new RHA.Forms.Asistentes.PerfilAs();
             this.inicioAs1 = new RHA.Forms.Asistentes.InicioAs();
-            this.horario2 = new RHA.Forms.Asistentes.Horario();
             this.panel1.SuspendLayout();
             this.pnSideBar.SuspendLayout();
             this.SuspendLayout();
@@ -77,12 +77,12 @@
             // pnSideBar
             // 
             this.pnSideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(51)))), ((int)(((byte)(88)))));
+            this.pnSideBar.Controls.Add(this.btnInicioAs);
             this.pnSideBar.Controls.Add(this.lblNombreAsistente);
             this.pnSideBar.Controls.Add(this.btnHorarioAs);
             this.pnSideBar.Controls.Add(this.btnBalanceAs);
             this.pnSideBar.Controls.Add(this.btnReporteAs);
             this.pnSideBar.Controls.Add(this.btnPerfilAs);
-            this.pnSideBar.Controls.Add(this.btnInicioAs);
             this.pnSideBar.Controls.Add(this.btnCerrar);
             this.pnSideBar.Location = new System.Drawing.Point(-1, 40);
             this.pnSideBar.Name = "pnSideBar";
@@ -201,6 +201,15 @@
             this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCerrar.UseVisualStyleBackColor = true;
             // 
+            // horario2
+            // 
+            this.horario2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.horario2.Location = new System.Drawing.Point(206, 40);
+            this.horario2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.horario2.Name = "horario2";
+            this.horario2.Size = new System.Drawing.Size(672, 586);
+            this.horario2.TabIndex = 8;
+            // 
             // balanceHorasAs1
             // 
             this.balanceHorasAs1.Location = new System.Drawing.Point(206, 40);
@@ -228,15 +237,6 @@
             this.inicioAs1.Name = "inicioAs1";
             this.inicioAs1.Size = new System.Drawing.Size(672, 586);
             this.inicioAs1.TabIndex = 4;
-            // 
-            // horario2
-            // 
-            this.horario2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.horario2.Location = new System.Drawing.Point(206, 40);
-            this.horario2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.horario2.Name = "horario2";
-            this.horario2.Size = new System.Drawing.Size(672, 586);
-            this.horario2.TabIndex = 8;
             // 
             // Asistente
             // 

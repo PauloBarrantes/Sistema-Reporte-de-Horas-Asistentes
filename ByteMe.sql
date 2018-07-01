@@ -5,11 +5,12 @@ USE DB_BYTEME;
 ---------------------------------------------------------------------------------------------
 CREATE TABLE Empleado(
 	Email varchar(100) not null primary key,
-	Contrasena varchar (255) not null,
-	NombreEmp binary(64) not null,
+	Contrasena binary (64) not null,
+	NombreEmp varchar(50) not null,
 	Apellido1 varchar(60) not null,
 	Apellido2 varchar(60),
-	salt UNIQUEIDENTIFIER);
+	salt UNIQUEIDENTIFIER
+);
 
 CREATE TABLE Asistente(
 	Email varchar(100) not null ,
@@ -141,16 +142,19 @@ CREATE PROCEDURE AgregarAsistente
 AS
 
 BEGIN
-	DECLARE @salt UNIQUEIDENTIFIER=NEWID()
+	DECLARE @salt UNIQUEIDENTIFIER=NEWID();
 
 	BEGIN TRY
-		INSERT INTO Empleado VALUES(@email, HASHBYTES('SHA2_512', @contrasena+CAST(@salt AS NVARCHAR(36))),
-		@nombre,@apellido1,@apellido2, @salt);
+		INSERT INTO Empleado(Email, Contrasena, NombreEmp, Apellido1, Apellido2, salt) VALUES(@email, HASHBYTES('SHA2_512', @contrasena+CAST(@salt AS NVARCHAR(36))),@nombre,@apellido1,@apellido2, @salt);
+		INSERT INTO Asistente(Email, Carne, Cedula, Carrera, Telefono, HorasAcumuladas) VALUES(@email,@carne, @cedula,@carrera ,@telefono,@horasAcumuladas);
+
 	END TRY
+	BEGIN CATCH
+		PRINT N'Eror'
+		
+	END CATCH
 
 
-
-	INSERT INTO Asistente VALUES(@email,@carne, @cedula,@carrera ,@telefono,@horasAcumuladas);
 END;
 
 DROP PROCEDURE AgregarAsistente
@@ -217,14 +221,15 @@ BEGIN
 END;
 -------------------------Procedimiento Almacenado 5 ------------------------------
 
-
-CREATE PROCEDURE Login @loginEmail Varchar(100), @loginPassword Varchar(255), @isInDB bit = 0 OUTPUT
+GO
+CREATE PROCEDURE Login @loginEmail Varchar(100), @loginPassword Nvarchar (50), @isInDB bit = 0 OUTPUT
 AS
 BEGIN
+	DECLARE @email varchar(100)
 
 	SET NOCOUNT ON
-	@email varchar(100)
-	IF EXIST (SELECT TOP 1 Email From Empleado Where Email = @loginEmail)
+
+	IF EXISTS (SELECT TOP 1 Email From Empleado Where Email = @loginEmail)
 		BEGIN
 			SET @email =(SELECT TOP 1 Email From Empleado Where Email = @loginEmail
 			AND Contrasena =HASHBYTES('SHA2_512', @loginPassword+CAST(Salt AS
@@ -240,7 +245,7 @@ BEGIN
 		SET @isInDB = 0;
 
 END
-
+select * from empleado
 ---------------------------------------------------------------------------------------------
 ------------------------------ Creaci�n de los TRIGGERS ------------------------------------
 ---------------------------------------------------------------------------------------------

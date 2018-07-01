@@ -42,7 +42,7 @@ namespace RHA.Forms.Asistentes
 
             }
         }
-        int mouseX = 0, mouseY = 0;
+     
         bool mouseDown;
         Point lastLocation;
 

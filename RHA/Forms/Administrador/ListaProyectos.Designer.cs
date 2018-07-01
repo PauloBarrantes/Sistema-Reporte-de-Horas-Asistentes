@@ -65,7 +65,7 @@
             this.Controls.Add(this.btnAgregarAsistentes);
             this.Controls.Add(this.lblBienvenido);
             this.Name = "ListaProyectos";
-            this.Size = new System.Drawing.Size(672, 539);
+            this.Size = new System.Drawing.Size(672, 586);
             this.Load += new System.EventHandler(this.ListaProyectos_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

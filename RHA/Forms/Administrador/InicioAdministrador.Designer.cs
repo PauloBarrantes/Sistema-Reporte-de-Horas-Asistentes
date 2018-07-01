@@ -47,7 +47,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.lblBienvenido);
             this.Name = "InicioAdministrador";
-            this.Size = new System.Drawing.Size(672, 539);
+            this.Size = new System.Drawing.Size(672, 586);
             this.Load += new System.EventHandler(this.InicioAdministrador_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

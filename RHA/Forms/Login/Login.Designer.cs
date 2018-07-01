@@ -39,6 +39,10 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.linkOlvide = new MetroFramework.Controls.MetroLink();
             this.cbRememberMe = new MetroFramework.Controls.MetroCheckBox();
+            this.lblCorreoInválido = new System.Windows.Forms.Label();
+            this.lblNoCorreo = new System.Windows.Forms.Label();
+            this.lblFaltaCorreo = new System.Windows.Forms.Label();
+            this.lblFaltanCampos = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -191,11 +195,59 @@
             this.cbRememberMe.Text = "Recordame";
             this.cbRememberMe.UseSelectable = true;
             // 
+            // lblCorreoInválido
+            // 
+            this.lblCorreoInválido.AutoSize = true;
+            this.lblCorreoInválido.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCorreoInválido.ForeColor = System.Drawing.Color.Brown;
+            this.lblCorreoInválido.Location = new System.Drawing.Point(110, 230);
+            this.lblCorreoInválido.Name = "lblCorreoInválido";
+            this.lblCorreoInválido.Size = new System.Drawing.Size(171, 15);
+            this.lblCorreoInválido.TabIndex = 9;
+            this.lblCorreoInválido.Text = "Correo Electrónico Incorrecto";
+            // 
+            // lblNoCorreo
+            // 
+            this.lblNoCorreo.AutoSize = true;
+            this.lblNoCorreo.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoCorreo.ForeColor = System.Drawing.Color.Brown;
+            this.lblNoCorreo.Location = new System.Drawing.Point(110, 230);
+            this.lblNoCorreo.Name = "lblNoCorreo";
+            this.lblNoCorreo.Size = new System.Drawing.Size(184, 15);
+            this.lblNoCorreo.TabIndex = 10;
+            this.lblNoCorreo.Text = "Esto no es un correo electrónico";
+            // 
+            // lblFaltaCorreo
+            // 
+            this.lblFaltaCorreo.AutoSize = true;
+            this.lblFaltaCorreo.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFaltaCorreo.ForeColor = System.Drawing.Color.Brown;
+            this.lblFaltaCorreo.Location = new System.Drawing.Point(110, 230);
+            this.lblFaltaCorreo.Name = "lblFaltaCorreo";
+            this.lblFaltaCorreo.Size = new System.Drawing.Size(184, 15);
+            this.lblFaltaCorreo.TabIndex = 11;
+            this.lblFaltaCorreo.Text = "Esto no es un correo electrónico";
+            // 
+            // lblFaltanCampos
+            // 
+            this.lblFaltanCampos.AutoSize = true;
+            this.lblFaltanCampos.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFaltanCampos.ForeColor = System.Drawing.Color.Brown;
+            this.lblFaltanCampos.Location = new System.Drawing.Point(110, 314);
+            this.lblFaltanCampos.Name = "lblFaltanCampos";
+            this.lblFaltanCampos.Size = new System.Drawing.Size(184, 15);
+            this.lblFaltanCampos.TabIndex = 12;
+            this.lblFaltanCampos.Text = "Esto no es un correo electrónico";
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(393, 521);
+            this.Controls.Add(this.lblFaltanCampos);
+            this.Controls.Add(this.lblFaltaCorreo);
+            this.Controls.Add(this.lblNoCorreo);
+            this.Controls.Add(this.lblCorreoInválido);
             this.Controls.Add(this.cbRememberMe);
             this.Controls.Add(this.linkOlvide);
             this.Controls.Add(this.btnLogin);
@@ -208,7 +260,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -227,5 +278,9 @@
         private System.Windows.Forms.Button btnLogin;
         private MetroFramework.Controls.MetroLink linkOlvide;
         private MetroFramework.Controls.MetroCheckBox cbRememberMe;
+        private System.Windows.Forms.Label lblCorreoInválido;
+        private System.Windows.Forms.Label lblNoCorreo;
+        private System.Windows.Forms.Label lblFaltaCorreo;
+        private System.Windows.Forms.Label lblFaltanCampos;
     }
 }

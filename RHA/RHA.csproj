@@ -74,13 +74,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\AccesoBaseDatos.cs" />
+    <Compile Include="Class\Empleado.cs" />
     <Compile Include="Forms\Administrador\Administrador.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Administrador\Administrador.Designer.cs">
       <DependentUpon>Administrador.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class\Empleado.cs" />
+    <Compile Include="Forms\Administrador\AgregarAsistente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Administrador\AgregarAsistente.Designer.cs">
+      <DependentUpon>AgregarAsistente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Administrador\InicioAdministrador.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -157,6 +163,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Administrador\Administrador.resx">
       <DependentUpon>Administrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Administrador\AgregarAsistente.resx">
+      <DependentUpon>AgregarAsistente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Administrador\InicioAdministrador.resx">
       <DependentUpon>InicioAdministrador.cs</DependentUpon>
