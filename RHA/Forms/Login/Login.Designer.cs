@@ -184,6 +184,7 @@
             this.linkOlvide.TabIndex = 7;
             this.linkOlvide.Text = "Olvide la contraseña";
             this.linkOlvide.UseSelectable = true;
+            this.linkOlvide.Click += new System.EventHandler(this.linkOlvide_Click);
             // 
             // cbRememberMe
             // 
@@ -200,18 +201,18 @@
             this.lblCorreoInválido.AutoSize = true;
             this.lblCorreoInválido.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCorreoInválido.ForeColor = System.Drawing.Color.Brown;
-            this.lblCorreoInválido.Location = new System.Drawing.Point(110, 230);
+            this.lblCorreoInválido.Location = new System.Drawing.Point(75, 230);
             this.lblCorreoInválido.Name = "lblCorreoInválido";
-            this.lblCorreoInválido.Size = new System.Drawing.Size(171, 15);
+            this.lblCorreoInválido.Size = new System.Drawing.Size(251, 15);
             this.lblCorreoInválido.TabIndex = 9;
-            this.lblCorreoInválido.Text = "Correo Electrónico Incorrecto";
+            this.lblCorreoInválido.Text = "Correo Electrónico o Contraseña Incorrecto";
             // 
             // lblNoCorreo
             // 
             this.lblNoCorreo.AutoSize = true;
             this.lblNoCorreo.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNoCorreo.ForeColor = System.Drawing.Color.Brown;
-            this.lblNoCorreo.Location = new System.Drawing.Point(110, 230);
+            this.lblNoCorreo.Location = new System.Drawing.Point(108, 230);
             this.lblNoCorreo.Name = "lblNoCorreo";
             this.lblNoCorreo.Size = new System.Drawing.Size(184, 15);
             this.lblNoCorreo.TabIndex = 10;
@@ -222,11 +223,11 @@
             this.lblFaltaCorreo.AutoSize = true;
             this.lblFaltaCorreo.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFaltaCorreo.ForeColor = System.Drawing.Color.Brown;
-            this.lblFaltaCorreo.Location = new System.Drawing.Point(110, 230);
+            this.lblFaltaCorreo.Location = new System.Drawing.Point(92, 230);
             this.lblFaltaCorreo.Name = "lblFaltaCorreo";
-            this.lblFaltaCorreo.Size = new System.Drawing.Size(184, 15);
+            this.lblFaltaCorreo.Size = new System.Drawing.Size(218, 15);
             this.lblFaltaCorreo.TabIndex = 11;
-            this.lblFaltaCorreo.Text = "Esto no es un correo electrónico";
+            this.lblFaltaCorreo.Text = "Por favor escriba el correo electrónico";
             // 
             // lblFaltanCampos
             // 
@@ -235,9 +236,9 @@
             this.lblFaltanCampos.ForeColor = System.Drawing.Color.Brown;
             this.lblFaltanCampos.Location = new System.Drawing.Point(110, 314);
             this.lblFaltanCampos.Name = "lblFaltanCampos";
-            this.lblFaltanCampos.Size = new System.Drawing.Size(184, 15);
+            this.lblFaltanCampos.Size = new System.Drawing.Size(182, 15);
             this.lblFaltanCampos.TabIndex = 12;
-            this.lblFaltanCampos.Text = "Esto no es un correo electrónico";
+            this.lblFaltanCampos.Text = "Por favor escriba la contraseña";
             // 
             // Login
             // 
@@ -245,8 +246,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(393, 521);
             this.Controls.Add(this.lblFaltanCampos);
-            this.Controls.Add(this.lblFaltaCorreo);
-            this.Controls.Add(this.lblNoCorreo);
             this.Controls.Add(this.lblCorreoInválido);
             this.Controls.Add(this.cbRememberMe);
             this.Controls.Add(this.linkOlvide);
@@ -257,6 +256,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.lblFaltaCorreo);
+            this.Controls.Add(this.lblNoCorreo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
             this.Text = "Login";

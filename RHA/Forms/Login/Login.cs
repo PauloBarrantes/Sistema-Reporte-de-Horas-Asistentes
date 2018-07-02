@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace RHA.Forms.Login
 {
@@ -65,20 +66,32 @@ namespace RHA.Forms.Login
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            invisiblesLabels();
             if (txtEmail.Text != "" && txtPassword.Text != "")
 
             {
-                if (empleado.login(txtEmail.Text, txtPassword.Text) == true)
+                string pattern = @"^(?!\.)(""([^""\r\\]|\\[""\r\\])*""|"
+            + @"([-a-z0-9!#$%&'*+/=?^_`{|}~]|(?<!\.)\.)*)(?<!\.)"
+            + @"@[a-z0-9][\w\.-]*[a-z0-9]\.[a-z][a-z\.]*[a-z]$";
+                Regex regex = new Regex(pattern, RegexOptions.IgnoreCase );
 
-                {
+                if (regex.IsMatch(txtEmail.Text)) { 
+                    if (empleado.login(txtEmail.Text, txtPassword.Text) == true)
                     
-                    Asistentes.Asistente asistente = new Asistentes.Asistente();
-                    asistente.Show();
-                    this.Hide();
+                    {
+                    
+                        Asistentes.Asistente asistente = new Asistentes.Asistente();
+                        asistente.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        lblCorreoInválido.Visible = true;
+                    }
                 }
                 else
                 {
-                    lblCorreoInválido.Visible = true;
+                    lblNoCorreo.Visible = true;
                 }
             }
             else
@@ -86,6 +99,7 @@ namespace RHA.Forms.Login
                 lblFaltaCorreo.Visible = true;
                 lblFaltanCampos.Visible = true;
             }
+
         }
 
         private void invisiblesLabels()
@@ -93,9 +107,15 @@ namespace RHA.Forms.Login
             lblCorreoInválido.Visible = false;
             lblFaltaCorreo.Visible = false;
             lblFaltanCampos.Visible = false;
-            lblNoCorreo.Visble = false;
+            lblNoCorreo.Visible = false;
 
         }
 
+        private void linkOlvide_Click(object sender, EventArgs e)
+        {
+            OlvideContrasena olvideContrasena = new OlvideContrasena();
+            olvideContrasena.Show();
+            this.Hide();
+        }
     }
 }

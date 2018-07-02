@@ -126,3 +126,10 @@ C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.csp
 C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.exe
 C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.pdb
 C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.Forms.Administrador.Administrador.resources
+C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.Forms.Login.OlvideContrasena.resources
+C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\bin\Debug\LiveCharts.dll
+C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\bin\Debug\LiveCharts.pdb
+C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\bin\Debug\LiveCharts.xml
+C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\bin\Debug\LiveCharts.Wpf.xml

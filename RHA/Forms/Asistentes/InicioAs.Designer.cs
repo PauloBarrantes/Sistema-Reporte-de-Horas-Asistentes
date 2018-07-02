@@ -34,6 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.solidGauge1 = new LiveCharts.WinForms.SolidGauge();
             this.SuspendLayout();
             // 
             // lblInicio
@@ -50,7 +51,7 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 15F);
-            this.lblNombre.Location = new System.Drawing.Point(484, 28);
+            this.lblNombre.Location = new System.Drawing.Point(430, 28);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(90, 23);
             this.lblNombre.TabIndex = 4;
@@ -96,10 +97,21 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Nombre";
             // 
+            // solidGauge1
+            // 
+            this.solidGauge1.Location = new System.Drawing.Point(31, 340);
+            this.solidGauge1.Name = "solidGauge1";
+            this.solidGauge1.Size = new System.Drawing.Size(297, 226);
+            this.solidGauge1.TabIndex = 12;
+            this.solidGauge1.Text = "GG";
+            this.solidGauge1.Value = 2;
+            this.solidGauge1.To = 100;
+            // 
             // InicioAs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.solidGauge1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -121,5 +133,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private LiveCharts.WinForms.SolidGauge solidGauge1;
     }
 }

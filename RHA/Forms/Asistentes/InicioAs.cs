@@ -16,5 +16,7 @@ namespace RHA.Forms.Asistentes
         {
             InitializeComponent();
         }
+
+       
     }
 }
