@@ -26,7 +26,6 @@ namespace RHA.Forms.Asistentes
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-
             string message = "¿Está seguro que desea salir?";
             string caption = "Salir";
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
@@ -38,8 +37,8 @@ namespace RHA.Forms.Asistentes
             if (result == System.Windows.Forms.DialogResult.Yes)
             {
                 // Closes the parent form.
-                this.Close();
 
+                Application.Exit();
             }
         }
      

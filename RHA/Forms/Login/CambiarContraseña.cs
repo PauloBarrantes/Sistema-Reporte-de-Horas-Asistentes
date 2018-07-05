@@ -16,5 +16,23 @@ namespace RHA.Forms.Login
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string message = "¿Está seguro que desea salir?";
+            string caption = "Salir";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result;
+
+            // Displays the MessageBox.
+
+            result = MessageBox.Show(message, caption, buttons);
+            if (result == System.Windows.Forms.DialogResult.Yes)
+            {
+                // Closes the parent form.
+
+                Application.Exit();
+            }
+        }
     }
 }

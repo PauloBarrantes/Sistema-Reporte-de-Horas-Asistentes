@@ -12,14 +12,56 @@ namespace RHA.Forms.Administrador
 {
     public partial class AgregarAsistente : UserControl
     {
+        Empleado empleado;
         public AgregarAsistente()
         {
+            empleado = new Empleado();
             InitializeComponent();
         }
-
+        
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            string nombre = txtNombre.Text;
+            string apellido1 = txtApellido1.Text;
+            string apellido2 = txtApellido2.Text;
+            string cedula = txtCedula.Text;
+            string carne = txtCarne.Text;
+            string email = txtEmail.Text;
+            string horasAcumuladas = txtHorasAcumuladas.Text;
+            int horasAcumuladas1 = Int32.Parse(horasAcumuladas);
+            string carrera = cbCarrera.Text;
+            string password1 = txtPassword1.Text;
+            string password2 = txtPassword2.Text;
+            bool agregado;
+            if(password1 == password2)
+            {
+                agregado =   empleado.agregarAsistentes(email,password1,nombre,apellido1, apellido2, carne,cedula,carrera,"83096579", horasAcumuladas1);
+                Console.WriteLine("GG");
+                Console.WriteLine(agregado);
 
+            }
+
+
+            cleanTextFields();
+        }
+
+        private void validateTextFields()
+        {
+
+        }
+
+        private void cleanTextFields()
+        {
+            txtNombre.Clear();
+            txtApellido1.Clear();
+            txtApellido2.Clear();
+            txtCedula.Clear();
+            txtCarne.Clear();
+            txtEmail.Clear();
+            txtHorasAcumuladas.Clear();
+            cbCarrera.ResetText();
+            txtPassword1.Clear();
+            txtPassword2.Clear();
         }
     }
 }

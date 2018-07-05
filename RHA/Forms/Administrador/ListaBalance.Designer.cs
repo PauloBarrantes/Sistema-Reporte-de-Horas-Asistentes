@@ -57,6 +57,5 @@
         #endregion
 
         private System.Windows.Forms.Label lblBienvenido;
-        private System.Windows.Forms.BindingSource dBBYTEMEDataSetBindingSource;
     }
 }

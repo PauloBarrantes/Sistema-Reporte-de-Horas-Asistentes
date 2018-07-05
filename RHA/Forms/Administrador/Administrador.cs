@@ -12,12 +12,18 @@ namespace RHA.Forms.Administrador
 {
     public partial class Administrador : Form
     {
-        public Administrador()
+        Empleado empleado;
+        string usuarioActual;
+        public Administrador(string emailUsuarioActual)
         {
+            empleado = new Empleado();
+            usuarioActual = emailUsuarioActual;
+
             InitializeComponent();
             btnInicio.BackColor = Color.FromArgb(12, 87, 153);
             inicioAdministrador1.BringToFront();
         }
+
         bool mouseDown;
         Point lastLocation;
 
@@ -57,7 +63,6 @@ namespace RHA.Forms.Administrador
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-
             string message = "¿Está seguro que desea salir?";
             string caption = "Salir";
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
@@ -69,8 +74,8 @@ namespace RHA.Forms.Administrador
             if (result == System.Windows.Forms.DialogResult.Yes)
             {
                 // Closes the parent form.
-                this.Close();
 
+                Application.Exit();
             }
         }
 

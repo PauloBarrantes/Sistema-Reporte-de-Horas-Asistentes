@@ -138,8 +138,12 @@ CREATE PROCEDURE AgregarAsistente
 	@cedula varchar(9) ,
 	@carrera varchar(50),
 	@telefono varchar(8),
-	@horasAcumuladas int
+	@horasAcumuladas int,
+	@estado bit OUTPUT
 AS
+SELECT Asi.Cedula, Emp.NombreEmp, Emp.Apellido1, Asi.Carrera, Asi.HorasAcumuladas
+FROM Asistente as Asi
+JOIN Empleado as Emp on Emp.Email = Asi.Email
 
 BEGIN
 	DECLARE @salt UNIQUEIDENTIFIER=NEWID();
@@ -147,9 +151,10 @@ BEGIN
 	BEGIN TRY
 		INSERT INTO Empleado(Email, Contrasena, NombreEmp, Apellido1, Apellido2, salt) VALUES(@email, HASHBYTES('SHA2_512', @contrasena+CAST(@salt AS NVARCHAR(36))),@nombre,@apellido1,@apellido2, @salt);
 		INSERT INTO Asistente(Email, Carne, Cedula, Carrera, Telefono, HorasAcumuladas) VALUES(@email,@carne, @cedula,@carrera ,@telefono,@horasAcumuladas);
-
+		SET @estado = 1 
 	END TRY
 	BEGIN CATCH
+	SET @estado = ERROR_MESSAGE()
 		PRINT N'Eror'
 		
 	END CATCH
@@ -163,6 +168,7 @@ EXEC AgregarAsistente 'paulobarrantes@gmail.com', '123456', 'Paulo','Barrantes',
 						'B60930', '117080092', 'Computacion', '83096579','50'
 
 SELECT *  FROM ASISTENTE;
+DROP PROCEDURE AgregarAsistente;
 -------------------------Procedimiento Almacenado 2 ------------------------------
 
 go
@@ -247,7 +253,7 @@ BEGIN
 END
 select * from empleado
 ---------------------------------------------------------------------------------------------
------------------------------- Creaci�n de los TRIGGERS ------------------------------------
+------------------------------ Creacion de los TRIGGERS ------------------------------------
 ---------------------------------------------------------------------------------------------
 
 GO

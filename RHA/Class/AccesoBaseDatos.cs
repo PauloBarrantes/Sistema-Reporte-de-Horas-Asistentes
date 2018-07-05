@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Diagnostics;
 using System.Configuration;
-// Namespace de acceso a base de datos
 using System.Data;
 using System.Data.SqlClient;
 
-/*Cambiar el namespace para que funcione!!*/
 namespace RHA
 {
     class AccesoBaseDatos
@@ -167,7 +165,7 @@ namespace RHA
 
                         //Se preparan los parámetros que recibe el procedimiento almacenado
                         cmd.Parameters.Add("@email", SqlDbType.VarChar).Value = email;
-                        cmd.Parameters.Add("@contraseña", SqlDbType.VarChar).Value = password;
+                        cmd.Parameters.Add("@contrasena", SqlDbType.VarChar).Value = password;
                         cmd.Parameters.Add("@nombre", SqlDbType.VarChar).Value = nombre;
                         cmd.Parameters.Add("@apellido1", SqlDbType.VarChar).Value = apellido1;
                         cmd.Parameters.Add("@apellido2", SqlDbType.VarChar).Value = apellido2;

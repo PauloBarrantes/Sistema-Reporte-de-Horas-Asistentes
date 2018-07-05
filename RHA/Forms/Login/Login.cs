@@ -34,8 +34,8 @@ namespace RHA.Forms.Login
             if (result == System.Windows.Forms.DialogResult.Yes)
             {
                 // Closes the parent form.
-                this.Close();
-
+                
+                Application.Exit();
             }
         }
 
@@ -79,10 +79,22 @@ namespace RHA.Forms.Login
                     if (empleado.login(txtEmail.Text, txtPassword.Text) == true)
                     
                     {
+                        if (true)
+                        {
+                            Administrador.Administrador admin = new Administrador.Administrador(txtEmail.Text);
+                            admin.Show();
+                            this.Hide();
+                        }
+
+                        else
+                        {
+                            Asistentes.Asistente asistente = new Asistentes.Asistente();
+                            asistente.Show();
+                            this.Hide();
+                        }
+                        
                     
-                        Asistentes.Asistente asistente = new Asistentes.Asistente();
-                        asistente.Show();
-                        this.Hide();
+                        
                     }
                     else
                     {

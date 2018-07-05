@@ -55,7 +55,7 @@ namespace RHA.Forms.Login
             if (result == System.Windows.Forms.DialogResult.Yes)
             {
                 // Closes the parent form.
-                this.Close();
+                Application.Exit();
 
             }
         }
