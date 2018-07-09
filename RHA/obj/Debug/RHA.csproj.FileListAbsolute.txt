@@ -134,3 +134,5 @@ C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\bin\Debug\Transit
 C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.csproj.CopyComplete
 C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.exe
 C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.pdb
+C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.Forms.VentanasEmergentes.Satisfactorio.resources
+C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.csprojResolveAssemblyReference.cache

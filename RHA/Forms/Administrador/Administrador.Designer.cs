@@ -38,10 +38,10 @@
             this.btnAsistentes = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.Button();
             this.lblNombreAsistente = new System.Windows.Forms.Label();
+            this.listaBalance2 = new RHA.Forms.Administrador.ListaBalance();
             this.listaProyectos1 = new RHA.Forms.Administrador.ListaProyectos();
             this.listaAsistentes1 = new RHA.Forms.Administrador.ListaAsistentes();
             this.inicioAdministrador1 = new RHA.Forms.Administrador.InicioAdministrador();
-            this.listaBalance2 = new RHA.Forms.Administrador.ListaBalance();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -90,6 +90,8 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
+            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLogout.Location = new System.Drawing.Point(0, 522);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(207, 60);
@@ -105,6 +107,8 @@
             this.btnProyectos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProyectos.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProyectos.ForeColor = System.Drawing.Color.White;
+            this.btnProyectos.Image = ((System.Drawing.Image)(resources.GetObject("btnProyectos.Image")));
+            this.btnProyectos.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnProyectos.Location = new System.Drawing.Point(0, 327);
             this.btnProyectos.Name = "btnProyectos";
             this.btnProyectos.Size = new System.Drawing.Size(207, 60);
@@ -120,6 +124,8 @@
             this.btnBalance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBalance.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBalance.ForeColor = System.Drawing.Color.White;
+            this.btnBalance.Image = ((System.Drawing.Image)(resources.GetObject("btnBalance.Image")));
+            this.btnBalance.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBalance.Location = new System.Drawing.Point(0, 260);
             this.btnBalance.Name = "btnBalance";
             this.btnBalance.Size = new System.Drawing.Size(207, 60);
@@ -135,9 +141,11 @@
             this.btnAsistentes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAsistentes.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAsistentes.ForeColor = System.Drawing.Color.White;
+            this.btnAsistentes.Image = ((System.Drawing.Image)(resources.GetObject("btnAsistentes.Image")));
+            this.btnAsistentes.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAsistentes.Location = new System.Drawing.Point(-2, 191);
             this.btnAsistentes.Name = "btnAsistentes";
-            this.btnAsistentes.Size = new System.Drawing.Size(209, 60);
+            this.btnAsistentes.Size = new System.Drawing.Size(206, 60);
             this.btnAsistentes.TabIndex = 16;
             this.btnAsistentes.Text = "Asistentes";
             this.btnAsistentes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -150,6 +158,8 @@
             this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInicio.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInicio.ForeColor = System.Drawing.Color.White;
+            this.btnInicio.Image = ((System.Drawing.Image)(resources.GetObject("btnInicio.Image")));
+            this.btnInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnInicio.Location = new System.Drawing.Point(0, 123);
             this.btnInicio.Name = "btnInicio";
             this.btnInicio.Size = new System.Drawing.Size(207, 60);
@@ -163,12 +173,19 @@
             // 
             this.lblNombreAsistente.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreAsistente.ForeColor = System.Drawing.Color.White;
-            this.lblNombreAsistente.Location = new System.Drawing.Point(0, 21);
+            this.lblNombreAsistente.Location = new System.Drawing.Point(0, 34);
             this.lblNombreAsistente.Name = "lblNombreAsistente";
             this.lblNombreAsistente.Size = new System.Drawing.Size(207, 23);
             this.lblNombreAsistente.TabIndex = 14;
             this.lblNombreAsistente.Text = "Nombre";
             this.lblNombreAsistente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // listaBalance2
+            // 
+            this.listaBalance2.Location = new System.Drawing.Point(204, 40);
+            this.listaBalance2.Name = "listaBalance2";
+            this.listaBalance2.Size = new System.Drawing.Size(672, 586);
+            this.listaBalance2.TabIndex = 5;
             // 
             // listaProyectos1
             // 
@@ -192,14 +209,6 @@
             this.inicioAdministrador1.Name = "inicioAdministrador1";
             this.inicioAdministrador1.Size = new System.Drawing.Size(672, 586);
             this.inicioAdministrador1.TabIndex = 2;
-        
-            // 
-            // listaBalance2
-            // 
-            this.listaBalance2.Location = new System.Drawing.Point(204, 40);
-            this.listaBalance2.Name = "listaBalance2";
-            this.listaBalance2.Size = new System.Drawing.Size(672, 586);
-            this.listaBalance2.TabIndex = 5;
             // 
             // Administrador
             // 

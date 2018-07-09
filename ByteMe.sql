@@ -141,9 +141,7 @@ CREATE PROCEDURE AgregarAsistente
 	@horasAcumuladas int,
 	@estado bit OUTPUT
 AS
-SELECT Asi.Cedula, Emp.NombreEmp, Emp.Apellido1, Asi.Carrera, Asi.HorasAcumuladas
-FROM Asistente as Asi
-JOIN Empleado as Emp on Emp.Email = Asi.Email
+
 
 BEGIN
 	DECLARE @salt UNIQUEIDENTIFIER=NEWID();
@@ -154,7 +152,7 @@ BEGIN
 		SET @estado = 1 
 	END TRY
 	BEGIN CATCH
-	SET @estado = ERROR_MESSAGE()
+		SET @estado = ERROR_MESSAGE()
 		PRINT N'Eror'
 		
 	END CATCH

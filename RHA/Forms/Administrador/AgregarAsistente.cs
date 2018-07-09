@@ -38,7 +38,9 @@ namespace RHA.Forms.Administrador
                 agregado =   empleado.agregarAsistentes(email,password1,nombre,apellido1, apellido2, carne,cedula,carrera,"83096579", horasAcumuladas1);
                 Console.WriteLine("GG");
                 Console.WriteLine(agregado);
-
+                VentanasEmergentes.Satisfactorio mensaje = new VentanasEmergentes.Satisfactorio("El asistente fue agregado satisfactoriamente");
+                
+                mensaje.Show();
             }
 
 
