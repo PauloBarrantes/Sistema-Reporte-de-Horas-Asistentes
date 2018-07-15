@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,20 @@ namespace RHA
                 retorno = true;
             }
             return retorno;
+        }
+
+        public SqlDataReader obtenerNombre(string usuarioActual)
+        {
+            SqlDataReader datos = null;
+            try
+            {
+                datos = db.ejecutarConsulta("SELECT distinct NombreEmp FROM Empleado");
+                }
+            catch
+            (SqlException ex){
+                Console.WriteLine("GG ObtenerNombre");
+            }
+            return datos;
         }
 
         public bool login(string email, string password) {

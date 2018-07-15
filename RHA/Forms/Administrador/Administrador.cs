@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,11 +17,24 @@ namespace RHA.Forms.Administrador
         string usuarioActual;
         public Administrador(string emailUsuarioActual)
         {
+         
             empleado = new Empleado();
             usuarioActual = emailUsuarioActual;
-
             InitializeComponent();
-            btnInicio.BackColor = Color.FromArgb(12, 87, 153);
+
+            SqlDataReader sql = empleado.obtenerNombre(usuarioActual);
+            if(sql.Read())
+            {
+                Console.Write("que pisha!");
+            }
+            else
+            {
+                int size;
+                object[] data = new object[] { };
+                
+            }
+            
+            btnInicio.BackColor = Color.FromArgb(28, 129, 158);
             inicioAdministrador1.BringToFront();
         }
 
@@ -52,11 +66,12 @@ namespace RHA.Forms.Administrador
 
         private void pintarBotones()
         {
-            btnInicio.BackColor = Color.FromArgb(8, 51, 88);
-            btnAsistentes.BackColor = Color.FromArgb(8, 51, 88);
-            btnProyectos.BackColor = Color.FromArgb(8, 51, 88);
+            btnInicio.BackColor = Color.FromArgb(0, 81, 122);
+            btnAsistentes.BackColor = Color.FromArgb(0, 81, 122);
+            btnProyectos.BackColor = Color.FromArgb(0, 81, 122);
+            btnBalance.BackColor = Color.FromArgb(0, 81, 122);
+            btnSettings.BackColor = Color.FromArgb(0, 81, 122);
 
-            btnBalance.BackColor = Color.FromArgb(8, 51, 88);
 
 
         }
@@ -82,14 +97,14 @@ namespace RHA.Forms.Administrador
         private void btnInicio_Click(object sender, EventArgs e)
         {
             pintarBotones();
-            btnInicio.BackColor = Color.FromArgb(12, 87, 153);
+            btnInicio.BackColor = Color.FromArgb(28, 129, 158);
             inicioAdministrador1.BringToFront();
         }
 
         private void btnAsistentes_Click(object sender, EventArgs e)
         {
             pintarBotones();
-            btnAsistentes.BackColor = Color.FromArgb(12, 87, 153);
+            btnAsistentes.BackColor = Color.FromArgb(28, 129, 158);
             listaAsistentes1.BringToFront();
             listaAsistentes1.reiniciar();
         }
@@ -97,14 +112,14 @@ namespace RHA.Forms.Administrador
         private void btnBalance_Click(object sender, EventArgs e)
         {
             pintarBotones();
-            btnBalance.BackColor = Color.FromArgb(12, 87, 153);
+            btnBalance.BackColor = Color.FromArgb(28, 129, 158);
             listaBalance2.BringToFront();
         }
 
         private void btnProyectos_Click(object sender, EventArgs e)
         {
             pintarBotones();
-            btnProyectos.BackColor = Color.FromArgb(12, 87, 153);
+            btnProyectos.BackColor = Color.FromArgb(28, 129, 158);
             listaProyectos1.BringToFront();
        
 

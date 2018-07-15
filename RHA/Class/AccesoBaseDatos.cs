@@ -31,6 +31,7 @@ namespace RHA
          */
         public SqlDataReader ejecutarConsulta(String consulta)
         {
+            Console.WriteLine("GG");
             //Prepara una nueva conexión a la bd y la abre
             SqlConnection sqlConnection = new SqlConnection(conexion);
             sqlConnection.Open();
@@ -43,9 +44,11 @@ namespace RHA
                 //Ejecuta la consulta sql recibida por parámetro y la carga en un datareader
                 comando = new SqlCommand(consulta, sqlConnection);
                 datos = comando.ExecuteReader();
+                
             }
             catch (SqlException ex)
             {
+                Console.WriteLine(ex.Message);
 
             }
             return datos;

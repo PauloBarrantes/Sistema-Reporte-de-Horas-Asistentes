@@ -20,9 +20,7 @@ CREATE TABLE Asistente(
 	Telefono varchar(8),
 	HorasAcumuladas int ,
 
-
-
-	PRIMARY KEY (Email),
+		PRIMARY KEY (Email),
 	FOREIGN KEY (Email) References Empleado(Email) ON DELETE CASCADE ON UPDATE CASCADE
 );
 

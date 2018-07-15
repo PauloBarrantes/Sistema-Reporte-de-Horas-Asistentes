@@ -1,6 +1,6 @@
-﻿namespace RHA.Forms.Asistentes
+﻿namespace RHA.Forms.Secreataria
 {
-    partial class Asistente
+    partial class formSecretaria
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Asistente));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formSecretaria));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pnSideBar = new System.Windows.Forms.Panel();
-            this.lblNombreAsistente = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
+            this.pnSideBar = new System.Windows.Forms.Panel();
             this.btnInicioAs = new System.Windows.Forms.Button();
+            this.lblNombreAsistente = new System.Windows.Forms.Label();
             this.btnHorarioAs = new System.Windows.Forms.Button();
             this.btnBalanceAs = new System.Windows.Forms.Button();
             this.btnReporteAs = new System.Windows.Forms.Button();
@@ -47,39 +47,10 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(41)))), ((int)(((byte)(49)))));
             this.panel1.Controls.Add(this.btnExit);
-            this.panel1.Location = new System.Drawing.Point(0, -1);
+            this.panel1.Location = new System.Drawing.Point(-1, -1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(972, 34);
-            this.panel1.TabIndex = 3;
-            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
-            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
-            this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
-            // 
-            // pnSideBar
-            // 
-            this.pnSideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(122)))));
-            this.pnSideBar.Controls.Add(this.btnInicioAs);
-            this.pnSideBar.Controls.Add(this.lblNombreAsistente);
-            this.pnSideBar.Controls.Add(this.btnHorarioAs);
-            this.pnSideBar.Controls.Add(this.btnBalanceAs);
-            this.pnSideBar.Controls.Add(this.btnReporteAs);
-            this.pnSideBar.Controls.Add(this.btnPerfilAs);
-            this.pnSideBar.Controls.Add(this.btnCerrar);
-            this.pnSideBar.Location = new System.Drawing.Point(0, 33);
-            this.pnSideBar.Name = "pnSideBar";
-            this.pnSideBar.Size = new System.Drawing.Size(207, 593);
-            this.pnSideBar.TabIndex = 2;
-            // 
-            // lblNombreAsistente
-            // 
-            this.lblNombreAsistente.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreAsistente.ForeColor = System.Drawing.Color.White;
-            this.lblNombreAsistente.Location = new System.Drawing.Point(0, 30);
-            this.lblNombreAsistente.Name = "lblNombreAsistente";
-            this.lblNombreAsistente.Size = new System.Drawing.Size(207, 23);
-            this.lblNombreAsistente.TabIndex = 13;
-            this.lblNombreAsistente.Text = "Nombre";
-            this.lblNombreAsistente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.panel1.TabIndex = 5;
             // 
             // btnExit
             // 
@@ -92,6 +63,21 @@
             this.btnExit.TabIndex = 10;
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // pnSideBar
+            // 
+            this.pnSideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(122)))));
+            this.pnSideBar.Controls.Add(this.btnInicioAs);
+            this.pnSideBar.Controls.Add(this.lblNombreAsistente);
+            this.pnSideBar.Controls.Add(this.btnHorarioAs);
+            this.pnSideBar.Controls.Add(this.btnBalanceAs);
+            this.pnSideBar.Controls.Add(this.btnReporteAs);
+            this.pnSideBar.Controls.Add(this.btnPerfilAs);
+            this.pnSideBar.Controls.Add(this.btnCerrar);
+            this.pnSideBar.Location = new System.Drawing.Point(-1, 33);
+            this.pnSideBar.Name = "pnSideBar";
+            this.pnSideBar.Size = new System.Drawing.Size(207, 593);
+            this.pnSideBar.TabIndex = 4;
             // 
             // btnInicioAs
             // 
@@ -108,7 +94,17 @@
             this.btnInicioAs.Text = "Inicio";
             this.btnInicioAs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInicioAs.UseVisualStyleBackColor = true;
-            this.btnInicioAs.Click += new System.EventHandler(this.btnInicioAs_Click);
+            // 
+            // lblNombreAsistente
+            // 
+            this.lblNombreAsistente.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreAsistente.ForeColor = System.Drawing.Color.White;
+            this.lblNombreAsistente.Location = new System.Drawing.Point(0, 30);
+            this.lblNombreAsistente.Name = "lblNombreAsistente";
+            this.lblNombreAsistente.Size = new System.Drawing.Size(207, 23);
+            this.lblNombreAsistente.TabIndex = 13;
+            this.lblNombreAsistente.Text = "Nombre";
+            this.lblNombreAsistente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnHorarioAs
             // 
@@ -125,7 +121,6 @@
             this.btnHorarioAs.Text = "Horario";
             this.btnHorarioAs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHorarioAs.UseVisualStyleBackColor = true;
-            this.btnHorarioAs.Click += new System.EventHandler(this.btnHorarioAs_Click);
             // 
             // btnBalanceAs
             // 
@@ -142,7 +137,6 @@
             this.btnBalanceAs.Text = "Balance Horas";
             this.btnBalanceAs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBalanceAs.UseVisualStyleBackColor = true;
-            this.btnBalanceAs.Click += new System.EventHandler(this.btnBalanceAs_Click);
             // 
             // btnReporteAs
             // 
@@ -159,7 +153,6 @@
             this.btnReporteAs.Text = "Reportar Horas";
             this.btnReporteAs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReporteAs.UseVisualStyleBackColor = true;
-            this.btnReporteAs.Click += new System.EventHandler(this.btnReporteAs_Click);
             // 
             // btnPerfilAs
             // 
@@ -176,7 +169,6 @@
             this.btnPerfilAs.Text = "Perfil";
             this.btnPerfilAs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPerfilAs.UseVisualStyleBackColor = true;
-            this.btnPerfilAs.Click += new System.EventHandler(this.btnPerfilAs_Click);
             // 
             // btnCerrar
             // 
@@ -194,7 +186,7 @@
             this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCerrar.UseVisualStyleBackColor = true;
             // 
-            // Asistente
+            // formSecretaria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -202,9 +194,8 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnSideBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Asistente";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Asistente_Load);
+            this.Name = "formSecretaria";
+            this.Text = "formSecretaria";
             this.panel1.ResumeLayout(false);
             this.pnSideBar.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -214,14 +205,14 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Panel pnSideBar;
         private System.Windows.Forms.Button btnInicioAs;
+        private System.Windows.Forms.Label lblNombreAsistente;
+        private System.Windows.Forms.Button btnHorarioAs;
         private System.Windows.Forms.Button btnBalanceAs;
         private System.Windows.Forms.Button btnReporteAs;
         private System.Windows.Forms.Button btnPerfilAs;
         private System.Windows.Forms.Button btnCerrar;
-        private System.Windows.Forms.Button btnHorarioAs;
-        private System.Windows.Forms.Label lblNombreAsistente;
-        private System.Windows.Forms.Button btnExit;
     }
 }
