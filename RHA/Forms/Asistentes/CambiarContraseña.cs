@@ -29,21 +29,37 @@ namespace RHA.Forms.Asistentes
         private void btnCambiarContraseña_Click(object sender, EventArgs e)
         {
             lblError.Visible = false;
+            if (txtPassword.Text != "" && txtPasswordConfirmarcion.Text != "") {
+                string password1 = txtPassword.Text;
+                string passwordConfi = txtPasswordConfirmarcion.Text;
 
-            string password1 = txtPassword.Text;
-            string passwordConfi = txtPasswordConfirmarcion.Text;
+                if (password1 == passwordConfi)
+                {
 
-            if (password1 == passwordConfi)
-            {
-
+                }
+                else
+                {
+                    lblError.Visible = true;
+                    lblError.Text = "Las contraseñas ingresadas no coinciden";
+                }
             }
             else
             {
-                lblError.Visible = true;
-                lblError.Text = "Las contraseñas ingresadas no coinciden";
+                VentanasEmergentes.VentanaError ventanaError = new VentanasEmergentes.VentanaError("Hay espacios vacíos, por favor complételos");
+                ventanaError.StartPosition = FormStartPosition.Manual;
+                ventanaError.Location = new Point(this.ClientSize.Width / 2, this.ClientSize.Height / 2);
+                ventanaError.Show();
             }
         }
 
-        
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.asistente.traerPerfil();
+        }
+
+        public void limpiar()
+        {
+
+        }
     }
 }

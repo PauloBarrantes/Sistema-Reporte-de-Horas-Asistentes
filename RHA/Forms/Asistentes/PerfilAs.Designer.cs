@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PerfilAs));
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCarrera = new System.Windows.Forms.Label();
             this.lblHorasAcumuladas = new System.Windows.Forms.Label();
@@ -42,6 +43,8 @@
             this.lblCedula = new System.Windows.Forms.Label();
             this.btnCambiarContraseña = new System.Windows.Forms.Button();
             this.btnEditarPerfil = new System.Windows.Forms.Button();
+            this.lblGirl = new System.Windows.Forms.Label();
+            this.lblMen = new System.Windows.Forms.Label();
             this.btnVolver = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -179,6 +182,7 @@
             this.btnCambiarContraseña.TabIndex = 18;
             this.btnCambiarContraseña.Text = "Cambiar Contraseña";
             this.btnCambiarContraseña.UseVisualStyleBackColor = false;
+            this.btnCambiarContraseña.Click += new System.EventHandler(this.btnCambiarContraseña_Click);
             // 
             // btnEditarPerfil
             // 
@@ -194,6 +198,23 @@
             this.btnEditarPerfil.TabIndex = 19;
             this.btnEditarPerfil.Text = "Editar Perfil";
             this.btnEditarPerfil.UseVisualStyleBackColor = false;
+            this.btnEditarPerfil.Click += new System.EventHandler(this.btnEditarPerfil_Click);
+            // 
+            // lblGirl
+            // 
+            this.lblGirl.Image = ((System.Drawing.Image)(resources.GetObject("lblGirl.Image")));
+            this.lblGirl.Location = new System.Drawing.Point(524, 20);
+            this.lblGirl.Name = "lblGirl";
+            this.lblGirl.Size = new System.Drawing.Size(141, 167);
+            this.lblGirl.TabIndex = 49;
+            // 
+            // lblMen
+            // 
+            this.lblMen.Image = ((System.Drawing.Image)(resources.GetObject("lblMen.Image")));
+            this.lblMen.Location = new System.Drawing.Point(524, 20);
+            this.lblMen.Name = "lblMen";
+            this.lblMen.Size = new System.Drawing.Size(141, 167);
+            this.lblMen.TabIndex = 50;
             // 
             // btnVolver
             // 
@@ -209,12 +230,14 @@
             this.btnVolver.TabIndex = 48;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = false;
+            this.btnVolver.Visible = false;
             // 
             // PerfilAs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.Controls.Add(this.lblMen);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnEditarPerfil);
             this.Controls.Add(this.btnCambiarContraseña);
@@ -230,6 +253,7 @@
             this.Controls.Add(this.lblHorasAcumuladas);
             this.Controls.Add(this.lblCarrera);
             this.Controls.Add(this.lblNombre);
+            this.Controls.Add(this.lblGirl);
             this.Name = "PerfilAs";
             this.Size = new System.Drawing.Size(764, 586);
             this.ResumeLayout(false);
@@ -253,6 +277,8 @@
         private System.Windows.Forms.Label lblCedula;
         private System.Windows.Forms.Button btnCambiarContraseña;
         private System.Windows.Forms.Button btnEditarPerfil;
+        private System.Windows.Forms.Label lblGirl;
+        private System.Windows.Forms.Label lblMen;
         private System.Windows.Forms.Button btnVolver;
     }
 }

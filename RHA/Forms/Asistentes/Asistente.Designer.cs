@@ -45,6 +45,8 @@
             this.horario2 = new RHA.Forms.Asistentes.Horario();
             this.balanceHorasAs1 = new RHA.Forms.Asistentes.BalanceHorasAs();
             this.inicioAs1 = new RHA.Forms.Asistentes.InicioAs();
+            this.editarPerfil1 = new RHA.Forms.Asistentes.EditarPerfil();
+            this.cambiarContraseña1 = new RHA.Forms.Asistentes.CambiarContraseña();
             this.panel1.SuspendLayout();
             this.pnSideBar.SuspendLayout();
             this.SuspendLayout();
@@ -245,11 +247,27 @@
             this.inicioAs1.Size = new System.Drawing.Size(764, 593);
             this.inicioAs1.TabIndex = 4;
             // 
+            // editarPerfil1
+            // 
+            this.editarPerfil1.Location = new System.Drawing.Point(205, 34);
+            this.editarPerfil1.Name = "editarPerfil1";
+            this.editarPerfil1.Size = new System.Drawing.Size(764, 592);
+            this.editarPerfil1.TabIndex = 10;
+            // 
+            // cambiarContraseña1
+            // 
+            this.cambiarContraseña1.Location = new System.Drawing.Point(205, 35);
+            this.cambiarContraseña1.Name = "cambiarContraseña1";
+            this.cambiarContraseña1.Size = new System.Drawing.Size(764, 586);
+            this.cambiarContraseña1.TabIndex = 11;
+            // 
             // Asistente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(970, 625);
+            this.Controls.Add(this.cambiarContraseña1);
+            this.Controls.Add(this.editarPerfil1);
             this.Controls.Add(this.agregarHorario1);
             this.Controls.Add(this.reporteHorasAs1);
             this.Controls.Add(this.perfilAs1);
@@ -287,5 +305,7 @@
         private PerfilAs perfilAs1;
         private ReporteHorasAs reporteHorasAs1;
         private AgregarHorario agregarHorario1;
+        private EditarPerfil editarPerfil1;
+        private CambiarContraseña cambiarContraseña1;
     }
 }

@@ -34,11 +34,11 @@
             this.lblCarrera = new System.Windows.Forms.Label();
             this.lblHorasAcumuladas = new System.Windows.Forms.Label();
             this.sgProgreso = new LiveCharts.WinForms.SolidGauge();
-            this.lblGirl = new System.Windows.Forms.Label();
-            this.lblMen = new System.Windows.Forms.Label();
             this.lblperiodo = new System.Windows.Forms.Label();
             this.lblSemanaActual = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblMen = new System.Windows.Forms.Label();
+            this.lblGirl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblInicio
@@ -89,22 +89,6 @@
             this.sgProgreso.TabIndex = 12;
             this.sgProgreso.Text = "GG";
             // 
-            // lblGirl
-            // 
-            this.lblGirl.Image = ((System.Drawing.Image)(resources.GetObject("lblGirl.Image")));
-            this.lblGirl.Location = new System.Drawing.Point(533, 19);
-            this.lblGirl.Name = "lblGirl";
-            this.lblGirl.Size = new System.Drawing.Size(141, 167);
-            this.lblGirl.TabIndex = 13;
-            // 
-            // lblMen
-            // 
-            this.lblMen.Image = ((System.Drawing.Image)(resources.GetObject("lblMen.Image")));
-            this.lblMen.Location = new System.Drawing.Point(533, 19);
-            this.lblMen.Name = "lblMen";
-            this.lblMen.Size = new System.Drawing.Size(141, 167);
-            this.lblMen.TabIndex = 14;
-            // 
             // lblperiodo
             // 
             this.lblperiodo.AutoSize = true;
@@ -135,6 +119,22 @@
             this.label1.TabIndex = 17;
             this.label1.Text = "Progreso de la Semana:";
             // 
+            // lblMen
+            // 
+            this.lblMen.Image = ((System.Drawing.Image)(resources.GetObject("lblMen.Image")));
+            this.lblMen.Location = new System.Drawing.Point(524, 20);
+            this.lblMen.Name = "lblMen";
+            this.lblMen.Size = new System.Drawing.Size(141, 167);
+            this.lblMen.TabIndex = 14;
+            // 
+            // lblGirl
+            // 
+            this.lblGirl.Image = ((System.Drawing.Image)(resources.GetObject("lblGirl.Image")));
+            this.lblGirl.Location = new System.Drawing.Point(524, 20);
+            this.lblGirl.Name = "lblGirl";
+            this.lblGirl.Size = new System.Drawing.Size(141, 167);
+            this.lblGirl.TabIndex = 13;
+            // 
             // InicioAs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -163,10 +163,10 @@
         private System.Windows.Forms.Label lblCarrera;
         private System.Windows.Forms.Label lblHorasAcumuladas;
         private LiveCharts.WinForms.SolidGauge sgProgreso;
-        private System.Windows.Forms.Label lblGirl;
-        private System.Windows.Forms.Label lblMen;
         private System.Windows.Forms.Label lblperiodo;
         private System.Windows.Forms.Label lblSemanaActual;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblMen;
+        private System.Windows.Forms.Label lblGirl;
     }
 }

@@ -32,6 +32,11 @@ namespace RHA.Forms.Asistentes
         }
 
 
+        public void llenar()
+        {
+
+        }
+
         
         private void btnEditar_Click(object sender, EventArgs e)
         {
@@ -41,7 +46,11 @@ namespace RHA.Forms.Asistentes
             }
             else
             {
-
+                VentanasEmergentes.VentanaError ventanaError = new VentanasEmergentes.VentanaError("Hay espacios vacíos, por favor complételos");
+                ventanaError.StartPosition = FormStartPosition.Manual;
+                ventanaError.Location = new Point(this.ClientSize.Width / 2, this.ClientSize.Height / 2);
+                ventanaError.Show();
+               
             }
         }
     }

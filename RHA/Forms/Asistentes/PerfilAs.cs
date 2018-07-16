@@ -44,6 +44,15 @@ namespace RHA.Forms.Asistentes
 
         }
 
+        private void btnEditarPerfil_Click(object sender, EventArgs e)
+        {
+            this.asistente.traerEditarPerfil();
+        }
        
+        private void btnCambiarContraseña_Click(object sender, EventArgs e)
+        {
+            
+            this.asistente.traerCambiarContraseña();
+        }
     }
 }

@@ -19,7 +19,10 @@ namespace RHA.Forms.Asistentes
         {
             empleado = new Empleado();
             InitializeComponent();
+            sgProgreso.Uses360Mode = true;
         }
+
+        
         public void SetAsistente(Asistente asistente)
         {
             this.asistente = asistente;
@@ -28,6 +31,8 @@ namespace RHA.Forms.Asistentes
 
         public void llenarDatos()
         {
+            sgProgreso.To = 100;
+            sgProgreso.Value = 60;
             Console.WriteLine(this.asistente.usuarioActual);
             SqlDataReader datosAsistente = empleado.obtenerInfoAsistente(this.asistente.usuarioActual);
             while (datosAsistente.Read())

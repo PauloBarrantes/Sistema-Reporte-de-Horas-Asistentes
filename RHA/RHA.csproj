@@ -240,6 +240,12 @@
     <Compile Include="Forms\VentanasEmergentes\Satisfactorio.Designer.cs">
       <DependentUpon>Satisfactorio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\VentanasEmergentes\VentanaError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VentanasEmergentes\VentanaError.Designer.cs">
+      <DependentUpon>VentanaError.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Administrador\Administrador.resx">
@@ -310,6 +316,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\VentanasEmergentes\Satisfactorio.resx">
       <DependentUpon>Satisfactorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VentanasEmergentes\VentanaError.resx">
+      <DependentUpon>VentanaError.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

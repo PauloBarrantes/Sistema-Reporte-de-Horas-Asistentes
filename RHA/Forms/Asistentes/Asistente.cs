@@ -33,7 +33,8 @@ namespace RHA.Forms.Asistentes
             perfilAs1.SetAsistente(this);
             inicioAs1.SetAsistente(this);
             reporteHorasAs1.SetAsistente(this);
-
+            editarPerfil1.SetAsistente(this);
+            cambiarContraseña1.SetAsistente(this);
 
             SqlDataReader sql = empleado.obtenerNombre(usuarioActual);
             
@@ -64,6 +65,21 @@ namespace RHA.Forms.Asistentes
         public void TraerHorario()
         {
             horario2.BringToFront();
+        }
+        public void traerPerfil()
+        {
+            this.perfilAs1.BringToFront();
+        }
+        public void traerCambiarContraseña()
+        {
+            this.cambiarContraseña1.limpiar();
+            this.cambiarContraseña1.BringToFront();
+
+        }
+        public void traerEditarPerfil()
+        {
+            this.editarPerfil1.llenar();
+            this.editarPerfil1.BringToFront();
         }
         private void btnExit_Click(object sender, EventArgs e)
         {
