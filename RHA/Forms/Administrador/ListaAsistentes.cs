@@ -7,17 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace RHA.Forms.Administrador
 {
     public partial class ListaAsistentes : UserControl
     {
         Class.AsistenteDB asistentes;
+        Administrador admin;
+        public void SetAdmin(Administrador admin)
+        {
+            this.admin = admin;
+
+        }
         public ListaAsistentes()
         {
             asistentes = new Class.AsistenteDB();
             InitializeComponent();
-            agregarAsistente1.Visible = false;
+            
             dgvAsistentes.RowTemplate.Height = 35;
 
             llenarTabla(dgvAsistentes);
@@ -25,25 +32,30 @@ namespace RHA.Forms.Administrador
 
         private void btnAgregarAsistentes_Click(object sender, EventArgs e)
         {
-            agregarAsistente1.Visible = true;
-            agregarAsistente1.BringToFront();
+            this.admin.traerAgregarAsistente();
         }
 
-        public void reiniciar()
-        {
-            agregarAsistente1.Visible = false;
-            this.BringToFront();
-        }
-
+        
         private void llenarTabla(DataGridView dataGridView)
         {
-         
             
-            DataTable tabla = asistentes.obtenerAsistentes();
-            BindingSource bindingSource = new BindingSource();
-            bindingSource.DataSource = tabla;
-            dataGridView.DataSource = bindingSource;
-                       
+            SqlDataReader dataReader = asistentes.obtenerAsistentes();
+
+
+            
+                                    
+            while (dataReader.Read())
+            {
+                         
+                dgvAsistentes.Rows.Add(
+                    dataReader["Email"].ToString(),
+                    dataReader["Cedula"].ToString(),
+                    dataReader["NombreEmp"].ToString(),
+                    dataReader["Apellido1"].ToString(),
+                    dataReader["Carrera"].ToString(),
+                    "1"
+                    );
+            }
             
         }
 
@@ -95,7 +107,7 @@ namespace RHA.Forms.Administrador
         {
             if (dgvAsistentes.Columns[e.ColumnIndex].Name == "Eliminar")
             {
-                MessageBox.Show(dgvAsistentes.Columns[e.ColumnIndex+1].Name);
+                MessageBox.Show("GG");
                 
             }
             else
@@ -106,7 +118,11 @@ namespace RHA.Forms.Administrador
                 }
                 else
                 {
-                    MessageBox.Show("Horario");
+                    if(dgvAsistentes.Columns[e.ColumnIndex].Name == "Horario")
+                    {
+                        MessageBox.Show("Horario");
+                    }
+                    
                 }
 
             }

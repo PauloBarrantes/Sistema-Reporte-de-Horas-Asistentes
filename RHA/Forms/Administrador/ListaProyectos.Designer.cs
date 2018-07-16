@@ -50,13 +50,14 @@
             this.btnAgregarAsistentes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarAsistentes.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarAsistentes.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarAsistentes.Location = new System.Drawing.Point(464, 29);
+            this.btnAgregarAsistentes.Location = new System.Drawing.Point(553, 29);
             this.btnAgregarAsistentes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAgregarAsistentes.Name = "btnAgregarAsistentes";
             this.btnAgregarAsistentes.Size = new System.Drawing.Size(161, 43);
             this.btnAgregarAsistentes.TabIndex = 4;
             this.btnAgregarAsistentes.Text = "Agregar Proyecto";
             this.btnAgregarAsistentes.UseVisualStyleBackColor = false;
+            this.btnAgregarAsistentes.Click += new System.EventHandler(this.btnAgregarAsistentes_Click);
             // 
             // ListaProyectos
             // 
@@ -65,8 +66,7 @@
             this.Controls.Add(this.btnAgregarAsistentes);
             this.Controls.Add(this.lblBienvenido);
             this.Name = "ListaProyectos";
-            this.Size = new System.Drawing.Size(672, 586);
-            this.Load += new System.EventHandler(this.ListaProyectos_Load);
+            this.Size = new System.Drawing.Size(764, 586);
             this.ResumeLayout(false);
             this.PerformLayout();
 

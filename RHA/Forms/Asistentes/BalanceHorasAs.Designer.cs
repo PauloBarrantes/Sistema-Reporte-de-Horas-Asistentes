@@ -28,26 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblBienvenido = new System.Windows.Forms.Label();
+            this.lblmsjBalance = new System.Windows.Forms.Label();
+            this.dgvAsistentes = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAsistentes)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblBienvenido
+            // lblmsjBalance
             // 
-            this.lblBienvenido.AutoSize = true;
-            this.lblBienvenido.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBienvenido.Location = new System.Drawing.Point(212, 257);
-            this.lblBienvenido.Name = "lblBienvenido";
-            this.lblBienvenido.Size = new System.Drawing.Size(249, 33);
-            this.lblBienvenido.TabIndex = 3;
-            this.lblBienvenido.Text = "Lista de Asistentes";
+            this.lblmsjBalance.AutoSize = true;
+            this.lblmsjBalance.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblmsjBalance.Location = new System.Drawing.Point(28, 23);
+            this.lblmsjBalance.Name = "lblmsjBalance";
+            this.lblmsjBalance.Size = new System.Drawing.Size(285, 33);
+            this.lblmsjBalance.TabIndex = 3;
+            this.lblmsjBalance.Text = "Mi Balance de Horas";
+            // 
+            // dgvAsistentes
+            // 
+            this.dgvAsistentes.AllowUserToAddRows = false;
+            this.dgvAsistentes.AllowUserToDeleteRows = false;
+            this.dgvAsistentes.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvAsistentes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvAsistentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAsistentes.Location = new System.Drawing.Point(34, 81);
+            this.dgvAsistentes.Name = "dgvAsistentes";
+            this.dgvAsistentes.ReadOnly = true;
+            this.dgvAsistentes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvAsistentes.RowHeadersWidth = 50;
+            this.dgvAsistentes.Size = new System.Drawing.Size(698, 474);
+            this.dgvAsistentes.TabIndex = 9;
             // 
             // BalanceHorasAs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.lblBienvenido);
+            this.Controls.Add(this.dgvAsistentes);
+            this.Controls.Add(this.lblmsjBalance);
             this.Name = "BalanceHorasAs";
-            this.Size = new System.Drawing.Size(672, 586);
+            this.Size = new System.Drawing.Size(764, 586);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAsistentes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -55,6 +74,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblBienvenido;
+        private System.Windows.Forms.Label lblmsjBalance;
+        private System.Windows.Forms.DataGridView dgvAsistentes;
     }
 }

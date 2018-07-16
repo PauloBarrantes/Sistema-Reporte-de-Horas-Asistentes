@@ -12,9 +12,24 @@ namespace RHA.Forms.Asistentes
 {
     public partial class Horario : UserControl
     {
+        Empleado empleado;
+        
+        Asistente asistente;
+
         public Horario()
         {
+            empleado = new Empleado();
             InitializeComponent();
+        }
+
+        public void SetAsistente(Asistente asistente)
+        {
+            this.asistente = asistente;
+        }
+
+        private void btnAgregarHorario_Click(object sender, EventArgs e)
+        {
+            this.asistente.TraeragregarHorario();
         }
     }
 }

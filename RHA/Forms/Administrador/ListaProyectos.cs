@@ -12,14 +12,23 @@ namespace RHA.Forms.Administrador
 {
     public partial class ListaProyectos : UserControl
     {
+        Administrador admin;
+        Class.Proyecto proyecto;
         public ListaProyectos()
         {
+            proyecto = new Class.Proyecto();
             InitializeComponent();
         }
 
-        private void ListaProyectos_Load(object sender, EventArgs e)
-        {
 
+        public void SetAdmin(Administrador admin)
+        {
+            this.admin = admin;
+        }
+        private void btnAgregarAsistentes_Click(object sender, EventArgs e)
+        {
+            this.admin.traerAgregarProyecto();
+            
         }
     }
   

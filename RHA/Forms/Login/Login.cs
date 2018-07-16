@@ -88,7 +88,7 @@ namespace RHA.Forms.Login
 
                         else
                         {
-                            Asistentes.Asistente asistente = new Asistentes.Asistente();
+                            Asistentes.Asistente asistente = new Asistentes.Asistente(txtEmail.Text);
                             asistente.Show();
                             this.Hide();
                         }

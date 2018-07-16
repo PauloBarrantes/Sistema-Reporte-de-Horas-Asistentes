@@ -31,7 +31,7 @@ namespace RHA
             SqlDataReader datos = null;
             try
             {
-                datos = db.ejecutarConsulta("SELECT distinct NombreEmp FROM Empleado");
+                datos = db.ejecutarConsulta("SELECT distinct NombreEmp FROM Empleado WHERE Email = \'"+usuarioActual+"\'");
                 }
             catch
             (SqlException ex){
@@ -39,7 +39,34 @@ namespace RHA
             }
             return datos;
         }
-
+        public SqlDataReader obtenerInfoUsuario(string usuarioActual)
+        {
+            SqlDataReader datos = null;
+            try
+            {
+                datos = db.ejecutarConsulta("SELECT * FROM Empleado WHERE Email = \'" + usuarioActual + "\'");
+            }
+            catch
+            (SqlException ex)
+            {
+                Console.WriteLine("GG ObtenerNombre");
+            }
+            return datos;
+        }
+        public SqlDataReader obtenerInfoAsistente(string usuarioActual)
+        {
+            SqlDataReader datos = null;
+            try
+            {
+                datos = db.ejecutarConsulta("SELECT * FROM Empleado JOIN Asistente  On Asistente.Email = \'"+ usuarioActual +"\'" +" WHERE Empleado.Email = \'" + usuarioActual + "\'");
+            }
+            catch
+            (SqlException ex)
+            {
+                Console.WriteLine("GG ObtenerNombre");
+            }
+            return datos;
+        }
         public bool login(string email, string password) {
             return db.login(email, password);
         }

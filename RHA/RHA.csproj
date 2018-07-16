@@ -114,6 +114,12 @@
     <Compile Include="Forms\Administrador\AgregarAsistente.Designer.cs">
       <DependentUpon>AgregarAsistente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Administrador\AgregarProyecto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Administrador\AgregarProyecto.Designer.cs">
+      <DependentUpon>AgregarProyecto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Administrador\InicioAdministrador.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -138,6 +144,12 @@
     <Compile Include="Forms\Administrador\ListaProyectos.Designer.cs">
       <DependentUpon>ListaProyectos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Asistentes\AgregarHorario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Asistentes\AgregarHorario.Designer.cs">
+      <DependentUpon>AgregarHorario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Asistentes\Asistente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +161,18 @@
     </Compile>
     <Compile Include="Forms\Asistentes\BalanceHorasAs.Designer.cs">
       <DependentUpon>BalanceHorasAs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Asistentes\CambiarContraseña.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Asistentes\CambiarContraseña.Designer.cs">
+      <DependentUpon>CambiarContraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Asistentes\EditarPerfil.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Asistentes\EditarPerfil.Designer.cs">
+      <DependentUpon>EditarPerfil.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Asistentes\Horario.cs">
       <SubType>UserControl</SubType>
@@ -192,6 +216,18 @@
     <Compile Include="Forms\Login\OlvideContrasena.Designer.cs">
       <DependentUpon>OlvideContrasena.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Secreataria\AgregarNombramiento.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Secreataria\AgregarNombramiento.Designer.cs">
+      <DependentUpon>AgregarNombramiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Secreataria\Secretaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Secreataria\Secretaria.Designer.cs">
+      <DependentUpon>Secretaria.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\VentanasEmergentes\BorrarAsistente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +248,9 @@
     <EmbeddedResource Include="Forms\Administrador\AgregarAsistente.resx">
       <DependentUpon>AgregarAsistente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Administrador\AgregarProyecto.resx">
+      <DependentUpon>AgregarProyecto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Administrador\InicioAdministrador.resx">
       <DependentUpon>InicioAdministrador.cs</DependentUpon>
     </EmbeddedResource>
@@ -224,11 +263,20 @@
     <EmbeddedResource Include="Forms\Administrador\ListaProyectos.resx">
       <DependentUpon>ListaProyectos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Asistentes\AgregarHorario.resx">
+      <DependentUpon>AgregarHorario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Asistentes\Asistente.resx">
       <DependentUpon>Asistente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Asistentes\BalanceHorasAs.resx">
       <DependentUpon>BalanceHorasAs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Asistentes\CambiarContraseña.resx">
+      <DependentUpon>CambiarContraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Asistentes\EditarPerfil.resx">
+      <DependentUpon>EditarPerfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Asistentes\Horario.resx">
       <DependentUpon>Horario.cs</DependentUpon>
@@ -250,6 +298,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login\OlvideContrasena.resx">
       <DependentUpon>OlvideContrasena.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Secreataria\AgregarNombramiento.resx">
+      <DependentUpon>AgregarNombramiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Secreataria\Secretaria.resx">
+      <DependentUpon>Secretaria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\VentanasEmergentes\BorrarAsistente.resx">
       <DependentUpon>BorrarAsistente.cs</DependentUpon>
@@ -296,9 +350,7 @@
   <ItemGroup>
     <None Include="Resources\icon.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Forms\Secreataria\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\Image1.bmp" />
   </ItemGroup>

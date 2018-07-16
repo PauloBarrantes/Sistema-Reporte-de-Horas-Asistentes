@@ -48,7 +48,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.lblBienvenido);
             this.Name = "ListaBalance";
-            this.Size = new System.Drawing.Size(672, 586);
+            this.Size = new System.Drawing.Size(764, 586);
             this.ResumeLayout(false);
             this.PerformLayout();
 

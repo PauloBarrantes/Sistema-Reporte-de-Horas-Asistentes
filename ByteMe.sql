@@ -1,7 +1,7 @@
-
+﻿
 USE DB_BYTEME;
 ---------------------------------------------------------------------------------------------
-------------------------------- Creaci�n de las tablas --------------------------------------
+------------------------------- Creación de las tablas --------------------------------------
 ---------------------------------------------------------------------------------------------
 CREATE TABLE Empleado(
 	Email varchar(100) not null primary key,
@@ -9,8 +9,11 @@ CREATE TABLE Empleado(
 	NombreEmp varchar(50) not null,
 	Apellido1 varchar(60) not null,
 	Apellido2 varchar(60),
+	Sexo varchar(1) ,
 	salt UNIQUEIDENTIFIER
 );
+SELECT * FROM Empleado JOIN Asistente  On Asistente.Email = 'paulobarrantes@gmail.com' WHERE Empleado.Email = 'paulobarrantes@gmail.com'
+
 
 CREATE TABLE Asistente(
 	Email varchar(100) not null ,
@@ -35,7 +38,6 @@ CREATE TABLE Admin(
 CREATE TABLE Proyecto(
 	Nombre varchar(50) not null,
 	Estado varchar (20)  DEFAULT 'vigente',
-
 
 	PRIMARY KEY (Nombre)
 );
@@ -172,8 +174,8 @@ CREATE PROCEDURE EliminarEmpleado
 	@email varchar(100)
 AS
 DELETE FROM Empleado WHERE Empleado.Email = @email;
+EXEC EliminarEmpleado 'k@gmail.com'
 
-EXEC EliminarEmpleado 'paulobarrantes@gmail.com'
 
 -------------------------Procedimiento Almacenado 3 ------------------------------
 
@@ -184,9 +186,8 @@ CREATE PROCEDURE AgregarBloqueHoras
 	@horaInicial Time ,
 	@horaFinal Time
 AS
-
 	BEGIN
-		INSERT INTO BloqueDeReporte VALUES(
+		INSERT INTO BloqueDeReporte(NombreProyecto, Fecha, HoraInicial, HoraFinal) VALUES(
 			@nombreProyecto,
 			@fecha,
 			@horaInicial,
@@ -210,7 +211,7 @@ CREATE PROCEDURE AgregarNombramiento
 AS
 
 BEGIN
-	INSERT INTO Nombramiento VALUES(
+	INSERT INTO Nombramiento (Email, ID, Ciclo, Anno, CantidadHoras, EntidadNombradora, TipoAsistente)VALUES(
 		@email,
 		@id ,
 		@ciclo,
@@ -247,7 +248,39 @@ BEGIN
 		SET @isInDB = 0;
 
 END
-select * from empleado
+-------------------------Procedimiento Almacenado 6 ------------------------------
+GO
+CREATE PROCEDURE AgregarPersonal
+	--Parametros
+	@email varchar(100),
+	@contrasena Nvarchar(50),
+	@nombre varchar(50),
+	@apellido1 varchar(60),
+	@apellido2 varchar(60),
+	@rol int ,
+	@estado bit OUTPUT
+AS
+
+
+BEGIN
+	DECLARE @salt UNIQUEIDENTIFIER=NEWID();
+
+	BEGIN TRY
+		INSERT INTO Empleado(Email, Contrasena, NombreEmp, Apellido1, Apellido2, salt) VALUES(@email, HASHBYTES('SHA2_512', @contrasena+CAST(@salt AS NVARCHAR(36))),@nombre,@apellido1,@apellido2, @salt);
+		INSERT INTO Admin(Email, Rol) VALUES(@email,@rol);
+		SET @estado = 1 
+	END TRY
+	BEGIN CATCH
+		SET @estado = ERROR_MESSAGE()
+		PRINT N'Eror'
+		
+	END CATCH
+END;
+EXEC AgregarPersonal 'admin@gmail.com', '123456', 'Admin','SuperAdmin','GG','1',2
+-------------------------Procedimiento Almacenado 7 ------------------------------
+-------------------------Procedimiento Almacenado 8 ------------------------------
+-------------------------Procedimiento Almacenado 9 ------------------------------
+
 ---------------------------------------------------------------------------------------------
 ------------------------------ Creacion de los TRIGGERS ------------------------------------
 ---------------------------------------------------------------------------------------------

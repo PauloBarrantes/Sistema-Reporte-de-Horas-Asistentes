@@ -32,7 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnHide = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
-            this.lblNombreAsistente = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.btnInicio = new System.Windows.Forms.Button();
             this.btnAsistentes = new System.Windows.Forms.Button();
             this.btnBalance = new System.Windows.Forms.Button();
@@ -42,8 +42,10 @@
             this.btnSettings = new System.Windows.Forms.Button();
             this.listaBalance2 = new RHA.Forms.Administrador.ListaBalance();
             this.listaAsistentes1 = new RHA.Forms.Administrador.ListaAsistentes();
-            this.inicioAdministrador1 = new RHA.Forms.Administrador.InicioAdministrador();
             this.listaProyectos1 = new RHA.Forms.Administrador.ListaProyectos();
+            this.agregarAsistente1 = new RHA.Forms.Administrador.AgregarAsistente();
+            this.agregarProyecto1 = new RHA.Forms.Administrador.AgregarProyecto();
+            this.inicioAdministrador1 = new RHA.Forms.Administrador.InicioAdministrador();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -84,16 +86,16 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // lblNombreAsistente
+            // lblNombre
             // 
-            this.lblNombreAsistente.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreAsistente.ForeColor = System.Drawing.Color.White;
-            this.lblNombreAsistente.Location = new System.Drawing.Point(0, 34);
-            this.lblNombreAsistente.Name = "lblNombreAsistente";
-            this.lblNombreAsistente.Size = new System.Drawing.Size(207, 23);
-            this.lblNombreAsistente.TabIndex = 14;
-            this.lblNombreAsistente.Text = "Nombre";
-            this.lblNombreAsistente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.Color.White;
+            this.lblNombre.Location = new System.Drawing.Point(0, 82);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(207, 23);
+            this.lblNombre.TabIndex = 14;
+            this.lblNombre.Text = "Nombre";
+            this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnInicio
             // 
@@ -171,7 +173,7 @@
             this.btnLogout.ForeColor = System.Drawing.Color.White;
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLogout.Location = new System.Drawing.Point(0, 522);
+            this.btnLogout.Location = new System.Drawing.Point(0, 533);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(207, 60);
             this.btnLogout.TabIndex = 19;
@@ -189,7 +191,7 @@
             this.panel2.Controls.Add(this.btnBalance);
             this.panel2.Controls.Add(this.btnAsistentes);
             this.panel2.Controls.Add(this.btnInicio);
-            this.panel2.Controls.Add(this.lblNombreAsistente);
+            this.panel2.Controls.Add(this.lblNombre);
             this.panel2.Location = new System.Drawing.Point(-1, 33);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(207, 593);
@@ -227,13 +229,6 @@
             this.listaAsistentes1.Size = new System.Drawing.Size(764, 593);
             this.listaAsistentes1.TabIndex = 3;
             // 
-            // inicioAdministrador1
-            // 
-            this.inicioAdministrador1.Location = new System.Drawing.Point(207, 33);
-            this.inicioAdministrador1.Name = "inicioAdministrador1";
-            this.inicioAdministrador1.Size = new System.Drawing.Size(672, 586);
-            this.inicioAdministrador1.TabIndex = 2;
-            // 
             // listaProyectos1
             // 
             this.listaProyectos1.Location = new System.Drawing.Point(208, 33);
@@ -241,17 +236,40 @@
             this.listaProyectos1.Size = new System.Drawing.Size(762, 586);
             this.listaProyectos1.TabIndex = 5;
             // 
+            // agregarAsistente1
+            // 
+            this.agregarAsistente1.Location = new System.Drawing.Point(207, 33);
+            this.agregarAsistente1.Name = "agregarAsistente1";
+            this.agregarAsistente1.Size = new System.Drawing.Size(764, 586);
+            this.agregarAsistente1.TabIndex = 6;
+            // 
+            // agregarProyecto1
+            // 
+            this.agregarProyecto1.Location = new System.Drawing.Point(205, 35);
+            this.agregarProyecto1.Name = "agregarProyecto1";
+            this.agregarProyecto1.Size = new System.Drawing.Size(764, 586);
+            this.agregarProyecto1.TabIndex = 7;
+            // 
+            // inicioAdministrador1
+            // 
+            this.inicioAdministrador1.Location = new System.Drawing.Point(207, 33);
+            this.inicioAdministrador1.Name = "inicioAdministrador1";
+            this.inicioAdministrador1.Size = new System.Drawing.Size(763, 593);
+            this.inicioAdministrador1.TabIndex = 2;
+            // 
             // Administrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(970, 625);
-            this.Controls.Add(this.listaBalance2);
-            this.Controls.Add(this.listaAsistentes1);
             this.Controls.Add(this.inicioAdministrador1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.listaProyectos1);
+            this.Controls.Add(this.listaBalance2);
+            this.Controls.Add(this.listaAsistentes1);
+            this.Controls.Add(this.agregarProyecto1);
+            this.Controls.Add(this.agregarAsistente1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Administrador";
             this.Text = "Administrador";
@@ -264,7 +282,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lblNombreAsistente;
+        private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Button btnInicio;
         private System.Windows.Forms.Button btnAsistentes;
         private System.Windows.Forms.Button btnBalance;
@@ -274,9 +292,11 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnHide;
         private System.Windows.Forms.Button btnSettings;
-        private InicioAdministrador inicioAdministrador1;
         private ListaAsistentes listaAsistentes1;
         private ListaBalance listaBalance2;
         private ListaProyectos listaProyectos1;
+        private AgregarAsistente agregarAsistente1;
+        private AgregarProyecto agregarProyecto1;
+        private InicioAdministrador inicioAdministrador1;
     }
 }

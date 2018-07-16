@@ -34,5 +34,7 @@ namespace RHA.Forms.Secreataria
                 Application.Exit();
             }
         }
+
+      
     }
 }

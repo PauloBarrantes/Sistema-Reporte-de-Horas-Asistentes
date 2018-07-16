@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,18 +13,58 @@ namespace RHA.Forms.Asistentes
 {
     public partial class Asistente : Form
     {
-        public Asistente()
+        public string usuarioActual;
+        Empleado empleado;
+        Class.AsistenteDB asistenteDB;
+        public Asistente(string emailUsuario)
         {
+            usuarioActual = emailUsuario;
+            empleado = new Empleado();
+            asistenteDB = new Class.AsistenteDB();
             InitializeComponent();
+            inicioAs1.BringToFront();
+
+
+            // Hay que pasar un controlador de la ventana del Asistente a cada Control de Usuario
+
+            horario2.SetAsistente(this);
+            balanceHorasAs1.SetAsistente(this);
+            agregarHorario1.SetAsistente(this);
+            perfilAs1.SetAsistente(this);
+            inicioAs1.SetAsistente(this);
+            reporteHorasAs1.SetAsistente(this);
+
+
+            SqlDataReader sql = empleado.obtenerNombre(usuarioActual);
+            
+            while (sql.Read())
+            {
+                lblNombreAsistente.Text = sql["NombreEmp"].ToString();
+
+            }
+
+            sql.Close();
+
+            inicioAs1.llenarDatos();
+            perfilAs1.llenarPerfil(usuarioActual);
+            
+
         }
 
         private void Asistente_Load(object sender, EventArgs e)
         {
             btnInicioAs.BackColor = Color.FromArgb(12, 87, 153);
-            inicioAs1.BringToFront();
+            //inicioAs1.BringToFront();
 
         }
+        public void TraeragregarHorario() {
+            agregarHorario1.BringToFront();
 
+        }
+        public void TraerHorario()
+        {
+            horario2.BringToFront();
+        }
         private void btnExit_Click(object sender, EventArgs e)
         {
             string message = "¿Está seguro que desea salir?";
@@ -97,12 +138,12 @@ namespace RHA.Forms.Asistentes
         }
         private void pintarBotones()
         {
-            btnInicioAs.BackColor = Color.FromArgb(8, 51, 88);
-            btnReporteAs.BackColor = Color.FromArgb(8, 51, 88);
-            btnPerfilAs.BackColor = Color.FromArgb(8, 51, 88);
+            btnInicioAs.BackColor = Color.FromArgb(0, 81, 122);
+            btnReporteAs.BackColor = Color.FromArgb(0, 81, 122);
+            btnPerfilAs.BackColor = Color.FromArgb(0, 81, 122);
 
-            btnBalanceAs.BackColor = Color.FromArgb(8, 51, 88);
-            btnHorarioAs.BackColor = Color.FromArgb(8, 51, 88);
+            btnBalanceAs.BackColor = Color.FromArgb(0, 81, 122);
+            btnHorarioAs.BackColor = Color.FromArgb(0, 81, 122);
 
 
         }
@@ -113,8 +154,6 @@ namespace RHA.Forms.Asistentes
             lastLocation = e.Location;
         }
 
-
-       
-
+        
     }
 }

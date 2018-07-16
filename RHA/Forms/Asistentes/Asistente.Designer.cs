@@ -30,15 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Asistente));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pnSideBar = new System.Windows.Forms.Panel();
-            this.lblNombreAsistente = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
+            this.pnSideBar = new System.Windows.Forms.Panel();
             this.btnInicioAs = new System.Windows.Forms.Button();
+            this.lblNombreAsistente = new System.Windows.Forms.Label();
             this.btnHorarioAs = new System.Windows.Forms.Button();
             this.btnBalanceAs = new System.Windows.Forms.Button();
             this.btnReporteAs = new System.Windows.Forms.Button();
             this.btnPerfilAs = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
+            this.agregarHorario1 = new RHA.Forms.Asistentes.AgregarHorario();
+            this.reporteHorasAs1 = new RHA.Forms.Asistentes.ReporteHorasAs();
+            this.perfilAs1 = new RHA.Forms.Asistentes.PerfilAs();
+            this.horario2 = new RHA.Forms.Asistentes.Horario();
+            this.balanceHorasAs1 = new RHA.Forms.Asistentes.BalanceHorasAs();
+            this.inicioAs1 = new RHA.Forms.Asistentes.InicioAs();
             this.panel1.SuspendLayout();
             this.pnSideBar.SuspendLayout();
             this.SuspendLayout();
@@ -55,6 +61,18 @@
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
             // 
+            // btnExit
+            // 
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.Location = new System.Drawing.Point(913, 0);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(56, 35);
+            this.btnExit.TabIndex = 10;
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // pnSideBar
             // 
             this.pnSideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(122)))));
@@ -69,29 +87,6 @@
             this.pnSideBar.Name = "pnSideBar";
             this.pnSideBar.Size = new System.Drawing.Size(207, 593);
             this.pnSideBar.TabIndex = 2;
-            // 
-            // lblNombreAsistente
-            // 
-            this.lblNombreAsistente.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreAsistente.ForeColor = System.Drawing.Color.White;
-            this.lblNombreAsistente.Location = new System.Drawing.Point(0, 30);
-            this.lblNombreAsistente.Name = "lblNombreAsistente";
-            this.lblNombreAsistente.Size = new System.Drawing.Size(207, 23);
-            this.lblNombreAsistente.TabIndex = 13;
-            this.lblNombreAsistente.Text = "Nombre";
-            this.lblNombreAsistente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnExit
-            // 
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(913, 0);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(56, 35);
-            this.btnExit.TabIndex = 10;
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnInicioAs
             // 
@@ -109,6 +104,17 @@
             this.btnInicioAs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInicioAs.UseVisualStyleBackColor = true;
             this.btnInicioAs.Click += new System.EventHandler(this.btnInicioAs_Click);
+            // 
+            // lblNombreAsistente
+            // 
+            this.lblNombreAsistente.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreAsistente.ForeColor = System.Drawing.Color.White;
+            this.lblNombreAsistente.Location = new System.Drawing.Point(0, 45);
+            this.lblNombreAsistente.Name = "lblNombreAsistente";
+            this.lblNombreAsistente.Size = new System.Drawing.Size(207, 23);
+            this.lblNombreAsistente.TabIndex = 13;
+            this.lblNombreAsistente.Text = "Nombre";
+            this.lblNombreAsistente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnHorarioAs
             // 
@@ -186,19 +192,70 @@
             this.btnCerrar.ForeColor = System.Drawing.Color.White;
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
             this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCerrar.Location = new System.Drawing.Point(3, 527);
+            this.btnCerrar.Location = new System.Drawing.Point(2, 532);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(204, 46);
+            this.btnCerrar.Size = new System.Drawing.Size(204, 61);
             this.btnCerrar.TabIndex = 4;
             this.btnCerrar.Text = "Cerrar Sesión";
             this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCerrar.UseVisualStyleBackColor = true;
+            // 
+            // agregarHorario1
+            // 
+            this.agregarHorario1.Location = new System.Drawing.Point(205, 33);
+            this.agregarHorario1.Name = "agregarHorario1";
+            this.agregarHorario1.Size = new System.Drawing.Size(764, 593);
+            this.agregarHorario1.TabIndex = 9;
+            // 
+            // reporteHorasAs1
+            // 
+            this.reporteHorasAs1.Location = new System.Drawing.Point(205, 33);
+            this.reporteHorasAs1.Name = "reporteHorasAs1";
+            this.reporteHorasAs1.Size = new System.Drawing.Size(764, 586);
+            this.reporteHorasAs1.TabIndex = 8;
+            // 
+            // perfilAs1
+            // 
+            this.perfilAs1.AutoSize = true;
+            this.perfilAs1.Location = new System.Drawing.Point(207, 33);
+            this.perfilAs1.Name = "perfilAs1";
+            this.perfilAs1.Size = new System.Drawing.Size(764, 586);
+            this.perfilAs1.TabIndex = 7;
+            // 
+            // horario2
+            // 
+            this.horario2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.horario2.Location = new System.Drawing.Point(205, 35);
+            this.horario2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.horario2.Name = "horario2";
+            this.horario2.Size = new System.Drawing.Size(764, 586);
+            this.horario2.TabIndex = 6;
+            // 
+            // balanceHorasAs1
+            // 
+            this.balanceHorasAs1.Location = new System.Drawing.Point(205, 33);
+            this.balanceHorasAs1.Name = "balanceHorasAs1";
+            this.balanceHorasAs1.Size = new System.Drawing.Size(764, 586);
+            this.balanceHorasAs1.TabIndex = 5;
+            // 
+            // inicioAs1
+            // 
+            this.inicioAs1.Location = new System.Drawing.Point(205, 33);
+            this.inicioAs1.Name = "inicioAs1";
+            this.inicioAs1.Size = new System.Drawing.Size(764, 593);
+            this.inicioAs1.TabIndex = 4;
             // 
             // Asistente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(970, 625);
+            this.Controls.Add(this.agregarHorario1);
+            this.Controls.Add(this.reporteHorasAs1);
+            this.Controls.Add(this.perfilAs1);
+            this.Controls.Add(this.horario2);
+            this.Controls.Add(this.balanceHorasAs1);
+            this.Controls.Add(this.inicioAs1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnSideBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -208,6 +265,7 @@
             this.panel1.ResumeLayout(false);
             this.pnSideBar.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -223,5 +281,11 @@
         private System.Windows.Forms.Button btnHorarioAs;
         private System.Windows.Forms.Label lblNombreAsistente;
         private System.Windows.Forms.Button btnExit;
+        private InicioAs inicioAs1;
+        private BalanceHorasAs balanceHorasAs1;
+        private Horario horario2;
+        private PerfilAs perfilAs1;
+        private ReporteHorasAs reporteHorasAs1;
+        private AgregarHorario agregarHorario1;
     }
 }

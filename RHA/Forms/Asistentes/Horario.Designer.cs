@@ -96,6 +96,7 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
+            this.btnAgregarHorario = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // panel1
@@ -715,10 +716,21 @@
             this.label18.TabIndex = 51;
             this.label18.Text = "\\";
             // 
+            // btnAgregarHorario
+            // 
+            this.btnAgregarHorario.Location = new System.Drawing.Point(625, 118);
+            this.btnAgregarHorario.Name = "btnAgregarHorario";
+            this.btnAgregarHorario.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregarHorario.TabIndex = 52;
+            this.btnAgregarHorario.Text = "Add Horario";
+            this.btnAgregarHorario.UseVisualStyleBackColor = true;
+            this.btnAgregarHorario.Click += new System.EventHandler(this.btnAgregarHorario_Click);
+            // 
             // Horario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnAgregarHorario);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.panel41);
@@ -790,7 +802,7 @@
             this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Horario";
-            this.Size = new System.Drawing.Size(672, 586);
+            this.Size = new System.Drawing.Size(764, 586);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -866,5 +878,6 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Button btnAgregarHorario;
     }
 }

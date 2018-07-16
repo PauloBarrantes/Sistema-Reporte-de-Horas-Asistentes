@@ -23,19 +23,25 @@ namespace RHA.Forms.Administrador
             InitializeComponent();
 
             SqlDataReader sql = empleado.obtenerNombre(usuarioActual);
-            if(sql.Read())
+            string nombreEmpleado = "";
+            while (sql.Read())
             {
-                Console.Write("que pisha!");
+                nombreEmpleado = sql["NombreEmp"].ToString();
+
             }
-            else
-            {
-                int size;
-                object[] data = new object[] { };
-                
-            }
-            
+            sql.Close();
+
+            lblNombre.Text = nombreEmpleado;
             btnInicio.BackColor = Color.FromArgb(28, 129, 158);
             inicioAdministrador1.BringToFront();
+
+            inicioAdministrador1.SetAdmin(this);
+            listaAsistentes1.SetAdmin(this);
+            listaProyectos1.SetAdmin(this);
+            listaBalance2.SetAdmin(this);
+            agregarAsistente1.SetAdmin(this);
+            agregarProyecto1.SetAdmin(this);
+
         }
 
         bool mouseDown;
@@ -106,7 +112,6 @@ namespace RHA.Forms.Administrador
             pintarBotones();
             btnAsistentes.BackColor = Color.FromArgb(28, 129, 158);
             listaAsistentes1.BringToFront();
-            listaAsistentes1.reiniciar();
         }
 
         private void btnBalance_Click(object sender, EventArgs e)
@@ -122,12 +127,38 @@ namespace RHA.Forms.Administrador
             btnProyectos.BackColor = Color.FromArgb(28, 129, 158);
             listaProyectos1.BringToFront();
        
-
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
 
         }
+
+
+        public void traerListaProyectos()
+        {
+            this.listaProyectos1.BringToFront();
+        }
+        public void traerListaAsistentes()
+        {
+            this.listaAsistentes1.BringToFront();
+        }
+        public void traerListaBalance()
+        {
+            this.listaBalance2.BringToFront();
+        }
+        public void traerAgregarAsistente()
+        {
+            this.agregarAsistente1.limpiar();
+            this.agregarAsistente1.BringToFront();
+            
+        }
+        public void traerAgregarProyecto()
+        {
+            this.agregarProyecto1.limpiar();
+            this.agregarProyecto1.BringToFront();
+            
+        }
+
     }
 }

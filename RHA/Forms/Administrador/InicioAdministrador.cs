@@ -12,6 +12,12 @@ namespace RHA.Forms.Administrador
 {
     public partial class InicioAdministrador : UserControl
     {
+        Administrador admin;
+        public void SetAdmin(Administrador admin)
+        {
+            this.admin = admin;
+
+        }
         public InicioAdministrador()
         {
             InitializeComponent();

@@ -12,9 +12,18 @@ namespace RHA.Forms.Asistentes
 {
     public partial class BalanceHorasAs : UserControl
     {
+        Asistente asistente;
+        Empleado empleado;
         public BalanceHorasAs()
         {
+            empleado = new Empleado();
             InitializeComponent();
+        }
+
+        public void SetAsistente(Asistente asistente)
+        {
+            this.asistente = asistente;
+            
         }
     }
 }

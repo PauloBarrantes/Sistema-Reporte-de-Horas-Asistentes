@@ -16,7 +16,12 @@ namespace RHA.Forms.Administrador
         {
             InitializeComponent();
         }
+        Administrador admin;
+        public void SetAdmin(Administrador admin)
+        {
+            this.admin = admin;
 
+        }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 

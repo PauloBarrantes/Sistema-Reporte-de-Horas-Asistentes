@@ -17,17 +17,19 @@ namespace RHA.Class
             db = new AccesoBaseDatos();
         }
 
-        public DataTable obtenerAsistentes() {
-            DataTable tabla = null;
+        public SqlDataReader obtenerAsistentes() {
+            SqlDataReader datos = null;
             try
             {
-                tabla = db.ejecutarConsultaTabla("SELECT Asi.Cedula, Emp.NombreEmp, Emp.Apellido1, Asi.Carrera, Asi.HorasAcumuladas FROM Asistente as Asi JOIN Empleado as Emp on Emp.Email = Asi.Email");
+                datos = db.ejecutarConsulta("SELECT Asi.Email, Asi.Cedula, Emp.NombreEmp, Emp.Apellido1, Asi.Carrera, Asi.HorasAcumuladas FROM Asistente as Asi JOIN Empleado as Emp on Emp.Email = Asi.Email");
             }
-            catch(SqlException ex) {
-                Console.WriteLine(ex);
+            catch
+            (SqlException ex)
+            {
+                Console.WriteLine("GG ObtenerNombre");
             }
-
-            return tabla;
+            return datos;
+            
         }
 
     }

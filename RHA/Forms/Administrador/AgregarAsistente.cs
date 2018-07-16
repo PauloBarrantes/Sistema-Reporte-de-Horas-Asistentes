@@ -51,6 +51,12 @@ namespace RHA.Forms.Administrador
         {
 
         }
+        Administrador admin;
+        public void SetAdmin(Administrador admin)
+        {
+            this.admin = admin;
+
+        }
 
         private void cleanTextFields()
         {
@@ -64,6 +70,26 @@ namespace RHA.Forms.Administrador
             cbCarrera.ResetText();
             txtPassword1.Clear();
             txtPassword2.Clear();
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.admin.traerListaAsistentes();
+        }
+        public void limpiar()
+        {
+            txtEmail.Clear();
+            txtNombre.Clear();
+            txtApellido1.Clear();
+            txtApellido2.Clear();
+            txtCarne.Clear();
+            txtCedula.Clear();
+            txtPassword1.Clear();
+            txtPassword2.Clear();
+            txtHorasAcumuladas.Clear();
+            cbCarrera.SelectedIndex = -1;
+
+            rbEstudiante.Select();
         }
     }
 }
