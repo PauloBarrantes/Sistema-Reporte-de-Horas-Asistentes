@@ -160,5 +160,9 @@ namespace RHA.Forms.Administrador
             
         }
 
+        private void btnHide_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

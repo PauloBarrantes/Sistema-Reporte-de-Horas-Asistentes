@@ -216,16 +216,16 @@
     <Compile Include="Forms\Login\OlvideContrasena.Designer.cs">
       <DependentUpon>OlvideContrasena.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Secreataria\AgregarNombramiento.cs">
+    <Compile Include="Forms\Secretaria\AgregarNombramiento.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\Secreataria\AgregarNombramiento.Designer.cs">
+    <Compile Include="Forms\Secretaria\AgregarNombramiento.Designer.cs">
       <DependentUpon>AgregarNombramiento.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Secreataria\Secretaria.cs">
+    <Compile Include="Forms\Secretaria\Secretaria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Secreataria\Secretaria.Designer.cs">
+    <Compile Include="Forms\Secretaria\Secretaria.Designer.cs">
       <DependentUpon>Secretaria.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\VentanasEmergentes\BorrarAsistente.cs">
@@ -305,10 +305,10 @@
     <EmbeddedResource Include="Forms\Login\OlvideContrasena.resx">
       <DependentUpon>OlvideContrasena.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Secreataria\AgregarNombramiento.resx">
+    <EmbeddedResource Include="Forms\Secretaria\AgregarNombramiento.resx">
       <DependentUpon>AgregarNombramiento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Secreataria\Secretaria.resx">
+    <EmbeddedResource Include="Forms\Secretaria\Secretaria.resx">
       <DependentUpon>Secretaria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\VentanasEmergentes\BorrarAsistente.resx">

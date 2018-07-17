@@ -28,8 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblBienvenido = new System.Windows.Forms.Label();
             this.btnAgregarAsistentes = new System.Windows.Forms.Button();
+            this.dgvProyectos = new System.Windows.Forms.DataGridView();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.actualizar = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.btnEliminarProyecto = new System.Windows.Forms.DataGridViewButtonColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProyectos)).BeginInit();
             this.SuspendLayout();
             // 
             // lblBienvenido
@@ -59,14 +70,87 @@
             this.btnAgregarAsistentes.UseVisualStyleBackColor = false;
             this.btnAgregarAsistentes.Click += new System.EventHandler(this.btnAgregarAsistentes_Click);
             // 
+            // dgvProyectos
+            // 
+            this.dgvProyectos.AllowUserToAddRows = false;
+            this.dgvProyectos.AllowUserToDeleteRows = false;
+            this.dgvProyectos.AllowUserToResizeColumns = false;
+            this.dgvProyectos.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.dgvProyectos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvProyectos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvProyectos.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvProyectos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvProyectos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal;
+            this.dgvProyectos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProyectos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nombre,
+            this.estado,
+            this.actualizar,
+            this.btnEliminarProyecto});
+            this.dgvProyectos.Location = new System.Drawing.Point(45, 97);
+            this.dgvProyectos.Name = "dgvProyectos";
+            this.dgvProyectos.ReadOnly = true;
+            this.dgvProyectos.RowHeadersWidth = 50;
+            this.dgvProyectos.Size = new System.Drawing.Size(669, 474);
+            this.dgvProyectos.TabIndex = 9;
+            // 
+            // nombre
+            // 
+            this.nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nombre.DefaultCellStyle = dataGridViewCellStyle2;
+            this.nombre.HeaderText = "Nombre del Proyecto:";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            // 
+            // estado
+            // 
+            this.estado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 8.25F);
+            this.estado.DefaultCellStyle = dataGridViewCellStyle3;
+            this.estado.HeaderText = "Estado del Proyecto:";
+            this.estado.Name = "estado";
+            this.estado.ReadOnly = true;
+            // 
+            // actualizar
+            // 
+            this.actualizar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 8.25F);
+            this.actualizar.DefaultCellStyle = dataGridViewCellStyle4;
+            this.actualizar.HeaderText = "Actualizar el estado:";
+            this.actualizar.Name = "actualizar";
+            this.actualizar.ReadOnly = true;
+            this.actualizar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.actualizar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // btnEliminarProyecto
+            // 
+            this.btnEliminarProyecto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 8.25F);
+            this.btnEliminarProyecto.DefaultCellStyle = dataGridViewCellStyle5;
+            this.btnEliminarProyecto.HeaderText = "Eliminar Proyecto";
+            this.btnEliminarProyecto.Name = "btnEliminarProyecto";
+            this.btnEliminarProyecto.ReadOnly = true;
+            this.btnEliminarProyecto.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.btnEliminarProyecto.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.btnEliminarProyecto.Text = "Eliminar";
+            // 
             // ListaProyectos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.dgvProyectos);
             this.Controls.Add(this.btnAgregarAsistentes);
             this.Controls.Add(this.lblBienvenido);
             this.Name = "ListaProyectos";
             this.Size = new System.Drawing.Size(764, 586);
+            this.Load += new System.EventHandler(this.ListaProyectos_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProyectos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -76,5 +160,10 @@
 
         private System.Windows.Forms.Label lblBienvenido;
         private System.Windows.Forms.Button btnAgregarAsistentes;
+        private System.Windows.Forms.DataGridView dgvProyectos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estado;
+        private System.Windows.Forms.DataGridViewComboBoxColumn actualizar;
+        private System.Windows.Forms.DataGridViewButtonColumn btnEliminarProyecto;
     }
 }

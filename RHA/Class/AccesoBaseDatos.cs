@@ -16,11 +16,12 @@ namespace RHA
 
         /*En Initial Catalog se agrega la base de datos propia. Intregated Security = false es para utilizar SQL SERVER Authentication*/
         String conexion = "Data Source=10.1.4.55;User ID=b60369;Password=Folotopo11; Initial Catalog=DB_BYTEME; Integrated Security=false";
-        
+
         /**
          * Constructor de la clase
          */
-        public AccesoBaseDatos(){
+        public AccesoBaseDatos()
+        {
         }
 
         /**
@@ -44,7 +45,7 @@ namespace RHA
                 //Ejecuta la consulta sql recibida por parámetro y la carga en un datareader
                 comando = new SqlCommand(consulta, sqlConnection);
                 datos = comando.ExecuteReader();
-                
+
             }
             catch (SqlException ex)
             {
@@ -72,8 +73,8 @@ namespace RHA
             DataTable table = new DataTable();
 
             dataAdapter.Fill(table);
-			
-			return table;
+
+            return table;
         }
 
         /*Método para ejecutar un insert, update o delete 
@@ -95,7 +96,7 @@ namespace RHA
                 //Ejecuta la consulta sql recibida por parámetro
                 cons.ExecuteNonQuery();
             }
-            catch(SqlException e)
+            catch (SqlException e)
             {
                 error = e.Number;
                 Debug.WriteLine("Error: " + error);
@@ -177,7 +178,7 @@ namespace RHA
                         cmd.Parameters.Add("@carrera", SqlDbType.VarChar).Value = carrera;
                         cmd.Parameters.Add("@telefono", SqlDbType.VarChar).Value = telefono;
                         cmd.Parameters.Add("@horasAcumuladas", SqlDbType.Int).Value = horasAcumuladas;
-                      
+
                         //se prepara el parámetro de retorno del procedimiento almacenado
                         cmd.Parameters.Add("@estado", SqlDbType.Bit).Direction = ParameterDirection.Output;
 
@@ -189,7 +190,7 @@ namespace RHA
 
                         /*Se convierte en un valor entero lo que se devuelve el procedimiento*/
                         return Convert.ToInt32(cmd.Parameters["@estado"].Value);
-                        
+
                     }
                     catch (SqlException ex)
                     {
@@ -201,7 +202,52 @@ namespace RHA
             }
 
         }
+        public bool agregarProyecto(string nombre, string estado)
+        {
+            using (SqlConnection con = new SqlConnection(conexion))
+            {
+                /*El sqlCommand recibe como primer parámetro el nombre del procedimiento almacenado, 
+                 * de segundo parámetro recibe el sqlConnection
+                */
+                using (SqlCommand cmd = new SqlCommand("AgregarProyecto", con))
+                {
+                    try
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
 
+                        //Se preparan los parámetros que recibe el procedimiento almacenado
+                        cmd.Parameters.Add("@nombre", SqlDbType.VarChar).Value = nombre;
+                        cmd.Parameters.Add("@estado", SqlDbType.VarChar).Value = estado;
+
+                        //se prepara el parámetro de retorno del procedimiento almacenado
+                        cmd.Parameters.Add("@salida", SqlDbType.Bit).Direction = ParameterDirection.Output;
+
+                        /*Se abre la conexión*/
+                        con.Open();
+
+                        //Se ejecuta el procedimiento almacenado
+                        cmd.ExecuteNonQuery();
+
+                        /*Se convierte en un valor entero lo que se devuelve el procedimiento*/
+                        int value = Convert.ToInt32(cmd.Parameters["@salida"].Value);
+                        if (value == 1)
+                        {
+                            return true;
+                        }
+
+                        /*Si devuelve 0 es que no se encuentra en la BD*/
+                        else
+                        {
+                            return false;
+                        }
+                    }
+                    catch (SqlException ex)
+                    {
+                        return false;
+                    }
+                }
+            }
+        }
         /*Método para llamar al procedimiento almacenado para comprobar que un usuario está en la base de datos
          Recibe: El usuario y contraseña que se desea verificar que está en la base de datos
          Modifica: Busca el usuario con esa contraseña en la base de datos
@@ -257,5 +303,6 @@ namespace RHA
 
         }
 
-    }
+
+    } 
 }

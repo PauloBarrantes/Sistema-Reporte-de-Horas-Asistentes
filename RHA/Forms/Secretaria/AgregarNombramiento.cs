@@ -12,9 +12,20 @@ namespace RHA.Forms.Secreataria
 {
     public partial class AgregarNombramiento : UserControl
     {
+        Secretaria secretaria;
         public AgregarNombramiento()
         {
+
             InitializeComponent();
+        }
+        public void SetSecretaria(Secretaria secretaria)
+        {
+            this.secretaria = secretaria;
+        }
+
+        private void btnNombrar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

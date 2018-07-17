@@ -105,7 +105,6 @@ C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.For
 C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.Forms.Login.CambiarContraseña.resources
 C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.Forms.Login.Login.resources
 C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.Forms.Login.OlvideContrasena.resources
-C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.Forms.Secreataria.formSecretaria.resources
 C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.Forms.VentanasEmergentes.BorrarAsistente.resources
 C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.Forms.VentanasEmergentes.Satisfactorio.resources
 C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.Properties.Resources.resources
@@ -143,3 +142,4 @@ C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.For
 C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.Forms.Secreataria.AgregarNombramiento.resources
 C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.csprojResolveAssemblyReference.cache
 C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.Forms.VentanasEmergentes.VentanaError.resources
+C:\Users\Paulo\Desktop\Sistema-Reporte-de-Horas-Asistentes\RHA\obj\Debug\RHA.Forms.Secreataria.Secretaria.resources

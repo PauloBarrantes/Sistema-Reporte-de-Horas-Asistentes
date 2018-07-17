@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace RHA.Forms.Secreataria
 {
-    public partial class formSecretaria : Form
+    public partial class Secretaria : Form
     {
-        public formSecretaria()
+        public Secretaria()
         {
             InitializeComponent();
         }
-
+        
         private void btnExit_Click(object sender, EventArgs e)
         {
             string message = "¿Está seguro que desea salir?";

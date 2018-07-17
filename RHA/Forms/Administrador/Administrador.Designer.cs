@@ -73,6 +73,7 @@
             this.btnHide.Size = new System.Drawing.Size(56, 35);
             this.btnHide.TabIndex = 2;
             this.btnHide.UseVisualStyleBackColor = true;
+            this.btnHide.Click += new System.EventHandler(this.btnHide_Click);
             // 
             // btnExit
             // 

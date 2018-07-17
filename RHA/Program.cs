@@ -16,7 +16,7 @@ namespace RHA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Forms.Asistentes.Asistente("paulobarrantes@gmail.com"));
+            Application.Run(new Forms.Administrador.Administrador("paulobarrantes@gmail.com"));
         }
     }
 }

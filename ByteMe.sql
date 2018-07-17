@@ -118,7 +118,7 @@ DROP TABLE Empleado;
 
 
 ---------------------------------------------------------------------------------------------
---------------------------- Creaci�n de los procesos almacenados ---------------------------
+--------------------------- Creación de los procesos almacenados ---------------------------
 ---------------------------------------------------------------------------------------------
 
 
@@ -168,7 +168,7 @@ EXEC AgregarAsistente 'paulobarrantes@gmail.com', '123456', 'Paulo','Barrantes',
 SELECT *  FROM ASISTENTE;
 DROP PROCEDURE AgregarAsistente;
 -------------------------Procedimiento Almacenado 2 ------------------------------
-
+SELECT Asi.Email, Asi.Cedula, Emp.NombreEmp, Emp.Apellido1, Asi.Carrera, Asi.HorasAcumuladas FROM Asistente as Asi JOIN Empleado as Emp on Emp.Email = Asi.Email
 go
 CREATE PROCEDURE EliminarEmpleado
 	@email varchar(100)
@@ -278,6 +278,28 @@ BEGIN
 END;
 EXEC AgregarPersonal 'admin@gmail.com', '123456', 'Admin','SuperAdmin','GG','1',2
 -------------------------Procedimiento Almacenado 7 ------------------------------
+GO
+CREATE PROCEDURE AgregarProyecto
+
+	@nombre varchar(50),
+	@estado varchar(20),
+	@salida bit OUTPUT
+AS
+
+BEGIN
+	BEGIN TRY
+		INSERT INTO Proyecto (Nombre, Estado)VALUES(
+			@nombre, @estado
+		);
+	END TRY
+	BEGIN CATCH 
+		SET @salida = ERROR_MESSAGE();
+
+	END CATCH
+
+END;
+EXEC AgregarProyecto 'PR_Parrita','Activo',1
+
 -------------------------Procedimiento Almacenado 8 ------------------------------
 -------------------------Procedimiento Almacenado 9 ------------------------------
 

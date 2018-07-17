@@ -28,21 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblBienvenido = new System.Windows.Forms.Label();
             this.btnAgregarAsistentes = new System.Windows.Forms.Button();
             this.dgvAsistentes = new System.Windows.Forms.DataGridView();
-            this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Horario = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Perfil = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Horas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Carrera = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cédula = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cédula = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Carrera = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Horas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Perfil = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Horario = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsistentes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,9 +77,12 @@
             // 
             this.dgvAsistentes.AllowUserToAddRows = false;
             this.dgvAsistentes.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.dgvAsistentes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvAsistentes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAsistentes.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dgvAsistentes.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvAsistentes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.dgvAsistentes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvAsistentes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
             this.dgvAsistentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAsistentes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Email,
@@ -100,77 +104,12 @@
             this.dgvAsistentes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAsistentes_CellContentClick);
             this.dgvAsistentes.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgvAsistentes_CellPainting);
             // 
-            // Eliminar
+            // Email
             // 
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
-            this.Eliminar.DefaultCellStyle = dataGridViewCellStyle18;
-            this.Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Eliminar.HeaderText = "Eliminar";
-            this.Eliminar.Name = "Eliminar";
-            this.Eliminar.ReadOnly = true;
-            this.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Eliminar.Width = 76;
-            // 
-            // Horario
-            // 
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
-            this.Horario.DefaultCellStyle = dataGridViewCellStyle17;
-            this.Horario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Horario.HeaderText = "Horario";
-            this.Horario.Name = "Horario";
-            this.Horario.ReadOnly = true;
-            this.Horario.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Horario.Text = "";
-            this.Horario.Width = 75;
-            // 
-            // Perfil
-            // 
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
-            this.Perfil.DefaultCellStyle = dataGridViewCellStyle16;
-            this.Perfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Perfil.HeaderText = "Perfil";
-            this.Perfil.Name = "Perfil";
-            this.Perfil.ReadOnly = true;
-            this.Perfil.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Perfil.Width = 75;
-            // 
-            // Horas
-            // 
-            this.Horas.HeaderText = "Horas";
-            this.Horas.Name = "Horas";
-            this.Horas.ReadOnly = true;
-            this.Horas.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Horas.Width = 50;
-            // 
-            // Carrera
-            // 
-            this.Carrera.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Carrera.HeaderText = "Carrera";
-            this.Carrera.Name = "Carrera";
-            this.Carrera.ReadOnly = true;
-            this.Carrera.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Carrera.Width = 74;
-            // 
-            // Apellido
-            // 
-            this.Apellido.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Apellido.HeaderText = "Apellido";
-            this.Apellido.Name = "Apellido";
-            this.Apellido.ReadOnly = true;
-            this.Apellido.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Apellido.Width = 76;
-            // 
-            // Nombre
-            // 
-            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Nombre.Width = 76;
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            this.Email.Visible = false;
             // 
             // Cédula
             // 
@@ -181,12 +120,73 @@
             this.Cédula.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Cédula.Width = 74;
             // 
-            // Email
+            // Nombre
             // 
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            this.Email.Visible = false;
+            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Nombre.Width = 76;
+            // 
+            // Apellido
+            // 
+            this.Apellido.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Apellido.HeaderText = "Apellido";
+            this.Apellido.Name = "Apellido";
+            this.Apellido.ReadOnly = true;
+            this.Apellido.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Apellido.Width = 76;
+            // 
+            // Carrera
+            // 
+            this.Carrera.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Carrera.HeaderText = "Carrera";
+            this.Carrera.Name = "Carrera";
+            this.Carrera.ReadOnly = true;
+            this.Carrera.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Carrera.Width = 74;
+            // 
+            // Horas
+            // 
+            this.Horas.HeaderText = "Horas";
+            this.Horas.Name = "Horas";
+            this.Horas.ReadOnly = true;
+            this.Horas.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Perfil
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            this.Perfil.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Perfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Perfil.HeaderText = "Perfil";
+            this.Perfil.Name = "Perfil";
+            this.Perfil.ReadOnly = true;
+            this.Perfil.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Horario
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            this.Horario.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Horario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Horario.HeaderText = "Horario";
+            this.Horario.Name = "Horario";
+            this.Horario.ReadOnly = true;
+            this.Horario.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Horario.Text = "";
+            // 
+            // Eliminar
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.Eliminar.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.ReadOnly = true;
+            this.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // ListaAsistentes
             // 

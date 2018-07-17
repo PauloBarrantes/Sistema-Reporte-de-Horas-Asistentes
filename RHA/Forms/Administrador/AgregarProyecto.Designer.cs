@@ -44,7 +44,7 @@
             this.cbCarrera.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.cbCarrera.Location = new System.Drawing.Point(260, 246);
+            this.cbCarrera.Location = new System.Drawing.Point(268, 246);
             this.cbCarrera.Name = "cbCarrera";
             this.cbCarrera.Size = new System.Drawing.Size(205, 29);
             this.cbCarrera.TabIndex = 44;
@@ -100,6 +100,7 @@
             this.btnAgregar.TabIndex = 45;
             this.btnAgregar.Text = "Agregar Proyecto";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // txtNombre
             // 

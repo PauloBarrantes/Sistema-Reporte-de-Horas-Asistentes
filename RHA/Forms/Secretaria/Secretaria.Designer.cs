@@ -1,6 +1,6 @@
 ﻿namespace RHA.Forms.Secreataria
 {
-    partial class formSecretaria
+    partial class Secretaria
     {
         /// <summary>
         /// Required designer variable.
@@ -28,16 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formSecretaria));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Secretaria));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
             this.pnSideBar = new System.Windows.Forms.Panel();
             this.btnInicioAs = new System.Windows.Forms.Button();
             this.lblNombreAsistente = new System.Windows.Forms.Label();
-            this.btnHorarioAs = new System.Windows.Forms.Button();
-            this.btnBalanceAs = new System.Windows.Forms.Button();
-            this.btnReporteAs = new System.Windows.Forms.Button();
-            this.btnPerfilAs = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.pnSideBar.SuspendLayout();
@@ -69,10 +65,6 @@
             this.pnSideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(122)))));
             this.pnSideBar.Controls.Add(this.btnInicioAs);
             this.pnSideBar.Controls.Add(this.lblNombreAsistente);
-            this.pnSideBar.Controls.Add(this.btnHorarioAs);
-            this.pnSideBar.Controls.Add(this.btnBalanceAs);
-            this.pnSideBar.Controls.Add(this.btnReporteAs);
-            this.pnSideBar.Controls.Add(this.btnPerfilAs);
             this.pnSideBar.Controls.Add(this.btnCerrar);
             this.pnSideBar.Location = new System.Drawing.Point(-1, 33);
             this.pnSideBar.Name = "pnSideBar";
@@ -106,70 +98,6 @@
             this.lblNombreAsistente.Text = "Nombre";
             this.lblNombreAsistente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnHorarioAs
-            // 
-            this.btnHorarioAs.FlatAppearance.BorderSize = 0;
-            this.btnHorarioAs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHorarioAs.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHorarioAs.ForeColor = System.Drawing.Color.White;
-            this.btnHorarioAs.Image = ((System.Drawing.Image)(resources.GetObject("btnHorarioAs.Image")));
-            this.btnHorarioAs.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnHorarioAs.Location = new System.Drawing.Point(-2, 373);
-            this.btnHorarioAs.Name = "btnHorarioAs";
-            this.btnHorarioAs.Size = new System.Drawing.Size(207, 60);
-            this.btnHorarioAs.TabIndex = 12;
-            this.btnHorarioAs.Text = "Horario";
-            this.btnHorarioAs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHorarioAs.UseVisualStyleBackColor = true;
-            // 
-            // btnBalanceAs
-            // 
-            this.btnBalanceAs.FlatAppearance.BorderSize = 0;
-            this.btnBalanceAs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBalanceAs.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBalanceAs.ForeColor = System.Drawing.Color.White;
-            this.btnBalanceAs.Image = ((System.Drawing.Image)(resources.GetObject("btnBalanceAs.Image")));
-            this.btnBalanceAs.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBalanceAs.Location = new System.Drawing.Point(0, 309);
-            this.btnBalanceAs.Name = "btnBalanceAs";
-            this.btnBalanceAs.Size = new System.Drawing.Size(207, 60);
-            this.btnBalanceAs.TabIndex = 11;
-            this.btnBalanceAs.Text = "Balance Horas";
-            this.btnBalanceAs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBalanceAs.UseVisualStyleBackColor = true;
-            // 
-            // btnReporteAs
-            // 
-            this.btnReporteAs.FlatAppearance.BorderSize = 0;
-            this.btnReporteAs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReporteAs.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReporteAs.ForeColor = System.Drawing.Color.White;
-            this.btnReporteAs.Image = ((System.Drawing.Image)(resources.GetObject("btnReporteAs.Image")));
-            this.btnReporteAs.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnReporteAs.Location = new System.Drawing.Point(0, 243);
-            this.btnReporteAs.Name = "btnReporteAs";
-            this.btnReporteAs.Size = new System.Drawing.Size(207, 60);
-            this.btnReporteAs.TabIndex = 10;
-            this.btnReporteAs.Text = "Reportar Horas";
-            this.btnReporteAs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReporteAs.UseVisualStyleBackColor = true;
-            // 
-            // btnPerfilAs
-            // 
-            this.btnPerfilAs.FlatAppearance.BorderSize = 0;
-            this.btnPerfilAs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPerfilAs.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPerfilAs.ForeColor = System.Drawing.Color.White;
-            this.btnPerfilAs.Image = ((System.Drawing.Image)(resources.GetObject("btnPerfilAs.Image")));
-            this.btnPerfilAs.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPerfilAs.Location = new System.Drawing.Point(0, 180);
-            this.btnPerfilAs.Name = "btnPerfilAs";
-            this.btnPerfilAs.Size = new System.Drawing.Size(207, 60);
-            this.btnPerfilAs.TabIndex = 9;
-            this.btnPerfilAs.Text = "Perfil";
-            this.btnPerfilAs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPerfilAs.UseVisualStyleBackColor = true;
-            // 
             // btnCerrar
             // 
             this.btnCerrar.FlatAppearance.BorderSize = 0;
@@ -180,13 +108,13 @@
             this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCerrar.Location = new System.Drawing.Point(3, 527);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(204, 46);
+            this.btnCerrar.Size = new System.Drawing.Size(204, 63);
             this.btnCerrar.TabIndex = 4;
             this.btnCerrar.Text = "Cerrar Sesión";
             this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCerrar.UseVisualStyleBackColor = true;
             // 
-            // formSecretaria
+            // Secretaria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -194,8 +122,8 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnSideBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "formSecretaria";
-            this.Text = "formSecretaria";
+            this.Name = "Secretaria";
+            this.Text = "Secretaria";
             this.panel1.ResumeLayout(false);
             this.pnSideBar.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -209,10 +137,6 @@
         private System.Windows.Forms.Panel pnSideBar;
         private System.Windows.Forms.Button btnInicioAs;
         private System.Windows.Forms.Label lblNombreAsistente;
-        private System.Windows.Forms.Button btnHorarioAs;
-        private System.Windows.Forms.Button btnBalanceAs;
-        private System.Windows.Forms.Button btnReporteAs;
-        private System.Windows.Forms.Button btnPerfilAs;
         private System.Windows.Forms.Button btnCerrar;
     }
 }

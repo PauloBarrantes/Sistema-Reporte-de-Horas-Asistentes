@@ -138,6 +138,7 @@
             this.btnNombrar.TabIndex = 45;
             this.btnNombrar.Text = "Nombrar";
             this.btnNombrar.UseVisualStyleBackColor = false;
+            this.btnNombrar.Click += new System.EventHandler(this.btnNombrar_Click);
             // 
             // lblBienvenido
             // 
@@ -213,6 +214,10 @@
             // 
             this.cbTipoAsistente.FormattingEnabled = true;
             this.cbTipoAsistente.ItemHeight = 23;
+            this.cbTipoAsistente.Items.AddRange(new object[] {
+            "Estudiante",
+            "Asistente",
+            "Asistente Graduado"});
             this.cbTipoAsistente.Location = new System.Drawing.Point(111, 399);
             this.cbTipoAsistente.Name = "cbTipoAsistente";
             this.cbTipoAsistente.Size = new System.Drawing.Size(205, 29);
