@@ -82,5 +82,18 @@ namespace RHA
 
             return retorno;
         }
+
+        public bool agregarNombramiento(string email, string idNombramiento, string ciclo, int anno, int horas, string entNombradora, int tipoAsistente)
+        {
+            bool retorno = false;
+            int resultado = db.agregarNombramiento(email, idNombramiento, ciclo, anno, horas, entNombradora, tipoAsistente);
+
+            if (resultado == 1)
+            {
+                retorno = true;
+            }
+            return retorno;
+        }
+
     }
 }

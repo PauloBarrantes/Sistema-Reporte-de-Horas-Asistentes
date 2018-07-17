@@ -97,7 +97,7 @@ CREATE TABLE Nombramiento(
 	Ciclo varchar(25) not null,
 	Anno int not null,
 	CantidadHoras int not null,
-	EntidadNombradora int  not null,
+	EntidadNombradora varchar(10)  not null,
 	TipoAsistente int not null,
 
 	FOREIGN KEY (Ciclo, Anno) REFERENCES Periodo(Ciclo, Anno),
@@ -205,9 +205,9 @@ CREATE PROCEDURE AgregarNombramiento
 	@ciclo varchar(25),
 	@anno int,
 	@cantidadHoras int,
-	@entidadNombradora int,
-	@tipoAsistente int
-
+	@entidadNombradora varchar(10),
+	@tipoAsistente int,
+	@isInDB bit = 0 OUTPUT
 AS
 
 BEGIN
@@ -220,8 +220,12 @@ BEGIN
 		@entidadNombradora,
 		@tipoAsistente
 	);
-
+	SET @isInDB = 1;
 END;
+
+
+INSERT INTO Periodo VALUES('I-Ciclo',2018);
+exec AgregarNombramiento 'paulobarrantes@gmail.com', 'A12345', 'I-Ciclo',2018,10,'UCR',0;
 -------------------------Procedimiento Almacenado 5 ------------------------------
 
 GO

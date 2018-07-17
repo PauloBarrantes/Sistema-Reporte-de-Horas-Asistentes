@@ -202,6 +202,58 @@ namespace RHA
             }
 
         }
+
+        /*Método para llamar al procedimiento almacenado que permite agregar un nuevo usuario 
+         Recibe: el usuario y la contraseña del nuevo usuario así como la cédula del estudiante a quién se asocia ese usuario
+         Modifica: Agrega en la base de datos un nuevo usuario
+         Retorna: 1 si se pudo guardar el nuevo usuario, un número diferente a cero que corresponde al número de error
+         si no se pudo insertar*/
+        public int agregarNombramiento(string email, string idNombramiento, string ciclo, int anno, int horas, string entNombradora, int tipoAsistente)
+        {
+            int error = 0;
+            using (SqlConnection con = new SqlConnection(conexion))
+            {
+                /*El sqlCommand recibe como primer parámetro el nombre del procedimiento almacenado, 
+                 * de segundo parámetro recibe el sqlConnection
+                */
+                using (SqlCommand cmd = new SqlCommand("AgregarNombramiento", con))
+                {
+                    try
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        //Se preparan los parámetros que recibe el procedimiento almacenado
+                        cmd.Parameters.Add("@email", SqlDbType.VarChar).Value = email;
+                        cmd.Parameters.Add("@id", SqlDbType.VarChar).Value = idNombramiento;
+                        cmd.Parameters.Add("@ciclo", SqlDbType.VarChar).Value = ciclo;
+                        cmd.Parameters.Add("@anno", SqlDbType.Int).Value = anno;
+                        cmd.Parameters.Add("@cantidadHoras", SqlDbType.Int).Value = horas;
+                        cmd.Parameters.Add("@entidadNombradora", SqlDbType.VarChar).Value = entNombradora;
+                        cmd.Parameters.Add("@tipoAsistente", SqlDbType.Int).Value = tipoAsistente;
+
+                        //se prepara el parámetro de retorno del procedimiento almacenado
+                        cmd.Parameters.Add("@estado", SqlDbType.Bit).Direction = ParameterDirection.Output;
+
+                        /*Se abre la conexión*/
+                        con.Open();
+
+                        //Se ejecuta el procedimiento almacenado
+                        cmd.ExecuteNonQuery();
+
+                        /*Se convierte en un valor entero lo que se devuelve el procedimiento*/
+                        return Convert.ToInt32(cmd.Parameters["@estado"].Value);
+
+                    }
+                    catch (SqlException ex)
+                    {
+                        /*Se capta el número de error si no se pudo insertar*/
+                        error = ex.Number;
+                        return error;
+                    }
+                }
+            }
+
+        }
         public bool agregarProyecto(string nombre, string estado)
         {
             using (SqlConnection con = new SqlConnection(conexion))

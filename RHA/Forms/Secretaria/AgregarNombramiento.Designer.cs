@@ -52,60 +52,60 @@
             // lblInfo
             // 
             this.lblInfo.AutoSize = true;
-            this.lblInfo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInfo.Location = new System.Drawing.Point(440, 172);
             this.lblInfo.Name = "lblInfo";
-            this.lblInfo.Size = new System.Drawing.Size(201, 18);
+            this.lblInfo.Size = new System.Drawing.Size(177, 18);
             this.lblInfo.TabIndex = 56;
             this.lblInfo.Text = "Información del Asistente:";
             // 
             // lblTipo
             // 
             this.lblTipo.AutoSize = true;
-            this.lblTipo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTipo.Location = new System.Drawing.Point(108, 369);
             this.lblTipo.Name = "lblTipo";
-            this.lblTipo.Size = new System.Drawing.Size(119, 17);
+            this.lblTipo.Size = new System.Drawing.Size(116, 16);
             this.lblTipo.TabIndex = 54;
             this.lblTipo.Text = "Tipo de Asistente:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(108, 295);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 17);
+            this.label4.Size = new System.Drawing.Size(59, 16);
             this.label4.TabIndex = 53;
             this.label4.Text = "Período:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(108, 229);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(136, 17);
+            this.label2.Size = new System.Drawing.Size(124, 16);
             this.label2.TabIndex = 52;
             this.label2.Text = "Cantidad de Horas:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(108, 162);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(151, 17);
+            this.label3.Size = new System.Drawing.Size(137, 16);
             this.label3.TabIndex = 51;
             this.label3.Text = "Entidad Nombradora:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(440, 88);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 17);
+            this.label1.Size = new System.Drawing.Size(66, 16);
             this.label1.TabIndex = 49;
             this.label1.Text = "Asistente:";
             // 
@@ -114,7 +114,7 @@
             this.btnVolver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(94)))), ((int)(((byte)(178)))));
             this.btnVolver.FlatAppearance.BorderSize = 0;
             this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVolver.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolver.ForeColor = System.Drawing.Color.White;
             this.btnVolver.Location = new System.Drawing.Point(44, 529);
             this.btnVolver.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -129,7 +129,7 @@
             this.btnNombrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(153)))), ((int)(((byte)(142)))));
             this.btnNombrar.FlatAppearance.BorderSize = 0;
             this.btnNombrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNombrar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNombrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNombrar.ForeColor = System.Drawing.Color.White;
             this.btnNombrar.Location = new System.Drawing.Point(574, 529);
             this.btnNombrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -143,10 +143,10 @@
             // lblBienvenido
             // 
             this.lblBienvenido.AutoSize = true;
-            this.lblBienvenido.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBienvenido.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBienvenido.Location = new System.Drawing.Point(105, 15);
             this.lblBienvenido.Name = "lblBienvenido";
-            this.lblBienvenido.Size = new System.Drawing.Size(331, 33);
+            this.lblBienvenido.Size = new System.Drawing.Size(294, 31);
             this.lblBienvenido.TabIndex = 37;
             this.lblBienvenido.Text = "Agregar Nombramiento";
             // 
@@ -169,6 +169,7 @@
             this.cbEntidad.Size = new System.Drawing.Size(205, 29);
             this.cbEntidad.TabIndex = 64;
             this.cbEntidad.UseSelectable = true;
+            this.cbEntidad.SelectedIndexChanged += new System.EventHandler(this.cbEntidad_SelectedIndexChanged);
             // 
             // txtCantidadHoras
             // 
@@ -227,40 +228,40 @@
             // lblCedula
             // 
             this.lblCedula.AutoSize = true;
-            this.lblCedula.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCedula.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCedula.Location = new System.Drawing.Point(440, 214);
             this.lblCedula.Name = "lblCedula";
-            this.lblCedula.Size = new System.Drawing.Size(60, 17);
+            this.lblCedula.Size = new System.Drawing.Size(54, 16);
             this.lblCedula.TabIndex = 67;
             this.lblCedula.Text = "Cédula:";
             // 
             // lblCarne
             // 
             this.lblCarne.AutoSize = true;
-            this.lblCarne.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCarne.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCarne.Location = new System.Drawing.Point(440, 256);
             this.lblCarne.Name = "lblCarne";
-            this.lblCarne.Size = new System.Drawing.Size(52, 17);
+            this.lblCarne.Size = new System.Drawing.Size(47, 16);
             this.lblCarne.TabIndex = 68;
             this.lblCarne.Text = "Carné:";
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.Location = new System.Drawing.Point(440, 295);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(134, 17);
+            this.lblEmail.Size = new System.Drawing.Size(121, 16);
             this.lblEmail.TabIndex = 69;
             this.lblEmail.Text = "Correo electrónico:";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(108, 88);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(158, 17);
+            this.label11.Size = new System.Drawing.Size(145, 16);
             this.label11.TabIndex = 71;
             this.label11.Text = "Identificador (Máscara)";
             // 
