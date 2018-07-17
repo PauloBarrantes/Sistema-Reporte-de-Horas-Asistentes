@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace RHA.Forms.Asistentes
 {
@@ -16,8 +17,12 @@ namespace RHA.Forms.Asistentes
         DateTime Lunes;
         DateTime Domingo;
         DateTime[] Semana = new DateTime[7];
+        Class.Proyecto proyecto;
+        Empleado empleado;
         public ReporteHorasAs()
         {
+            proyecto = new Class.Proyecto();
+            empleado = new Empleado();
             InitializeComponent();
 
             DateTime hoy = DateTime.Now;
@@ -69,12 +74,74 @@ namespace RHA.Forms.Asistentes
             }
             Console.WriteLine(hoy.DayOfWeek);
 
-            lblSemana.Text = String.Format("{0:dd/MM/yy}", Lunes) +" - " +String.Format("{0:dd/MM/yy}", Domingo);  
+            lblSemana.Text = String.Format("{0:dd/MM/yy}", Lunes) +" - " +String.Format("{0:dd/MM/yy}", Domingo);
+            llenarProyectos();
+        }
+
+        public void  llenarProyectos() {
+            cbProyectoLunes.DisplayMember = "Text";
+            cbProyectoLunes.ValueMember = "Value";
+            cbProyectoMartes.DisplayMember = "Text";
+            cbProyectoMartes.ValueMember = "Value";
+            cbProyectoMierco.DisplayMember = "Text";
+            cbProyectoMierco.ValueMember = "Value";
+            cbProyectoJueves.DisplayMember = "Text";
+            cbProyectoJueves.ValueMember = "Value";
+
+            cbProyectoVier.DisplayMember = "Text";
+            cbProyectoVier.ValueMember = "Value";
+            cbProyectoSab.DisplayMember = "Text";
+            cbProyectoSab.ValueMember = "Value";
+            cbProyectoDomingo.DisplayMember = "Text";
+            cbProyectoDomingo.ValueMember = "Value";
+            SqlDataReader proyectos = proyecto.obtenerProyectos();
+            while (proyectos.Read()) {
+                cbProyectoLunes.Items.Add(new { Text = proyectos["Nombre"].ToString(), Value = proyectos["Nombre"].ToString() });
+                cbProyectoMartes.Items.Add(new { Text = proyectos["Nombre"].ToString(), Value = proyectos["Nombre"].ToString() });
+                cbProyectoMierco.Items.Add(new { Text = proyectos["Nombre"].ToString(), Value = proyectos["Nombre"].ToString() });
+                cbProyectoJueves.Items.Add(new { Text = proyectos["Nombre"].ToString(), Value = proyectos["Nombre"].ToString() });
+                cbProyectoVier.Items.Add(new { Text = proyectos["Nombre"].ToString(), Value = proyectos["Nombre"].ToString() });
+                cbProyectoSab.Items.Add(new { Text = proyectos["Nombre"].ToString(), Value = proyectos["Nombre"].ToString() });
+                cbProyectoDomingo.Items.Add(new { Text = proyectos["Nombre"].ToString(), Value = proyectos["Nombre"].ToString() });
+
+            }
+
         }
         public void SetAsistente(Asistente asistente)
         {
             this.asistente = asistente;
 
+        }
+
+        private void btnReportar_Click(object sender, EventArgs e)
+        {
+            if (cbProyectoLunes.SelectedIndex != -1 && cbHoraILunes.SelectedIndex != -1 && cbHoraFLunes.SelectedIndex != -1) {
+
+            }
+            else if (cbProyectoMartes.SelectedIndex != -1 && cbHoraIMartes.SelectedIndex != -1 && cbHoraFMartes.SelectedIndex != -1)
+            {
+
+            }
+            else if (cbProyectoMierco.SelectedIndex != -1 && cbHoraIMiercoles.SelectedIndex != -1 && cbHoraFMiercoles.SelectedIndex != -1)
+            {
+
+            }
+            else if (cbProyectoJueves.SelectedIndex != -1 && cbHoraIJueves.SelectedIndex != -1 && cbHoraFJueves.SelectedIndex != -1)
+            {
+
+            }
+            else if (cbProyectoVier.SelectedIndex != -1 && cbHoraIViernes.SelectedIndex != -1 && cbHoraFViernes.SelectedIndex != -1)
+            {
+
+            }
+            else if (cbProyectoSab.SelectedIndex != -1 && cbHoraISabado.SelectedIndex != -1 && cbHoraFSabado.SelectedIndex != -1)
+            {
+
+            }
+            else if (cbProyectoDomingo.SelectedIndex != -1 && cbHoraIDom.SelectedIndex != -1 && cbHoraFDomingo.SelectedIndex != -1)
+            {
+
+            }
         }
     }
 }

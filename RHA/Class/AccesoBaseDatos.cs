@@ -235,7 +235,7 @@ namespace RHA
                         cmd.Parameters.Add("@tipoAsistente", SqlDbType.Int).Value = tipoAsistente;
 
                         //se prepara el parámetro de retorno del procedimiento almacenado
-                        cmd.Parameters.Add("@estado", SqlDbType.Bit).Direction = ParameterDirection.Output;
+                        cmd.Parameters.Add("@isInDB", SqlDbType.Int).Direction = ParameterDirection.Output;
 
                         /*Se abre la conexión*/
                         con.Open();
@@ -244,7 +244,7 @@ namespace RHA
                         cmd.ExecuteNonQuery();
 
                         /*Se convierte en un valor entero lo que se devuelve el procedimiento*/
-                        return Convert.ToInt32(cmd.Parameters["@estado"].Value);
+                        return Convert.ToInt32(cmd.Parameters["@isInDB"].Value);
 
                     }
                     catch (SqlException ex)
@@ -257,7 +257,106 @@ namespace RHA
             }
 
         }
-        public bool agregarProyecto(string nombre, string estado)
+
+        public bool agregarBloqueHoras(string email, string nombreProyecto, string fecha, string horaI, string horaF) 
+        {
+            using (SqlConnection con = new SqlConnection(conexion))
+            {
+                /*El sqlCommand recibe como primer parámetro el nombre del procedimiento almacenado, 
+                 * de segundo parámetro recibe el sqlConnection
+                */
+                using (SqlCommand cmd = new SqlCommand("AgregarBloqueHoras", con))
+                {
+                    try
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        //Se preparan los parámetros que recibe el procedimiento almacenado
+                        cmd.Parameters.Add("@email", SqlDbType.VarChar).Value = email;
+                        cmd.Parameters.Add("@nombreProyecto", SqlDbType.VarChar).Value = nombreProyecto;
+                        cmd.Parameters.Add("@fecha", SqlDbType.VarChar).Value = fecha;
+                        cmd.Parameters.Add("@horaInicial ", SqlDbType.VarChar).Value = horaI;
+                        cmd.Parameters.Add("@horaFinal", SqlDbType.VarChar).Value = horaF;
+
+                        //se prepara el parámetro de retorno del procedimiento almacenado
+                        cmd.Parameters.Add("@salida", SqlDbType.Bit).Direction = ParameterDirection.Output;
+
+                        /*Se abre la conexión*/
+                        con.Open();
+
+                        //Se ejecuta el procedimiento almacenado
+                        cmd.ExecuteNonQuery();
+
+                        /*Se convierte en un valor entero lo que se devuelve el procedimiento*/
+                        int value = Convert.ToInt32(cmd.Parameters["@salida"].Value);
+                        if (value == 1)
+                        {
+                            return true;
+                        }
+
+                        /*Si devuelve 0 es que no se encuentra en la BD*/
+                        else
+                        {
+                            return false;
+                        }
+                    }
+                    catch (SqlException ex)
+                    {
+                        return false;
+                    }
+                }
+            }
+
+        }
+        public bool editarPerfil(string nombre, string apellido1, string apellido2, string cedula, string emailNuevo, string emailViejo, string carrera, string carne, string telefono)
+        {
+            using (SqlConnection con = new SqlConnection(conexion))
+            {
+                using (SqlCommand cmd = new SqlCommand("editarPerfil", con))
+
+                {
+                    try
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("@nombre", SqlDbType.VarChar).Value = nombre;
+                        cmd.Parameters.Add("@apellido1", SqlDbType.VarChar).Value = apellido1;
+                        cmd.Parameters.Add("@apellido2", SqlDbType.VarChar).Value = apellido2;
+                        cmd.Parameters.Add("@cedula", SqlDbType.VarChar).Value = cedula;
+                        cmd.Parameters.Add("@emailNuevo", SqlDbType.VarChar).Value = emailNuevo;
+                        cmd.Parameters.Add("@emailViejo", SqlDbType.VarChar).Value = emailViejo;
+                        cmd.Parameters.Add("@carrera", SqlDbType.VarChar).Value = carrera;
+                        cmd.Parameters.Add("@carne", SqlDbType.VarChar).Value = carne;
+                        cmd.Parameters.Add("@telefono", SqlDbType.VarChar).Value = telefono;
+
+                        //se prepara el parámetro de retorno del procedimiento almacenado
+                        cmd.Parameters.Add("@estado", SqlDbType.Bit).Direction = ParameterDirection.Output;
+                        con.Open();
+
+                        //Se ejecuta el procedimiento almacenado
+                        cmd.ExecuteNonQuery();
+
+                        int value = Convert.ToInt32(cmd.Parameters["@estado"].Value);
+
+                        if (value == 1)
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                    }
+                    catch (SqlException ex)
+                    {
+                        return false;
+                    }
+                }
+            }
+        }
+
+
+    public bool agregarProyecto(string nombre, string estado)
         {
             using (SqlConnection con = new SqlConnection(conexion))
             {

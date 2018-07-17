@@ -87,13 +87,24 @@ namespace RHA.Forms.Asistentes
 
         public void llenarDatos()
         {
-
+            string ciclo ="";
+            string anno = "";
             SqlDataReader periodo = empleado.obtenerPeriodo();
             while (periodo.Read()) {
+                ciclo = periodo["Ciclo"].ToString();
+                anno = periodo["Anno"].ToString();
                 lblperiodo.Text = lblperiodo.Text + " " + periodo["Ciclo"] + " - " + periodo["Anno"];
-            }   
-            sgProgreso.To = 100;
-            sgProgreso.Value = 60;
+            }
+            SqlDataReader nombramiento = empleado.obtenerNombramiento(this.asistente.usuarioActual, ciclo, anno);
+            int cantidadHorasNombradas = 0;
+            while (nombramiento.Read()) {
+                cantidadHorasNombradas = cantidadHorasNombradas + Int32.Parse(nombramiento["CantidadHoras"].ToString()); 
+            }
+            sgProgreso.To = cantidadHorasNombradas;
+
+            int cantidadHorasTrabajadasEnLaSemana = 0;
+            sgProgreso.Value = cantidadHorasTrabajadasEnLaSemana;
+
             Console.WriteLine(this.asistente.usuarioActual);
             SqlDataReader datosAsistente = empleado.obtenerInfoAsistente(this.asistente.usuarioActual);
             

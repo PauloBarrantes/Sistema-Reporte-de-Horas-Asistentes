@@ -51,6 +51,7 @@ namespace RHA.Forms.Secreataria
                 else
                 {
                     VentanasEmergentes.VentanaError error = new VentanasEmergentes.VentanaError("Ha ocurrido un problema");
+                    error.Show();
                 }
                 limpiar();
             }

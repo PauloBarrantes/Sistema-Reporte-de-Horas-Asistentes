@@ -86,6 +86,20 @@ namespace RHA
             }
             return datos;
         }
+        public SqlDataReader obtenerNombramiento(string usuarioActual, string ciclo, string anno)
+        {
+            SqlDataReader datos = null;
+            try
+            {
+                datos = db.ejecutarConsulta("SELECT * FROM Nombramiento "  + " WHERE Nombramiento.Email = \'" + usuarioActual + "\' and Nombramiento.Ciclo = \'"+ciclo+"\' and Nombramiento.Anno = \'"+anno+"\'");
+            }
+            catch
+            (SqlException ex)
+            {
+                Console.WriteLine("GG ObtenerNombre");
+            }
+            return datos;
+        }
         public bool login(string email, string password)
         {
             return db.login(email, password);
@@ -109,7 +123,15 @@ namespace RHA
             }
             return retorno;
         }
-
+        public bool agregarBloqueHoras(string email, string nombreProyecto, string fecha, string horaI, string horaF)
+        {
+            return db.agregarBloqueHoras(email, nombreProyecto, fecha, horaI, horaF);
+        }
+        public bool editarPerfil(string nombre, string apellido1, string apellido2, string cedula, string emailNuevo, string emailViejo, string carrera, string carne, string telefono)
+        {
+            
+            return db.editarPerfil(nombre, apellido1, apellido2, cedula, emailNuevo, emailViejo, carrera, carne, telefono);
+        }
         public bool cambiarPassword(string email, string password) {
             return db.cambiarPassword(email, password);
 

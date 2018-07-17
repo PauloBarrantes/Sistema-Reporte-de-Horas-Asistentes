@@ -18,7 +18,7 @@ namespace RHA.Forms.Administrador
             empleado = new Empleado();
             InitializeComponent();
         }
-        
+
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             string nombre = txtNombre.Text;
@@ -27,40 +27,49 @@ namespace RHA.Forms.Administrador
             string cedula = txtCedula.Text;
             string carne = txtCarne.Text;
             string email = txtEmail.Text;
-            string horasAcumuladas = txtHorasAcumuladas.Text;
-            int horasAcumuladas1 = Int32.Parse(horasAcumuladas);
+       
+            
             string carrera = cbCarrera.Text;
             string password1 = txtPassword1.Text;
             string password2 = txtPassword2.Text;
-
             string sexo = "M";
-            bool agregado;
 
-            if (rbF.Checked == true)
+            if (email != "" && password1 != "" && nombre != "" && apellido1 != "" && apellido2 != "" && carne != "" && cedula != "" && carrera != "" && txtHorasAcumuladas.Text != "")
             {
-                sexo = "F";
-            }
-            else if (rbO.Checked == true) {
-                sexo = "O";
-            }
-            if(password1 == password2)
-            {
-                agregado =   empleado.agregarAsistentes(email,password1,nombre,apellido1, apellido2, carne,cedula,carrera,"83096579", horasAcumuladas1,sexo);
-                Console.WriteLine("GG");
-                Console.WriteLine(agregado);
-                VentanasEmergentes.Satisfactorio mensaje = new VentanasEmergentes.Satisfactorio("El asistente fue agregado satisfactoriamente");
-                
-                mensaje.Show();
-            }
+                int horasAcumuladas1 = Int32.Parse(txtHorasAcumuladas.Text);
 
 
+                if (rbF.Checked == true)
+                {
+                    sexo = "F";
+                }
+                else if (rbO.Checked == true)
+                {
+                    sexo = "O";
+                }
+                if (password1 == password2)
+                {
+                    bool success = empleado.agregarAsistentes(email, password1, nombre, apellido1, apellido2, carne, cedula, carrera, "83096579", horasAcumuladas1, sexo);
+                    if (success)
+                    {
+                        VentanasEmergentes.Satisfactorio exito = new VentanasEmergentes.Satisfactorio("El asistente fue agregado satisfactoriamente");
+                        exito.Show();
+                    }
+                    else
+                    {
+                        VentanasEmergentes.VentanaError error = new VentanasEmergentes.VentanaError("Ha ocurrido un error.");
+                        error.Show();
+                    }
+                }
+                else
+                {
+                    VentanasEmergentes.VentanaError mismatch = new VentanasEmergentes.VentanaError("Las contraseñas no coinciden.");
+                    mismatch.Show();
+                }
+            }
             cleanTextFields();
         }
-
-        private void validateTextFields()
-        {
-
-        }
+        
         Administrador admin;
         public void SetAdmin(Administrador admin)
         {

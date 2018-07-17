@@ -34,10 +34,9 @@
             this.lblHorasAcumuladas = new System.Windows.Forms.Label();
             this.lblTipoAsistente = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.lblResidencia = new System.Windows.Forms.Label();
             this.lblHorasAsignadas = new System.Windows.Forms.Label();
             this.lblTel = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblPeriodo = new System.Windows.Forms.Label();
             this.lblSexo = new System.Windows.Forms.Label();
             this.lblCarne = new System.Windows.Forms.Label();
             this.lblCedula = new System.Windows.Forms.Label();
@@ -98,21 +97,11 @@
             this.lblEmail.TabIndex = 6;
             this.lblEmail.Text = "Email:";
             // 
-            // lblResidencia
-            // 
-            this.lblResidencia.AutoSize = true;
-            this.lblResidencia.Font = new System.Drawing.Font("Century Gothic", 11F);
-            this.lblResidencia.Location = new System.Drawing.Point(62, 337);
-            this.lblResidencia.Name = "lblResidencia";
-            this.lblResidencia.Size = new System.Drawing.Size(93, 20);
-            this.lblResidencia.TabIndex = 8;
-            this.lblResidencia.Text = "Residencia:";
-            // 
             // lblHorasAsignadas
             // 
             this.lblHorasAsignadas.AutoSize = true;
             this.lblHorasAsignadas.Font = new System.Drawing.Font("Century Gothic", 11F);
-            this.lblHorasAsignadas.Location = new System.Drawing.Point(62, 380);
+            this.lblHorasAsignadas.Location = new System.Drawing.Point(62, 337);
             this.lblHorasAsignadas.Name = "lblHorasAsignadas";
             this.lblHorasAsignadas.Size = new System.Drawing.Size(137, 20);
             this.lblHorasAsignadas.TabIndex = 9;
@@ -122,21 +111,21 @@
             // 
             this.lblTel.AutoSize = true;
             this.lblTel.Font = new System.Drawing.Font("Century Gothic", 11F);
-            this.lblTel.Location = new System.Drawing.Point(62, 427);
+            this.lblTel.Location = new System.Drawing.Point(62, 380);
             this.lblTel.Name = "lblTel";
             this.lblTel.Size = new System.Drawing.Size(79, 20);
             this.lblTel.TabIndex = 10;
             this.lblTel.Text = "Teléfono: ";
             // 
-            // label6
+            // lblPeriodo
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 11F);
-            this.label6.Location = new System.Drawing.Point(428, 380);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(122, 20);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Período Actual:";
+            this.lblPeriodo.AutoSize = true;
+            this.lblPeriodo.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.lblPeriodo.Location = new System.Drawing.Point(428, 380);
+            this.lblPeriodo.Name = "lblPeriodo";
+            this.lblPeriodo.Size = new System.Drawing.Size(122, 20);
+            this.lblPeriodo.TabIndex = 11;
+            this.lblPeriodo.Text = "Período Actual:";
             // 
             // lblSexo
             // 
@@ -244,10 +233,9 @@
             this.Controls.Add(this.lblSexo);
             this.Controls.Add(this.lblCarne);
             this.Controls.Add(this.lblCedula);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lblPeriodo);
             this.Controls.Add(this.lblTel);
             this.Controls.Add(this.lblHorasAsignadas);
-            this.Controls.Add(this.lblResidencia);
             this.Controls.Add(this.lblTipoAsistente);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblHorasAcumuladas);
@@ -268,10 +256,9 @@
         private System.Windows.Forms.Label lblHorasAcumuladas;
         private System.Windows.Forms.Label lblTipoAsistente;
         private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.Label lblResidencia;
         private System.Windows.Forms.Label lblHorasAsignadas;
         private System.Windows.Forms.Label lblTel;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblPeriodo;
         private System.Windows.Forms.Label lblSexo;
         private System.Windows.Forms.Label lblCarne;
         private System.Windows.Forms.Label lblCedula;

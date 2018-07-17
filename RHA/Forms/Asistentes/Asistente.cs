@@ -181,5 +181,12 @@ namespace RHA.Forms.Asistentes
             login.Show();
             this.Hide();
         }
+        public void cargarInicio() {
+            this.inicioAs1.llenarDatos();
+
+        }
+        public void cargarPerfil() {
+            this.perfilAs1.llenarPerfil(usuarioActual);
+        }
     }
 }

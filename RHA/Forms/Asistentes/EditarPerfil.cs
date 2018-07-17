@@ -37,20 +37,43 @@ namespace RHA.Forms.Asistentes
 
         }
 
-        
+
+        public void limpiar()
+        {
+            txtNombre.Clear();
+            txtApellido1.Clear();
+            txtApellido2.Clear();
+            txtEmail.Clear();
+            txtTelefono.Clear();
+            txtCarne.Clear();
+            txtCedula.Clear();
+            cbCarrera.SelectedIndex = -1;
+          }
+
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            if (txtNombre.Text != "" && txtApellido1.Text != "" && txtApellido2.Text != "" && txtEmail.Text != "" && txtTelefono.Text != "" && txtCarne.Text != ""&& txtCedula.Text != "")
+            if (txtNombre.Text != "" && txtApellido1.Text != "" && txtApellido2.Text != "" && txtEmail.Text != "" && txtTelefono.Text != "" && txtCarne.Text != "" && txtCedula.Text != "" && cbCarrera.SelectedIndex != -1)
             {
-
+                bool success = empleado.editarPerfil(txtNombre.Text, txtApellido1.Text, txtApellido2.Text, txtEmail.Text, this.asistente.usuarioActual, cbCarrera.Text, txtCarne.Text, txtCedula.Text, txtTelefono.Text);
+                if (success)
+                {
+                    VentanasEmergentes.Satisfactorio satisfactorio = new VentanasEmergentes.Satisfactorio("El perfil se ha editado con éxito");
+                    satisfactorio.Show();
+                    this.asistente.usuarioActual = txtEmail.Text;
+                    this.asistente.cargarInicio();
+                    this.asistente.cargarPerfil();
+                }
+                else
+                {
+                    VentanasEmergentes.VentanaError error = new VentanasEmergentes.VentanaError("Ha ocurrido un problema");
+                    error.Show();
+                }
+                limpiar();
             }
             else
             {
-                VentanasEmergentes.VentanaError ventanaError = new VentanasEmergentes.VentanaError("Hay espacios vacíos, por favor complételos");
-                ventanaError.StartPosition = FormStartPosition.Manual;
-                ventanaError.Location = new Point(this.ClientSize.Width / 2, this.ClientSize.Height / 2);
-                ventanaError.Show();
-               
+                VentanasEmergentes.VentanaError ventana = new VentanasEmergentes.VentanaError("Tiene que completar todos los espacios para poder editar el perfil.");
+                ventana.Show();
             }
         }
     }

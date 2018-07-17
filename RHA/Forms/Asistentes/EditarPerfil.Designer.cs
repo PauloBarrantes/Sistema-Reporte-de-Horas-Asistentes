@@ -45,8 +45,6 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.txtNombre = new MetroFramework.Controls.MetroTextBox();
             this.lblEditarPerfil = new System.Windows.Forms.Label();
-            this.lblResidencia = new System.Windows.Forms.Label();
-            this.txtResidencia = new MetroFramework.Controls.MetroTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtTelefono = new MetroFramework.Controls.MetroTextBox();
             this.SuspendLayout();
@@ -356,51 +354,11 @@
             this.lblEditarPerfil.TabIndex = 37;
             this.lblEditarPerfil.Text = "Editar Perfil";
             // 
-            // lblResidencia
-            // 
-            this.lblResidencia.AutoSize = true;
-            this.lblResidencia.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResidencia.Location = new System.Drawing.Point(440, 215);
-            this.lblResidencia.Name = "lblResidencia";
-            this.lblResidencia.Size = new System.Drawing.Size(142, 17);
-            this.lblResidencia.TabIndex = 64;
-            this.lblResidencia.Text = "Lugar de Residencia:";
-            // 
-            // txtResidencia
-            // 
-            // 
-            // 
-            // 
-            this.txtResidencia.CustomButton.Image = null;
-            this.txtResidencia.CustomButton.Location = new System.Drawing.Point(236, 1);
-            this.txtResidencia.CustomButton.Name = "";
-            this.txtResidencia.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtResidencia.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtResidencia.CustomButton.TabIndex = 1;
-            this.txtResidencia.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtResidencia.CustomButton.UseSelectable = true;
-            this.txtResidencia.CustomButton.Visible = false;
-            this.txtResidencia.Lines = new string[0];
-            this.txtResidencia.Location = new System.Drawing.Point(443, 242);
-            this.txtResidencia.MaxLength = 32767;
-            this.txtResidencia.Name = "txtResidencia";
-            this.txtResidencia.PasswordChar = '\0';
-            this.txtResidencia.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtResidencia.SelectedText = "";
-            this.txtResidencia.SelectionLength = 0;
-            this.txtResidencia.SelectionStart = 0;
-            this.txtResidencia.ShortcutsEnabled = true;
-            this.txtResidencia.Size = new System.Drawing.Size(258, 23);
-            this.txtResidencia.TabIndex = 63;
-            this.txtResidencia.UseSelectable = true;
-            this.txtResidencia.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtResidencia.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(440, 284);
+            this.label7.Location = new System.Drawing.Point(440, 216);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(66, 17);
             this.label7.TabIndex = 66;
@@ -421,7 +379,7 @@
             this.txtTelefono.CustomButton.UseSelectable = true;
             this.txtTelefono.CustomButton.Visible = false;
             this.txtTelefono.Lines = new string[0];
-            this.txtTelefono.Location = new System.Drawing.Point(443, 311);
+            this.txtTelefono.Location = new System.Drawing.Point(443, 243);
             this.txtTelefono.MaxLength = 32767;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.PasswordChar = '\0';
@@ -442,8 +400,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtTelefono);
-            this.Controls.Add(this.lblResidencia);
-            this.Controls.Add(this.txtResidencia);
             this.Controls.Add(this.cbCarrera);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtCarne);
@@ -487,8 +443,6 @@
         private System.Windows.Forms.Button btnEditar;
         private MetroFramework.Controls.MetroTextBox txtNombre;
         private System.Windows.Forms.Label lblEditarPerfil;
-        private System.Windows.Forms.Label lblResidencia;
-        private MetroFramework.Controls.MetroTextBox txtResidencia;
         private System.Windows.Forms.Label label7;
         private MetroFramework.Controls.MetroTextBox txtTelefono;
     }

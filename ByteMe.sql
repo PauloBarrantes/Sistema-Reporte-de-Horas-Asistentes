@@ -51,7 +51,7 @@ CREATE TABLE Periodo(
 	PRIMARY KEY (Ciclo,Anno)
 );
 
-CREATE TABLE BloqueDeReporte(
+CREATE TABLE BloqueDeReporte(	
 	NombreProyecto varchar(50) not null,
 	Fecha Date not null,
 	HoraInicial Time not null,
@@ -74,7 +74,7 @@ CREATE TABLE HorarioDelPeriodo(
 
 
 );
-SELECT * FROM Asistente;
+SELECT * FROM Empleado;
 CREATE TABLE BloqueDeHorario (
 	Email varchar(100) not null,
 	Ciclo varchar(25) not null,
@@ -105,6 +105,7 @@ CREATE TABLE Nombramiento(
 	PRIMARY KEY (Email,Ciclo, Anno, ID )
 
 );
+select * from Nombramiento
 
 DROP Table Nombramiento;
 DROP TABLE BloqueDeHorario;
@@ -181,13 +182,16 @@ EXEC EliminarEmpleado 'k@gmail.com'
 
 GO
 CREATE PROCEDURE AgregarBloqueHoras
+	@email varchar(100),
 	@nombreProyecto varchar(50),
 	@fecha Date,
 	@horaInicial Time ,
-	@horaFinal Time
+	@horaFinal Time,
+	@salida int OUTPUT
 AS
 	BEGIN
-		INSERT INTO BloqueDeReporte(NombreProyecto, Fecha, HoraInicial, HoraFinal) VALUES(
+		INSERT INTO BloqueDeReporte(Email,NombreProyecto, Fecha, HoraInicial, HoraFinal) VALUES(
+			@email,
 			@nombreProyecto,
 			@fecha,
 			@horaInicial,
@@ -371,8 +375,37 @@ BEGIN
 
 
 END;
-SELECT * FROM EMPLEADO;
+SELECT * FROM Nombramiento;
 EXEC Rol 'admin@gmail.com',1
+-------------------------Procedimiento Almacenado 10 ------------------------------
+
+GO
+CREATE PROCEDURE editarPerfil
+    @nombre varchar(50),
+    @apellido1 varchar (60),
+    @apellido2 varchar(60),
+    @cedula varchar(9),
+    @email varchar(100),
+    @carrera varchar(50),
+    @carne int,
+    @telefono varchar(8),
+    @estado bit OUTPUT
+AS
+
+BEGIN
+    UPDATE Empleado 
+    SET    Email = @email,
+             NombreEmp = @nombre,
+            Apellido1 = @apellido1,
+            Apellido2 = @apellido2;
+    UPDATE Asistente 
+    SET Cedula = @cedula,
+            Carne = @carne,
+            Carrera = @carrera,
+            Telefono = @telefono;
+    SET @estado = 1;
+END;
+
 ---------------------------------------------------------------------------------------------
 ------------------------------ Creacion de los TRIGGERS ------------------------------------
 ---------------------------------------------------------------------------------------------

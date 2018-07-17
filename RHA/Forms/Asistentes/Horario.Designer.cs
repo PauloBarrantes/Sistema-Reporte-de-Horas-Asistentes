@@ -225,7 +225,7 @@
             // lblName
             // 
             this.lblName.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(242, 33);
+            this.lblName.Location = new System.Drawing.Point(244, 40);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(273, 74);
             this.lblName.TabIndex = 208;

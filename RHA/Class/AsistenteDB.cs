@@ -31,8 +31,23 @@ namespace RHA.Class
             return datos;
             
         }
+        public SqlDataReader obtenerHorario(string usuarioActual, string ciclo, string anno)
+        {
+            SqlDataReader datos = null;
+            try
+            {
+                datos = db.ejecutarConsulta("SELECT Asi.Email, Asi.Cedula, Emp.NombreEmp, Emp.Apellido1, Asi.Carrera, Asi.HorasAcumuladas FROM Asistente as Asi JOIN Empleado as Emp on Emp.Email = Asi.Email");
+            }
+            catch
+            (SqlException ex)
+            {
+                Console.WriteLine("GG ObtenerNombre");
+            }
+            return datos;
 
-       public SqlDataReader obtenerBalance()
+        }
+
+        public SqlDataReader obtenerBalance()
         {
             SqlDataReader datos = null;
             try

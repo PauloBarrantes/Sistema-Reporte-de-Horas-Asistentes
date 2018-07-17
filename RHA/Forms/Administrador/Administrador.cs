@@ -32,8 +32,8 @@ namespace RHA.Forms.Administrador
             sql.Close();
 
             lblNombre.Text = nombreEmpleado;
-            btnInicio.BackColor = Color.FromArgb(28, 129, 158);
-            inicioAdministrador1.BringToFront();
+            btnAsistentes.BackColor = Color.FromArgb(28, 129, 158);
+            listaAsistentes1.BringToFront();
 
             inicioAdministrador1.SetAdmin(this);
             listaAsistentes1.SetAdmin(this);

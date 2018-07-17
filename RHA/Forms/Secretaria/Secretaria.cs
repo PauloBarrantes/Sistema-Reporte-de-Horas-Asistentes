@@ -38,6 +38,11 @@ namespace RHA.Forms.Secreataria
             }
         }
 
-      
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Login.Login login = new Login.Login();
+            login.Show();
+            this.Hide();
+        }
     }
 }
