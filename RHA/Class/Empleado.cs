@@ -86,5 +86,11 @@ namespace RHA
             return db.cambiarPassword(email, password);
 
         }
+
+        public int rol(string email)
+        {
+            int rol = db.Rol(email);
+            return rol;
+        }
     }
 }

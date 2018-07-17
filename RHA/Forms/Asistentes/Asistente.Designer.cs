@@ -39,14 +39,15 @@
             this.btnReporteAs = new System.Windows.Forms.Button();
             this.btnPerfilAs = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
+            this.cambiarContraseña1 = new RHA.Forms.Asistentes.CambiarContraseña();
+            this.editarPerfil1 = new RHA.Forms.Asistentes.EditarPerfil();
             this.agregarHorario1 = new RHA.Forms.Asistentes.AgregarHorario();
             this.reporteHorasAs1 = new RHA.Forms.Asistentes.ReporteHorasAs();
             this.perfilAs1 = new RHA.Forms.Asistentes.PerfilAs();
             this.horario2 = new RHA.Forms.Asistentes.Horario();
             this.balanceHorasAs1 = new RHA.Forms.Asistentes.BalanceHorasAs();
             this.inicioAs1 = new RHA.Forms.Asistentes.InicioAs();
-            this.editarPerfil1 = new RHA.Forms.Asistentes.EditarPerfil();
-            this.cambiarContraseña1 = new RHA.Forms.Asistentes.CambiarContraseña();
+            this.btnHide = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.pnSideBar.SuspendLayout();
             this.SuspendLayout();
@@ -54,6 +55,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(41)))), ((int)(((byte)(49)))));
+            this.panel1.Controls.Add(this.btnHide);
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Location = new System.Drawing.Point(0, -1);
             this.panel1.Name = "panel1";
@@ -202,6 +204,20 @@
             this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCerrar.UseVisualStyleBackColor = true;
             // 
+            // cambiarContraseña1
+            // 
+            this.cambiarContraseña1.Location = new System.Drawing.Point(205, 35);
+            this.cambiarContraseña1.Name = "cambiarContraseña1";
+            this.cambiarContraseña1.Size = new System.Drawing.Size(764, 586);
+            this.cambiarContraseña1.TabIndex = 11;
+            // 
+            // editarPerfil1
+            // 
+            this.editarPerfil1.Location = new System.Drawing.Point(205, 34);
+            this.editarPerfil1.Name = "editarPerfil1";
+            this.editarPerfil1.Size = new System.Drawing.Size(764, 592);
+            this.editarPerfil1.TabIndex = 10;
+            // 
             // agregarHorario1
             // 
             this.agregarHorario1.Location = new System.Drawing.Point(205, 33);
@@ -247,19 +263,17 @@
             this.inicioAs1.Size = new System.Drawing.Size(764, 593);
             this.inicioAs1.TabIndex = 4;
             // 
-            // editarPerfil1
+            // btnHide
             // 
-            this.editarPerfil1.Location = new System.Drawing.Point(205, 34);
-            this.editarPerfil1.Name = "editarPerfil1";
-            this.editarPerfil1.Size = new System.Drawing.Size(764, 592);
-            this.editarPerfil1.TabIndex = 10;
-            // 
-            // cambiarContraseña1
-            // 
-            this.cambiarContraseña1.Location = new System.Drawing.Point(205, 35);
-            this.cambiarContraseña1.Name = "cambiarContraseña1";
-            this.cambiarContraseña1.Size = new System.Drawing.Size(764, 586);
-            this.cambiarContraseña1.TabIndex = 11;
+            this.btnHide.FlatAppearance.BorderSize = 0;
+            this.btnHide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHide.Image = ((System.Drawing.Image)(resources.GetObject("btnHide.Image")));
+            this.btnHide.Location = new System.Drawing.Point(855, 0);
+            this.btnHide.Name = "btnHide";
+            this.btnHide.Size = new System.Drawing.Size(56, 35);
+            this.btnHide.TabIndex = 12;
+            this.btnHide.UseVisualStyleBackColor = true;
+            this.btnHide.Click += new System.EventHandler(this.btnHide_Click);
             // 
             // Asistente
             // 
@@ -307,5 +321,6 @@
         private AgregarHorario agregarHorario1;
         private EditarPerfil editarPerfil1;
         private CambiarContraseña cambiarContraseña1;
+        private System.Windows.Forms.Button btnHide;
     }
 }

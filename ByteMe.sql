@@ -354,10 +354,12 @@ BEGIN
 			PRINT N'Empleado Administrativo'
 			IF (SELECT Admin.Rol FROM Admin WHERE Admin.Email = @email) = 1
 				BEGIN
+					SET @rol = 1
 					PRINT N'Administrador'
 				END;
 			ELSE
 				BEGIN
+					SET @rol = 2
 					PRINT N'Secretaria'
 				END;
 		END;
