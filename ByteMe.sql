@@ -74,7 +74,7 @@ CREATE TABLE HorarioDelPeriodo(
 
 
 );
-
+SELECT * FROM Asistente;
 CREATE TABLE BloqueDeHorario (
 	Email varchar(100) not null,
 	Ciclo varchar(25) not null,

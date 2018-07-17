@@ -23,15 +23,20 @@ namespace RHA.Forms.Secreataria
         {
             this.secretaria = secretaria;
         }
-        private void limpiar() {
-
-
+        public void limpiar()
+        {
+            txtID.Clear();
+            txtCantidadHoras.Clear();
+            cbEntidad.SelectedIndex = -1;
+            cbAsistentes.SelectedIndex = -1;
+            cbPeriodo.SelectedIndex = -1;
+            cbTipoAsistente.SelectedIndex = -1;
         }
         private void btnNombrar_Click(object sender, EventArgs e)
         {
             Console.WriteLine(cbEntidad.Text);
 
-            if (txtID.Text != "" && cbEntidad.SelectedIndex != -1 && cbAsistentes.SelectedIndex != -1 && cbEntidad.SelectedIndex != -1 && txtCantidadHoras.Text != "" && cbPeriodo.SelectedIndex != -1)
+            if (txtID.Text != "" && cbEntidad.SelectedIndex != -1 && cbAsistentes.SelectedIndex != -1 && cbTipoAsistente.SelectedIndex != -1 && txtCantidadHoras.Text != "" && cbPeriodo.SelectedIndex != -1)
             {
                 string[] periodo = cbPeriodo.Text.Split(' ');
                 string ciclo = periodo[0];

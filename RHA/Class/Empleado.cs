@@ -57,6 +57,21 @@ namespace RHA
             }
             return datos;
         }
+
+        public SqlDataReader obtenerPeriodo() {
+
+            SqlDataReader datos = null;
+            try
+            {
+                datos = db.ejecutarConsulta("SELECT * FROM Periodo");
+            }
+            catch
+            (SqlException ex)
+            {
+                Console.WriteLine("GG ObtenerNombre");
+            }
+            return datos;
+        }
         public SqlDataReader obtenerInfoAsistente(string usuarioActual)
         {
             SqlDataReader datos = null;
