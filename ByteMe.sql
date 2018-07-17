@@ -1,4 +1,4 @@
-﻿
+
 USE DB_BYTEME;
 ---------------------------------------------------------------------------------------------
 ------------------------------- Creación de las tablas --------------------------------------
@@ -74,7 +74,11 @@ CREATE TABLE HorarioDelPeriodo(
 
 
 );
+<<<<<<< HEAD
 SELECT * FROM Empleado;
+=======
+
+>>>>>>> a66812270c610ee947c9c144c996e39c957b069b
 CREATE TABLE BloqueDeHorario (
 	Email varchar(100) not null,
 	Ciclo varchar(25) not null,
@@ -101,13 +105,13 @@ CREATE TABLE Nombramiento(
 	TipoAsistente int not null,
 
 	FOREIGN KEY (Ciclo, Anno) REFERENCES Periodo(Ciclo, Anno),
-	FOREIGN KEY (Email) REFERENCES Asistente(Email),
+	FOREIGN KEY (Email) REFERENCES Asistente(Email) ON UPDATE CASCADE,
 	PRIMARY KEY (Email,Ciclo, Anno, ID )
 
 );
 select * from Nombramiento
 
-DROP Table Nombramiento;
+DROP TABLE Nombramiento;
 DROP TABLE BloqueDeHorario;
 DROP TABLE HorarioDelPeriodo;
 DROP TABLE BloqueDeReporte;
@@ -140,7 +144,8 @@ CREATE PROCEDURE AgregarAsistente
 	@carrera varchar(50),
 	@telefono varchar(8),
 	@horasAcumuladas int,
-	@estado bit OUTPUT
+	@sexo char
+	@estado bit  OUTPUT
 AS
 
 
@@ -150,12 +155,12 @@ BEGIN
 	BEGIN TRY
 		INSERT INTO Empleado(Email, Contrasena, NombreEmp, Apellido1, Apellido2, salt) VALUES(@email, HASHBYTES('SHA2_512', @contrasena+CAST(@salt AS NVARCHAR(36))),@nombre,@apellido1,@apellido2, @salt);
 		INSERT INTO Asistente(Email, Carne, Cedula, Carrera, Telefono, HorasAcumuladas) VALUES(@email,@carne, @cedula,@carrera ,@telefono,@horasAcumuladas);
-		SET @estado = 1 
+		SET @estado = 1
 	END TRY
 	BEGIN CATCH
 		SET @estado = ERROR_MESSAGE()
 		PRINT N'Eror'
-		
+
 	END CATCH
 
 
@@ -163,8 +168,12 @@ END;
 
 DROP PROCEDURE AgregarAsistente
 
-EXEC AgregarAsistente 'paulobarrantes@gmail.com', '123456', 'Paulo','Barrantes','Aguilar',
-						'B60930', '117080092', 'Computacion', '83096579','50'
+EXEC AgregarAsistente 'fla@gmail.com', '123456', 'Fla','Flasterstein','Salazar',
+						'B42578', '116010610', 'Computacion', '88621201', 50,'F',1
+EXEC AgregarAsistente 'paulo@gmail.com', '123456', 'Fla','Flasterstein','Salazar',
+						'B60930', '117110011', 'Computacion', '88621202', 50,'M',1
+EXEC AgregarAsistente 'fake@gmail.com', '123456', 'Fla','Flasterstein','Salazar',
+						'B60369', '117110012', 'Computacion', '88621203', 50,'F',1
 
 SELECT *  FROM ASISTENTE;
 DROP PROCEDURE AgregarAsistente;
@@ -211,7 +220,7 @@ CREATE PROCEDURE AgregarNombramiento
 	@cantidadHoras int,
 	@entidadNombradora varchar(10),
 	@tipoAsistente int,
-	@isInDB bit = 0 OUTPUT
+	@isInDB bit OUTPUT
 AS
 
 BEGIN
@@ -227,9 +236,9 @@ BEGIN
 	SET @isInDB = 1;
 END;
 
-
+DROP procedure AgregarNombramiento
 INSERT INTO Periodo VALUES('I-Ciclo',2018);
-exec AgregarNombramiento 'paulobarrantes@gmail.com', 'A12345', 'I-Ciclo',2018,10,'UCR',0;
+exec AgregarNombramiento 'fla@gmail.com', 'A12347', 'I-Ciclo',2018,5,0,0,0;
 -------------------------Procedimiento Almacenado 5 ------------------------------
 
 GO
@@ -276,12 +285,12 @@ BEGIN
 	BEGIN TRY
 		INSERT INTO Empleado(Email, Contrasena, NombreEmp, Apellido1, Apellido2, salt) VALUES(@email, HASHBYTES('SHA2_512', @contrasena+CAST(@salt AS NVARCHAR(36))),@nombre,@apellido1,@apellido2, @salt);
 		INSERT INTO Admin(Email, Rol) VALUES(@email,@rol);
-		SET @estado = 1 
+		SET @estado = 1
 	END TRY
 	BEGIN CATCH
 		SET @estado = ERROR_MESSAGE()
 		PRINT N'Eror'
-		
+
 	END CATCH
 END;
 EXEC AgregarPersonal 'admin@gmail.com', '123456', 'Admin','SuperAdmin','GG','1',2
@@ -301,13 +310,15 @@ BEGIN
 			@nombre, @estado
 		);
 	END TRY
-	BEGIN CATCH 
+	BEGIN CATCH
 		SET @salida = ERROR_MESSAGE();
 
 	END CATCH
 
 END;
 EXEC AgregarProyecto 'PR_Parrita','Activo',1
+EXEC AgregarProyecto 'PR_Alajuela','Activo',1
+EXEC AgregarProyecto 'PR_Sarapiqui','Inactivo',1
 
 -------------------------Procedimiento Almacenado 8 ------------------------------
 GO
@@ -315,7 +326,7 @@ CREATE PROCEDURE CambiarContrasena
 	--Parametros
 	@email varchar(100),
 	@contrasena Nvarchar(50),
-	
+
 	@estado bit OUTPUT
 AS
 
@@ -324,16 +335,16 @@ BEGIN
 	--DECLARE @salt UNIQUEIDENTIFIER=NEWID();
 
 	BEGIN TRY
-		UPDATE Empleado 
+		UPDATE Empleado
 		SET Empleado.Contrasena =  HASHBYTES('SHA2_512', @contrasena+CAST(Empleado.salt AS NVARCHAR(36)))
 		WHERE Empleado.Email = @email;
-		
-		SET @estado = 1 
+
+		SET @estado = 1
 	END TRY
 	BEGIN CATCH
 		SET @estado = ERROR_MESSAGE()
 		PRINT N'Eror'
-		
+
 	END CATCH
 END;
 
@@ -352,7 +363,7 @@ AS
 
 
 BEGIN
-	
+
 	IF (SELECT COUNT(*) FROM Asistente Where Asistente.Email = @email) = 1
 		BEGIN
 			PRINT N'ASISTENTE'
@@ -377,7 +388,10 @@ BEGIN
 END;
 SELECT * FROM Nombramiento;
 EXEC Rol 'admin@gmail.com',1
+<<<<<<< HEAD
 -------------------------Procedimiento Almacenado 10 ------------------------------
+=======
+>>>>>>> a66812270c610ee947c9c144c996e39c957b069b
 
 GO
 CREATE PROCEDURE editarPerfil
@@ -393,12 +407,20 @@ CREATE PROCEDURE editarPerfil
 AS
 
 BEGIN
+<<<<<<< HEAD
     UPDATE Empleado 
+=======
+    UPDATE Empleado
+>>>>>>> a66812270c610ee947c9c144c996e39c957b069b
     SET    Email = @email,
              NombreEmp = @nombre,
             Apellido1 = @apellido1,
             Apellido2 = @apellido2;
+<<<<<<< HEAD
     UPDATE Asistente 
+=======
+    UPDATE Asistente
+>>>>>>> a66812270c610ee947c9c144c996e39c957b069b
     SET Cedula = @cedula,
             Carne = @carne,
             Carrera = @carrera,
@@ -406,6 +428,43 @@ BEGIN
     SET @estado = 1;
 END;
 
+<<<<<<< HEAD
+=======
+GO
+CREATE PROCEDURE editarPerfil
+    @nombre varchar(50),
+    @apellido1 varchar (60),
+    @apellido2 varchar(60),
+    @cedula varchar(9),
+    @emailNuevo varchar(100),
+	@emailViejo varchar(100),
+    @carrera varchar(50),
+    @carne varchar(6),
+    @telefono varchar(8),
+    @estado bit OUTPUT
+AS
+
+BEGIN
+    UPDATE Empleado
+    SET    Email = @emailNuevo,
+           NombreEmp = @nombre,
+           Apellido1 = @apellido1,
+           Apellido2 = @apellido2
+	WHERE Email = @emailViejo;
+    UPDATE Asistente
+    SET Cedula = @cedula,
+            Carne = @carne,
+            Carrera = @carrera,
+            Telefono = @telefono
+	WHERE Email = @emailViejo;
+    SET @estado = 1;
+END;
+
+drop procedure editarPerfil;
+
+select * from Empleado
+exec editarPerfil 'Flan','Flaster','Salazar','116010610','flaster@gmail.com','fla@gmail.com','Computacion','B42578','88621201',0;
+>>>>>>> a66812270c610ee947c9c144c996e39c957b069b
 ---------------------------------------------------------------------------------------------
 ------------------------------ Creacion de los TRIGGERS ------------------------------------
 ---------------------------------------------------------------------------------------------
@@ -418,3 +477,4 @@ AFTER INSERT
 		BEGIN
 
 		END;
+
