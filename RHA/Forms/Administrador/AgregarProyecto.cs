@@ -41,7 +41,7 @@ namespace RHA.Forms.Administrador
         {
             if (txtNombre.Text != "" && cbCarrera.SelectedIndex != -1)
             {
-                string nombre = txtNombre.Text;
+
                 string estado = "";
                 if (cbCarrera.SelectedIndex == 0)
                 {
@@ -49,14 +49,23 @@ namespace RHA.Forms.Administrador
                 }
                 else
                 {
-                    if(cbCarrera.SelectedIndex == 1)
+                    if (cbCarrera.SelectedIndex == 1)
                     {
-                         estado = "Inactivo";
+                        estado = "Inactivo";
                     }
 
                 }
-                Console.WriteLine(nombre);
-                Console.WriteLine(estado);                   
+                bool success = proyecto.agregarProyecto(txtNombre.Text, estado);
+                if (success)
+                {
+                    VentanasEmergentes.Satisfactorio satisfactorio = new VentanasEmergentes.Satisfactorio("El proyecto ha sido guardado con éxito");
+                    satisfactorio.Show();
+                }
+                else
+                {
+                    VentanasEmergentes.VentanaError error = new VentanasEmergentes.VentanaError("Ha ocurrido un problema");
+                }
+                limpiar();
             }
             else
             {

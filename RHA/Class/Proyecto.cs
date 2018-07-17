@@ -17,16 +17,14 @@ namespace RHA.Class
 
         public bool agregarProyecto(string nombre, string estado)
         {
-          return db.agregarProyecto(nombre, estado);
+           return db.agregarProyecto(nombre, estado);
 
-        }
-        public bool eliminarProyecto(string nombre)
-        {
-            bool retorno = false;
-
+            if (resultado == 1)
+            {
+                retorno = 1;
+            }
             return retorno;
         }
-
         public SqlDataReader obtenerProyectos()
         {
             SqlDataReader dataReader = null;

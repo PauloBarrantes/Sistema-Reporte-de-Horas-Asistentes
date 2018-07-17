@@ -44,7 +44,6 @@
             this.cbTipoAsistente = new MetroFramework.Controls.MetroComboBox();
             this.lblCedula = new System.Windows.Forms.Label();
             this.lblCarne = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.txtID = new MetroFramework.Controls.MetroTextBox();
             this.lblNombre = new System.Windows.Forms.Label();
@@ -238,7 +237,7 @@
             // 
             this.lblCedula.AutoSize = true;
             this.lblCedula.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCedula.Location = new System.Drawing.Point(440, 214);
+            this.lblCedula.Location = new System.Drawing.Point(440, 234);
             this.lblCedula.Name = "lblCedula";
             this.lblCedula.Size = new System.Drawing.Size(54, 16);
             this.lblCedula.TabIndex = 67;
@@ -248,21 +247,11 @@
             // 
             this.lblCarne.AutoSize = true;
             this.lblCarne.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCarne.Location = new System.Drawing.Point(440, 256);
+            this.lblCarne.Location = new System.Drawing.Point(440, 268);
             this.lblCarne.Name = "lblCarne";
             this.lblCarne.Size = new System.Drawing.Size(47, 16);
             this.lblCarne.TabIndex = 68;
             this.lblCarne.Text = "Carné:";
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(440, 295);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(121, 16);
-            this.lblEmail.TabIndex = 69;
-            this.lblEmail.Text = "Correo electrónico:";
             // 
             // label11
             // 
@@ -308,7 +297,7 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(440, 218);
+            this.lblNombre.Location = new System.Drawing.Point(440, 204);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(60, 16);
             this.lblNombre.TabIndex = 72;
@@ -321,7 +310,6 @@
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtID);
-            this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblCarne);
             this.Controls.Add(this.lblCedula);
             this.Controls.Add(this.cbTipoAsistente);
@@ -362,7 +350,6 @@
         private MetroFramework.Controls.MetroComboBox cbTipoAsistente;
         private System.Windows.Forms.Label lblCedula;
         private System.Windows.Forms.Label lblCarne;
-        private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label label11;
         private MetroFramework.Controls.MetroTextBox txtID;
         private System.Windows.Forms.Label lblNombre;

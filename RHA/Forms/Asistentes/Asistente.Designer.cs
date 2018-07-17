@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Asistente));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnHide = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.pnSideBar = new System.Windows.Forms.Panel();
             this.btnInicioAs = new System.Windows.Forms.Button();
@@ -47,7 +48,6 @@
             this.horario2 = new RHA.Forms.Asistentes.Horario();
             this.balanceHorasAs1 = new RHA.Forms.Asistentes.BalanceHorasAs();
             this.inicioAs1 = new RHA.Forms.Asistentes.InicioAs();
-            this.btnHide = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.pnSideBar.SuspendLayout();
             this.SuspendLayout();
@@ -64,6 +64,18 @@
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
+            // 
+            // btnHide
+            // 
+            this.btnHide.FlatAppearance.BorderSize = 0;
+            this.btnHide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHide.Image = ((System.Drawing.Image)(resources.GetObject("btnHide.Image")));
+            this.btnHide.Location = new System.Drawing.Point(855, 0);
+            this.btnHide.Name = "btnHide";
+            this.btnHide.Size = new System.Drawing.Size(56, 35);
+            this.btnHide.TabIndex = 12;
+            this.btnHide.UseVisualStyleBackColor = true;
+            this.btnHide.Click += new System.EventHandler(this.btnHide_Click);
             // 
             // btnExit
             // 
@@ -203,6 +215,7 @@
             this.btnCerrar.Text = "Cerrar Sesión";
             this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // cambiarContraseña1
             // 
@@ -262,18 +275,6 @@
             this.inicioAs1.Name = "inicioAs1";
             this.inicioAs1.Size = new System.Drawing.Size(764, 593);
             this.inicioAs1.TabIndex = 4;
-            // 
-            // btnHide
-            // 
-            this.btnHide.FlatAppearance.BorderSize = 0;
-            this.btnHide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHide.Image = ((System.Drawing.Image)(resources.GetObject("btnHide.Image")));
-            this.btnHide.Location = new System.Drawing.Point(855, 0);
-            this.btnHide.Name = "btnHide";
-            this.btnHide.Size = new System.Drawing.Size(56, 35);
-            this.btnHide.TabIndex = 12;
-            this.btnHide.UseVisualStyleBackColor = true;
-            this.btnHide.Click += new System.EventHandler(this.btnHide_Click);
             // 
             // Asistente
             // 

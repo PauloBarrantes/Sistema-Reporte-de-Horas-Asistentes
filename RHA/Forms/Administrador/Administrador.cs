@@ -131,7 +131,9 @@ namespace RHA.Forms.Administrador
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-
+            Login.Login login = new Login.Login();
+            login.Show();
+            this.Hide();
         }
 
 

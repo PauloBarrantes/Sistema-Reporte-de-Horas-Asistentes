@@ -174,5 +174,12 @@ namespace RHA.Forms.Asistentes
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Login.Login login = new Login.Login();
+            login.Show();
+            this.Hide();
+        }
     }
 }

@@ -84,7 +84,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(95, 192);
+            this.label2.Location = new System.Drawing.Point(95, 229);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(205, 24);
             this.label2.TabIndex = 2;
@@ -94,7 +94,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(126, 294);
+            this.label3.Location = new System.Drawing.Point(126, 331);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(131, 24);
             this.label3.TabIndex = 3;
@@ -116,7 +116,7 @@
             this.txtEmail.CustomButton.UseSelectable = true;
             this.txtEmail.CustomButton.Visible = false;
             this.txtEmail.Lines = new string[0];
-            this.txtEmail.Location = new System.Drawing.Point(88, 224);
+            this.txtEmail.Location = new System.Drawing.Point(88, 261);
             this.txtEmail.MaxLength = 32767;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
@@ -146,7 +146,7 @@
             this.txtPassword.CustomButton.UseSelectable = true;
             this.txtPassword.CustomButton.Visible = false;
             this.txtPassword.Lines = new string[0];
-            this.txtPassword.Location = new System.Drawing.Point(88, 332);
+            this.txtPassword.Location = new System.Drawing.Point(88, 369);
             this.txtPassword.MaxLength = 32767;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
@@ -168,7 +168,7 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(88, 415);
+            this.btnLogin.Location = new System.Drawing.Point(88, 426);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(209, 43);
             this.btnLogin.TabIndex = 6;
@@ -192,7 +192,7 @@
             this.lblCorreoInválido.AutoSize = true;
             this.lblCorreoInválido.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCorreoInválido.ForeColor = System.Drawing.Color.Brown;
-            this.lblCorreoInválido.Location = new System.Drawing.Point(73, 274);
+            this.lblCorreoInválido.Location = new System.Drawing.Point(73, 311);
             this.lblCorreoInválido.Name = "lblCorreoInválido";
             this.lblCorreoInválido.Size = new System.Drawing.Size(251, 15);
             this.lblCorreoInválido.TabIndex = 9;
@@ -203,7 +203,7 @@
             this.lblNoCorreo.AutoSize = true;
             this.lblNoCorreo.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNoCorreo.ForeColor = System.Drawing.Color.Brown;
-            this.lblNoCorreo.Location = new System.Drawing.Point(108, 250);
+            this.lblNoCorreo.Location = new System.Drawing.Point(108, 287);
             this.lblNoCorreo.Name = "lblNoCorreo";
             this.lblNoCorreo.Size = new System.Drawing.Size(184, 15);
             this.lblNoCorreo.TabIndex = 10;
@@ -214,7 +214,7 @@
             this.lblFaltaCorreo.AutoSize = true;
             this.lblFaltaCorreo.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFaltaCorreo.ForeColor = System.Drawing.Color.Brown;
-            this.lblFaltaCorreo.Location = new System.Drawing.Point(92, 250);
+            this.lblFaltaCorreo.Location = new System.Drawing.Point(92, 287);
             this.lblFaltaCorreo.Name = "lblFaltaCorreo";
             this.lblFaltaCorreo.Size = new System.Drawing.Size(218, 15);
             this.lblFaltaCorreo.TabIndex = 11;
@@ -225,7 +225,7 @@
             this.lblFaltanCampos.AutoSize = true;
             this.lblFaltanCampos.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFaltanCampos.ForeColor = System.Drawing.Color.Brown;
-            this.lblFaltanCampos.Location = new System.Drawing.Point(108, 358);
+            this.lblFaltanCampos.Location = new System.Drawing.Point(108, 395);
             this.lblFaltanCampos.Name = "lblFaltanCampos";
             this.lblFaltanCampos.Size = new System.Drawing.Size(182, 15);
             this.lblFaltanCampos.TabIndex = 12;
@@ -234,7 +234,7 @@
             // lblLogoProdus
             // 
             this.lblLogoProdus.Image = ((System.Drawing.Image)(resources.GetObject("lblLogoProdus.Image")));
-            this.lblLogoProdus.Location = new System.Drawing.Point(88, 30);
+            this.lblLogoProdus.Location = new System.Drawing.Point(86, 29);
             this.lblLogoProdus.Name = "lblLogoProdus";
             this.lblLogoProdus.Size = new System.Drawing.Size(228, 127);
             this.lblLogoProdus.TabIndex = 13;

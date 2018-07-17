@@ -107,23 +107,45 @@ namespace RHA.Forms.Asistentes
             Console.WriteLine(times[1].ToString());     // Displays "02:14:18".
 
             bool bloque = false;
+            string diaActual = "";
+            TimeSpan horaInicio = times[0];
+            TimeSpan horaFin = times[0];
             for (int i = 0; i < 5; i++)
             {
-                for (j = 0; j < 10; j++)
+                for (int j = 0; j < 10; j++)
                 {
-                    if (horario[i, j] == true && bloque == true)
+                    if (horario[i, j] == true && bloque == false)
                     {
-
+                        bloque = true;
+                        horaInicio = times[j];
 
                     }
-                    else if (horario[i, j] == true && bloque == false)
+                    else if (horario[i, j] == true && bloque == true)
                     {
+                        if (j == 9)
+                        {
+                            diaActual = dias[i];
+                            horaFin = times[j];
+                            //asistente.guardarBloqueHorario(this.asistente.usuarioActual,"I Semestre",2018,diaActual, horaInicio, horaFin);
+                            Console.WriteLine("Hora Inicio" + horaInicio + "Hora Fin: " + horaFin + "Dia" + diaActual);
 
+                            bloque = false;
+                        }
+                        // Se acabo
                     }
                     else if (horario[i, j] == false && bloque == true)
                     {
 
-                    }
+                        // Se acabo el bloque en el pasado
+                        diaActual = dias[i];
+                        horaFin = times[j-1];
+                        Console.WriteLine("Hora Inicio"+horaInicio + "Hora Fin: " + horaFin + "Dia" + diaActual);
+                        //asistente.guardarBloqueHorario(this.asistente.usuarioActual, "I Semestre", 2018, diaActual, horaInicio, horaFin);
+                        bloque = false;
+                        
+
+
+                    } 
                 }
             }
 
