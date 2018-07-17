@@ -308,6 +308,92 @@ namespace RHA
             }
 
         }
+
+        public bool guardarBloqueReporte(string email, string nombreProyecto, string fecha, string horaInicio, string horaFinal) {
+            using (SqlConnection con = new SqlConnection(conexion))
+            {
+                using (SqlCommand cmd = new SqlCommand("AgregarBloqueHoras", con))
+
+                {
+                    try
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("@email", SqlDbType.VarChar).Value = email;
+                        cmd.Parameters.Add("@nombreProyecto", SqlDbType.VarChar).Value = nombreProyecto;
+                        cmd.Parameters.Add("@fecha", SqlDbType.Date).Value = fecha;
+                        cmd.Parameters.Add("@horaInicial", SqlDbType.Time).Value = horaInicio;
+                        cmd.Parameters.Add("@horaFinal", SqlDbType.Time).Value = horaFinal;
+                        
+                        //se prepara el parámetro de retorno del procedimiento almacenado
+                        cmd.Parameters.Add("@salida", SqlDbType.Int).Direction = ParameterDirection.Output;
+                        con.Open();
+
+                        //Se ejecuta el procedimiento almacenado
+                        cmd.ExecuteNonQuery();
+
+                        int value = Convert.ToInt32(cmd.Parameters["@salida"].Value);
+
+                        if (value == 1)
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                    }
+                    catch (SqlException ex)
+                    {
+                        return false;
+                    }
+                }
+            }
+
+        }
+
+        public bool guardarBloqueHorario(string email, string ciclo, string anno, string dia, string horaInicio, string horaFinal) {
+            using (SqlConnection con = new SqlConnection(conexion))
+            {
+                using (SqlCommand cmd = new SqlCommand("AgregarBloqueHorario", con))
+
+                {
+                    try
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("@email", SqlDbType.VarChar).Value = email;
+                        cmd.Parameters.Add("@ciclo", SqlDbType.VarChar).Value = nombreProyecto;
+                        cmd.Parameters.Add("@anno", SqlDbType.Date).Value = fecha;
+                        cmd.Parameters.Add("@dia", SqlDbType.Time).Value = horaInicio;
+                        cmd.Parameters.Add("@horaInicio", SqlDbType.Time).Value = horaFinal;
+                        cmd.Parameters.Add("@horaFinal", SqlDbType.Time).Value = horaFinal;
+
+                        //se prepara el parámetro de retorno del procedimiento almacenado
+                        cmd.Parameters.Add("@salida", SqlDbType.Int).Direction = ParameterDirection.Output;
+                        con.Open();
+
+                        //Se ejecuta el procedimiento almacenado
+                        cmd.ExecuteNonQuery();
+
+                        int value = Convert.ToInt32(cmd.Parameters["@salida"].Value);
+
+                        if (value == 1)
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                    }
+                    catch (SqlException ex)
+                    {
+                        return false;
+                    }
+                }
+            }
+        }
         public bool editarPerfil(string nombre, string apellido1, string apellido2, string cedula, string emailNuevo, string emailViejo, string carrera, string carne, string telefono)
         {
             using (SqlConnection con = new SqlConnection(conexion))

@@ -12,10 +12,21 @@ namespace RHA.Class
     {
         AccesoBaseDatos db;
 
+
+
         public AsistenteDB()
         {
             db = new AccesoBaseDatos();
         }
+
+        public bool guardarBloqueReporte(string email, string nombreProyecto, string fecha, string horaInicial, string horaFinal) {
+           return  db.guardarBloqueReporte(email, nombreProyecto, fecha, horaInicial, horaFinal);
+        }
+
+        public bool guardarBloqueHorario(string email, string ciclo, string anno, string dia, string horaInicio, string horaFinal) {
+            return db.guardarBloqueHorario(email, ciclo, anno, dia, horaInicio, horaFinal);
+        }
+
 
         public SqlDataReader obtenerAsistentes() {
             SqlDataReader datos = null;

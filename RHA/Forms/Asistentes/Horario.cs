@@ -28,7 +28,8 @@ namespace RHA.Forms.Asistentes
         {
             this.asistente = asistente;
         }
-        public void llenarHorario(string usuario) {
+        public void llenarHorario(string usuario)
+        {
             SqlDataReader nombre = empleado.obtenerNombre(usuario);
             while (nombre.Read()) {
                 lblName.Text = nombre["NombreEmp"].ToString();
