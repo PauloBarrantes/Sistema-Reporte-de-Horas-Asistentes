@@ -153,7 +153,7 @@ namespace RHA
          Modifica: Agrega en la base de datos un nuevo usuario
          Retorna: 1 si se pudo guardar el nuevo usuario, un número diferente a cero que corresponde al número de error
          si no se pudo insertar*/
-        public int agregarAsistente(string email, string password, string nombre, string apellido1, string apellido2, string carne, string cedula, string carrera, string telefono, int horasAcumuladas)
+        public int agregarAsistente(string email, string password, string nombre, string apellido1, string apellido2, string carne, string cedula, string carrera, string telefono, int horasAcumuladas, string sexo)
         {
             int error = 0;
             using (SqlConnection con = new SqlConnection(conexion))
@@ -177,6 +177,9 @@ namespace RHA
                         cmd.Parameters.Add("@cedula", SqlDbType.VarChar).Value = cedula;
                         cmd.Parameters.Add("@carrera", SqlDbType.VarChar).Value = carrera;
                         cmd.Parameters.Add("@telefono", SqlDbType.VarChar).Value = telefono;
+                        cmd.Parameters.Add("@sexo", SqlDbType.VarChar).Value = sexo;
+
+
                         cmd.Parameters.Add("@horasAcumuladas", SqlDbType.Int).Value = horasAcumuladas;
 
                         //se prepara el parámetro de retorno del procedimiento almacenado

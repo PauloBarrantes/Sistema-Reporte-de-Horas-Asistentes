@@ -17,10 +17,10 @@ namespace RHA
             db = new AccesoBaseDatos();
         }
 
-        public bool agregarAsistentes(string email, string password, string nombre, string apellido1, string apellido2, string carne, string cedula, string carrera, string telefono, int horasAcumuladas)
+        public bool agregarAsistentes(string email, string password, string nombre, string apellido1, string apellido2, string carne, string cedula, string carrera, string telefono, int horasAcumuladas, string sexo)
         {
             bool retorno = false;
-            int resultado = db.agregarAsistente(email, password, nombre, apellido1, apellido2, carne, cedula, carrera, telefono, horasAcumuladas);
+            int resultado = db.agregarAsistente(email, password, nombre, apellido1, apellido2, carne, cedula, carrera, telefono, horasAcumuladas, sexo);
 
             if (resultado == 1)
             {

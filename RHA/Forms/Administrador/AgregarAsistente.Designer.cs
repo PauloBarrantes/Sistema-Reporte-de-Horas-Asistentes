@@ -30,7 +30,7 @@
         {
             this.lblBienvenido = new System.Windows.Forms.Label();
             this.txtNombre = new MetroFramework.Controls.MetroTextBox();
-            this.rbEstudiante = new MetroFramework.Controls.MetroRadioButton();
+            this.rbM = new MetroFramework.Controls.MetroRadioButton();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,8 +46,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtCarne = new MetroFramework.Controls.MetroTextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.rbAsistente = new MetroFramework.Controls.MetroRadioButton();
-            this.rbGraduado = new MetroFramework.Controls.MetroRadioButton();
+            this.rbF = new MetroFramework.Controls.MetroRadioButton();
+            this.rbO = new MetroFramework.Controls.MetroRadioButton();
             this.label11 = new System.Windows.Forms.Label();
             this.txtPassword2 = new MetroFramework.Controls.MetroTextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -97,16 +97,16 @@
             this.txtNombre.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtNombre.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // rbEstudiante
+            // rbM
             // 
-            this.rbEstudiante.AutoSize = true;
-            this.rbEstudiante.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.rbEstudiante.Location = new System.Drawing.Point(550, 206);
-            this.rbEstudiante.Name = "rbEstudiante";
-            this.rbEstudiante.Size = new System.Drawing.Size(78, 15);
-            this.rbEstudiante.TabIndex = 6;
-            this.rbEstudiante.Text = "Estudiante";
-            this.rbEstudiante.UseSelectable = true;
+            this.rbM.AutoSize = true;
+            this.rbM.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.rbM.Location = new System.Drawing.Point(550, 206);
+            this.rbM.Name = "rbM";
+            this.rbM.Size = new System.Drawing.Size(78, 15);
+            this.rbM.TabIndex = 6;
+            this.rbM.Text = "Masculino";
+            this.rbM.UseSelectable = true;
             // 
             // btnAgregar
             // 
@@ -366,30 +366,30 @@
             this.label9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(440, 206);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(98, 17);
+            this.label9.Size = new System.Drawing.Size(41, 17);
             this.label9.TabIndex = 26;
-            this.label9.Text = "Tipo Asistente:";
+            this.label9.Text = "Sexo:";
             // 
-            // rbAsistente
+            // rbF
             // 
-            this.rbAsistente.AutoSize = true;
-            this.rbAsistente.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.rbAsistente.Location = new System.Drawing.Point(550, 238);
-            this.rbAsistente.Name = "rbAsistente";
-            this.rbAsistente.Size = new System.Drawing.Size(71, 15);
-            this.rbAsistente.TabIndex = 27;
-            this.rbAsistente.Text = "Asistente";
-            this.rbAsistente.UseSelectable = true;
+            this.rbF.AutoSize = true;
+            this.rbF.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.rbF.Location = new System.Drawing.Point(550, 238);
+            this.rbF.Name = "rbF";
+            this.rbF.Size = new System.Drawing.Size(76, 15);
+            this.rbF.TabIndex = 27;
+            this.rbF.Text = "Femenino";
+            this.rbF.UseSelectable = true;
             // 
-            // rbGraduado
+            // rbO
             // 
-            this.rbGraduado.AutoSize = true;
-            this.rbGraduado.Location = new System.Drawing.Point(550, 275);
-            this.rbGraduado.Name = "rbGraduado";
-            this.rbGraduado.Size = new System.Drawing.Size(75, 15);
-            this.rbGraduado.TabIndex = 28;
-            this.rbGraduado.Text = "Graduado";
-            this.rbGraduado.UseSelectable = true;
+            this.rbO.AutoSize = true;
+            this.rbO.Location = new System.Drawing.Point(550, 275);
+            this.rbO.Name = "rbO";
+            this.rbO.Size = new System.Drawing.Size(47, 15);
+            this.rbO.TabIndex = 28;
+            this.rbO.Text = "Otro";
+            this.rbO.UseSelectable = true;
             // 
             // label11
             // 
@@ -535,8 +535,8 @@
             this.Controls.Add(this.txtPassword2);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txtPassword1);
-            this.Controls.Add(this.rbGraduado);
-            this.Controls.Add(this.rbAsistente);
+            this.Controls.Add(this.rbO);
+            this.Controls.Add(this.rbF);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtCarne);
@@ -552,7 +552,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.rbEstudiante);
+            this.Controls.Add(this.rbM);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblBienvenido);
             this.Name = "AgregarAsistente";
@@ -566,7 +566,7 @@
 
         private System.Windows.Forms.Label lblBienvenido;
         private MetroFramework.Controls.MetroTextBox txtNombre;
-        private MetroFramework.Controls.MetroRadioButton rbEstudiante;
+        private MetroFramework.Controls.MetroRadioButton rbM;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Label label1;
@@ -582,8 +582,8 @@
         private System.Windows.Forms.Label label8;
         private MetroFramework.Controls.MetroTextBox txtCarne;
         private System.Windows.Forms.Label label9;
-        private MetroFramework.Controls.MetroRadioButton rbAsistente;
-        private MetroFramework.Controls.MetroRadioButton rbGraduado;
+        private MetroFramework.Controls.MetroRadioButton rbF;
+        private MetroFramework.Controls.MetroRadioButton rbO;
         private System.Windows.Forms.Label label11;
         private MetroFramework.Controls.MetroTextBox txtPassword2;
         private System.Windows.Forms.Label label12;

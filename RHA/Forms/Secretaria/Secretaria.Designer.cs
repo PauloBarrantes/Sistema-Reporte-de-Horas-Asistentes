@@ -32,9 +32,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
             this.pnSideBar = new System.Windows.Forms.Panel();
-            this.btnInicioAs = new System.Windows.Forms.Button();
-            this.lblNombreAsistente = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.Button();
+            this.agregarNombramiento1 = new RHA.Forms.Secreataria.AgregarNombramiento();
             this.panel1.SuspendLayout();
             this.pnSideBar.SuspendLayout();
             this.SuspendLayout();
@@ -63,40 +62,11 @@
             // pnSideBar
             // 
             this.pnSideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(122)))));
-            this.pnSideBar.Controls.Add(this.btnInicioAs);
-            this.pnSideBar.Controls.Add(this.lblNombreAsistente);
             this.pnSideBar.Controls.Add(this.btnCerrar);
             this.pnSideBar.Location = new System.Drawing.Point(-1, 33);
             this.pnSideBar.Name = "pnSideBar";
             this.pnSideBar.Size = new System.Drawing.Size(207, 593);
             this.pnSideBar.TabIndex = 4;
-            // 
-            // btnInicioAs
-            // 
-            this.btnInicioAs.FlatAppearance.BorderSize = 0;
-            this.btnInicioAs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInicioAs.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInicioAs.ForeColor = System.Drawing.Color.White;
-            this.btnInicioAs.Image = ((System.Drawing.Image)(resources.GetObject("btnInicioAs.Image")));
-            this.btnInicioAs.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnInicioAs.Location = new System.Drawing.Point(1, 114);
-            this.btnInicioAs.Name = "btnInicioAs";
-            this.btnInicioAs.Size = new System.Drawing.Size(206, 60);
-            this.btnInicioAs.TabIndex = 8;
-            this.btnInicioAs.Text = "Inicio";
-            this.btnInicioAs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInicioAs.UseVisualStyleBackColor = true;
-            // 
-            // lblNombreAsistente
-            // 
-            this.lblNombreAsistente.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreAsistente.ForeColor = System.Drawing.Color.White;
-            this.lblNombreAsistente.Location = new System.Drawing.Point(0, 30);
-            this.lblNombreAsistente.Name = "lblNombreAsistente";
-            this.lblNombreAsistente.Size = new System.Drawing.Size(207, 23);
-            this.lblNombreAsistente.TabIndex = 13;
-            this.lblNombreAsistente.Text = "Nombre";
-            this.lblNombreAsistente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnCerrar
             // 
@@ -114,11 +84,19 @@
             this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCerrar.UseVisualStyleBackColor = true;
             // 
+            // agregarNombramiento1
+            // 
+            this.agregarNombramiento1.Location = new System.Drawing.Point(206, 33);
+            this.agregarNombramiento1.Name = "agregarNombramiento1";
+            this.agregarNombramiento1.Size = new System.Drawing.Size(764, 593);
+            this.agregarNombramiento1.TabIndex = 6;
+            // 
             // Secretaria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(970, 625);
+            this.Controls.Add(this.agregarNombramiento1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnSideBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -135,8 +113,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Panel pnSideBar;
-        private System.Windows.Forms.Button btnInicioAs;
-        private System.Windows.Forms.Label lblNombreAsistente;
         private System.Windows.Forms.Button btnCerrar;
+        private AgregarNombramiento agregarNombramiento1;
     }
 }

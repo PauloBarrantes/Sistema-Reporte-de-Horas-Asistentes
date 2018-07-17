@@ -64,6 +64,7 @@ namespace RHA.Forms.Administrador
                 else
                 {
                     VentanasEmergentes.VentanaError error = new VentanasEmergentes.VentanaError("Ha ocurrido un problema");
+                    error.Show();
                 }
                 limpiar();
             }

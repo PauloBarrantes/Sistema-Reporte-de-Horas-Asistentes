@@ -23,16 +23,36 @@ namespace RHA.Forms.Secreataria
         {
             this.secretaria = secretaria;
         }
+        private void limpiar() {
 
+
+        }
         private void btnNombrar_Click(object sender, EventArgs e)
         {
             Console.WriteLine(cbEntidad.Text);
 
-            if (txtID.Text != "" && cbEntidad.SelectedIndex != -1 && cbAsistentes.SelectedIndex != -1 && cbEntidad.SelectedIndex != -1 && txtCantidadHoras.Text != "" && cbPeriodo.SelectedIndex != -1){
+            if (txtID.Text != "" && cbEntidad.SelectedIndex != -1 && cbAsistentes.SelectedIndex != -1 && cbEntidad.SelectedIndex != -1 && txtCantidadHoras.Text != "" && cbPeriodo.SelectedIndex != -1)
+            {
                 string[] periodo = cbPeriodo.Text.Split(' ');
                 string ciclo = periodo[0];
                 int anno = Int32.Parse(periodo[1]);
-                empleado.agregarNombramiento(cbAsistentes.Text, txtID.Text, ciclo, anno, Int32.Parse(txtCantidadHoras.Text), cbEntidad.Text, Int32.Parse(cbTipoAsistente.Text));
+                bool success= empleado.agregarNombramiento(cbAsistentes.Text, txtID.Text, ciclo, anno, Int32.Parse(txtCantidadHoras.Text), cbEntidad.Text, Int32.Parse(cbTipoAsistente.Text));
+                
+                if (success)
+                {
+                    VentanasEmergentes.Satisfactorio satisfactorio = new VentanasEmergentes.Satisfactorio("El nombramiento ha sido guardado con éxito");
+                    satisfactorio.Show();
+                }
+                else
+                {
+                    VentanasEmergentes.VentanaError error = new VentanasEmergentes.VentanaError("Ha ocurrido un problema");
+                }
+                limpiar();
+            }
+            else
+            {
+                VentanasEmergentes.VentanaError ventana = new VentanasEmergentes.VentanaError("Tiene que completar todos los espacios para poder agregar el nombramiento");
+                ventana.Show();
             }
         }
 

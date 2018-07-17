@@ -32,10 +32,20 @@ namespace RHA.Forms.Administrador
             string carrera = cbCarrera.Text;
             string password1 = txtPassword1.Text;
             string password2 = txtPassword2.Text;
+
+            string sexo = "M";
             bool agregado;
+
+            if (rbF.Checked == true)
+            {
+                sexo = "F";
+            }
+            else if (rbO.Checked == true) {
+                sexo = "O";
+            }
             if(password1 == password2)
             {
-                agregado =   empleado.agregarAsistentes(email,password1,nombre,apellido1, apellido2, carne,cedula,carrera,"83096579", horasAcumuladas1);
+                agregado =   empleado.agregarAsistentes(email,password1,nombre,apellido1, apellido2, carne,cedula,carrera,"83096579", horasAcumuladas1,sexo);
                 Console.WriteLine("GG");
                 Console.WriteLine(agregado);
                 VentanasEmergentes.Satisfactorio mensaje = new VentanasEmergentes.Satisfactorio("El asistente fue agregado satisfactoriamente");
@@ -89,7 +99,7 @@ namespace RHA.Forms.Administrador
             txtHorasAcumuladas.Clear();
             cbCarrera.SelectedIndex = -1;
 
-            rbEstudiante.Select();
+            rbM.Select();
         }
     }
 }

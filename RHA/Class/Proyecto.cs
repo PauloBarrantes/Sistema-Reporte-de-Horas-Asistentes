@@ -19,11 +19,7 @@ namespace RHA.Class
         {
            return db.agregarProyecto(nombre, estado);
 
-            if (resultado == 1)
-            {
-                retorno = 1;
-            }
-            return retorno;
+        
         }
         public SqlDataReader obtenerProyectos()
         {
