@@ -155,6 +155,8 @@
             // 
             this.cbAsistentes.FormattingEnabled = true;
             this.cbAsistentes.ItemHeight = 23;
+            this.cbAsistentes.Items.AddRange(new object[] {
+            "paulobarrantes@gmail.com"});
             this.cbAsistentes.Location = new System.Drawing.Point(443, 115);
             this.cbAsistentes.Name = "cbAsistentes";
             this.cbAsistentes.Size = new System.Drawing.Size(205, 29);
@@ -165,6 +167,9 @@
             // 
             this.cbEntidad.FormattingEnabled = true;
             this.cbEntidad.ItemHeight = 23;
+            this.cbEntidad.Items.AddRange(new object[] {
+            "UCR",
+            "Fundevi"});
             this.cbEntidad.Location = new System.Drawing.Point(111, 193);
             this.cbEntidad.Name = "cbEntidad";
             this.cbEntidad.Size = new System.Drawing.Size(205, 29);
@@ -206,6 +211,9 @@
             // 
             this.cbPeriodo.FormattingEnabled = true;
             this.cbPeriodo.ItemHeight = 23;
+            this.cbPeriodo.Items.AddRange(new object[] {
+            "I-Ciclo 2018",
+            "II-Ciclo 2018"});
             this.cbPeriodo.Location = new System.Drawing.Point(111, 321);
             this.cbPeriodo.Name = "cbPeriodo";
             this.cbPeriodo.Size = new System.Drawing.Size(205, 29);
@@ -217,9 +225,9 @@
             this.cbTipoAsistente.FormattingEnabled = true;
             this.cbTipoAsistente.ItemHeight = 23;
             this.cbTipoAsistente.Items.AddRange(new object[] {
-            "Estudiante",
-            "Asistente",
-            "Asistente Graduado"});
+            "0",
+            "1",
+            "2"});
             this.cbTipoAsistente.Location = new System.Drawing.Point(111, 399);
             this.cbTipoAsistente.Name = "cbTipoAsistente";
             this.cbTipoAsistente.Size = new System.Drawing.Size(205, 29);
@@ -229,13 +237,8 @@
             // lblCedula
             // 
             this.lblCedula.AutoSize = true;
-<<<<<<< HEAD
             this.lblCedula.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCedula.Location = new System.Drawing.Point(440, 214);
-=======
-            this.lblCedula.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCedula.Location = new System.Drawing.Point(440, 256);
->>>>>>> bd0dc70717778d2322c81595b25f27ba75ba88b5
             this.lblCedula.Name = "lblCedula";
             this.lblCedula.Size = new System.Drawing.Size(54, 16);
             this.lblCedula.TabIndex = 67;
@@ -244,13 +247,8 @@
             // lblCarne
             // 
             this.lblCarne.AutoSize = true;
-<<<<<<< HEAD
             this.lblCarne.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCarne.Location = new System.Drawing.Point(440, 256);
-=======
-            this.lblCarne.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCarne.Location = new System.Drawing.Point(440, 298);
->>>>>>> bd0dc70717778d2322c81595b25f27ba75ba88b5
             this.lblCarne.Name = "lblCarne";
             this.lblCarne.Size = new System.Drawing.Size(47, 16);
             this.lblCarne.TabIndex = 68;
@@ -259,13 +257,8 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-<<<<<<< HEAD
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.Location = new System.Drawing.Point(440, 295);
-=======
-            this.lblEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(440, 337);
->>>>>>> bd0dc70717778d2322c81595b25f27ba75ba88b5
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(121, 16);
             this.lblEmail.TabIndex = 69;
@@ -314,10 +307,10 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.Location = new System.Drawing.Point(440, 218);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(65, 17);
+            this.lblNombre.Size = new System.Drawing.Size(60, 16);
             this.lblNombre.TabIndex = 72;
             this.lblNombre.Text = "Nombre:";
             // 

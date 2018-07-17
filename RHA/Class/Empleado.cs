@@ -82,7 +82,6 @@ namespace RHA
 
             return retorno;
         }
-<<<<<<< HEAD
 
         public bool agregarNombramiento(string email, string idNombramiento, string ciclo, int anno, int horas, string entNombradora, int tipoAsistente)
         {
@@ -96,7 +95,6 @@ namespace RHA
             return retorno;
         }
 
-=======
         public bool cambiarPassword(string email, string password) {
             return db.cambiarPassword(email, password);
 
@@ -107,6 +105,5 @@ namespace RHA
             int rol = db.Rol(email);
             return rol;
         }
->>>>>>> bd0dc70717778d2322c81595b25f27ba75ba88b5
     }
 }

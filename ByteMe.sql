@@ -281,6 +281,7 @@ BEGIN
 	END CATCH
 END;
 EXEC AgregarPersonal 'admin@gmail.com', '123456', 'Admin','SuperAdmin','GG','1',2
+EXEC AgregarPersonal 'secre@gmail.com', '123456', 'Secre','SuperSecre','GG','2',2
 -------------------------Procedimiento Almacenado 7 ------------------------------
 GO
 CREATE PROCEDURE AgregarProyecto
