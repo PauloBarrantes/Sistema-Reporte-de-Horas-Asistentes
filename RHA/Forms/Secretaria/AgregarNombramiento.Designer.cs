@@ -47,6 +47,7 @@
             this.lblEmail = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.txtID = new MetroFramework.Controls.MetroTextBox();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblInfo
@@ -228,8 +229,13 @@
             // lblCedula
             // 
             this.lblCedula.AutoSize = true;
+<<<<<<< HEAD
             this.lblCedula.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCedula.Location = new System.Drawing.Point(440, 214);
+=======
+            this.lblCedula.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCedula.Location = new System.Drawing.Point(440, 256);
+>>>>>>> bd0dc70717778d2322c81595b25f27ba75ba88b5
             this.lblCedula.Name = "lblCedula";
             this.lblCedula.Size = new System.Drawing.Size(54, 16);
             this.lblCedula.TabIndex = 67;
@@ -238,8 +244,13 @@
             // lblCarne
             // 
             this.lblCarne.AutoSize = true;
+<<<<<<< HEAD
             this.lblCarne.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCarne.Location = new System.Drawing.Point(440, 256);
+=======
+            this.lblCarne.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCarne.Location = new System.Drawing.Point(440, 298);
+>>>>>>> bd0dc70717778d2322c81595b25f27ba75ba88b5
             this.lblCarne.Name = "lblCarne";
             this.lblCarne.Size = new System.Drawing.Size(47, 16);
             this.lblCarne.TabIndex = 68;
@@ -248,8 +259,13 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
+<<<<<<< HEAD
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.Location = new System.Drawing.Point(440, 295);
+=======
+            this.lblEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(440, 337);
+>>>>>>> bd0dc70717778d2322c81595b25f27ba75ba88b5
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(121, 16);
             this.lblEmail.TabIndex = 69;
@@ -295,10 +311,21 @@
             this.txtID.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtID.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(440, 218);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(65, 17);
+            this.lblNombre.TabIndex = 72;
+            this.lblNombre.Text = "Nombre:";
+            // 
             // AgregarNombramiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.lblEmail);
@@ -345,5 +372,6 @@
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label label11;
         private MetroFramework.Controls.MetroTextBox txtID;
+        private System.Windows.Forms.Label lblNombre;
     }
 }

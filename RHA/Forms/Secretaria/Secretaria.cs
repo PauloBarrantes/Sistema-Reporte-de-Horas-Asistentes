@@ -12,8 +12,11 @@ namespace RHA.Forms.Secreataria
 {
     public partial class Secretaria : Form
     {
-        public Secretaria()
+
+        string usuarioActual;
+        public Secretaria(string email)
         {
+            this.usuarioActual = email;
             InitializeComponent();
         }
         

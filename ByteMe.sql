@@ -305,8 +305,73 @@ END;
 EXEC AgregarProyecto 'PR_Parrita','Activo',1
 
 -------------------------Procedimiento Almacenado 8 ------------------------------
--------------------------Procedimiento Almacenado 9 ------------------------------
+GO
+CREATE PROCEDURE CambiarContrasena
+	--Parametros
+	@email varchar(100),
+	@contrasena Nvarchar(50),
+	
+	@estado bit OUTPUT
+AS
 
+
+BEGIN
+	--DECLARE @salt UNIQUEIDENTIFIER=NEWID();
+
+	BEGIN TRY
+		UPDATE Empleado 
+		SET Empleado.Contrasena =  HASHBYTES('SHA2_512', @contrasena+CAST(Empleado.salt AS NVARCHAR(36)))
+		WHERE Empleado.Email = @email;
+		
+		SET @estado = 1 
+	END TRY
+	BEGIN CATCH
+		SET @estado = ERROR_MESSAGE()
+		PRINT N'Eror'
+		
+	END CATCH
+END;
+
+EXEC CambiarContrasena 'paulobarrantes1@gmail.com','gg2',1
+
+-------------------------Procedimiento Almacenado 9 ------------------------------
+GO
+CREATE PROCEDURE Rol
+	--Parametros
+	@email varchar(100),
+	@rol int OUTPUT
+	-- 0 Asistente
+	-- 1 Administrador
+	-- 2 Secretaria
+AS
+
+
+BEGIN
+	
+	IF (SELECT COUNT(*) FROM Asistente Where Asistente.Email = @email) = 1
+		BEGIN
+			PRINT N'ASISTENTE'
+			SET @rol = 0
+		END;
+	ELSE
+		BEGIN
+			PRINT N'Empleado Administrativo'
+			IF (SELECT Admin.Rol FROM Admin WHERE Admin.Email = @email) = 1
+				BEGIN
+					SET @rol = 1
+					PRINT N'Administrador'
+				END;
+			ELSE
+				BEGIN
+					SET @rol = 2
+					PRINT N'Secretaria'
+				END;
+		END;
+
+
+END;
+SELECT * FROM EMPLEADO;
+EXEC Rol 'admin@gmail.com',1
 ---------------------------------------------------------------------------------------------
 ------------------------------ Creacion de los TRIGGERS ------------------------------------
 ---------------------------------------------------------------------------------------------

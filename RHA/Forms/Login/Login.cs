@@ -79,17 +79,24 @@ namespace RHA.Forms.Login
                     if (empleado.login(txtEmail.Text, txtPassword.Text) == true)
                     
                     {
-                        if (true)
+                        int tipo = empleado.rol(txtEmail.Text);
+                        if (tipo == 0)
+                        {
+                            Asistentes.Asistente asistente = new Asistentes.Asistente(txtEmail.Text);
+                            asistente.Show();
+                            this.Hide();
+                        }
+
+                        else if (tipo == 1)
                         {
                             Administrador.Administrador admin = new Administrador.Administrador(txtEmail.Text);
                             admin.Show();
                             this.Hide();
                         }
-
-                        else
+                        else if (tipo == 2)
                         {
-                            Asistentes.Asistente asistente = new Asistentes.Asistente(txtEmail.Text);
-                            asistente.Show();
+                            Secreataria.Secretaria secretaria = new Secreataria.Secretaria(txtEmail.Text);
+                            secretaria.Show();
                             this.Hide();
                         }
                         

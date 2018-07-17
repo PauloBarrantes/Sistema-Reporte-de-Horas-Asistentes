@@ -170,6 +170,9 @@ namespace RHA.Forms.Asistentes
             lastLocation = e.Location;
         }
 
-        
+        private void btnHide_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

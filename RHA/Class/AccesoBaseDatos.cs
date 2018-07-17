@@ -300,6 +300,95 @@ namespace RHA
                 }
             }
         }
+
+        public bool cambiarPassword(string email, string password) {
+            using (SqlConnection con = new SqlConnection(conexion))
+            {
+                using (SqlCommand cmd = new SqlCommand("CambiarContrasena", con))
+
+                {
+                    try
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        //Se preparan los parámetros que recibe el procedimiento almacenado
+                        cmd.Parameters.Add("@email", SqlDbType.VarChar).Value = email;
+                        cmd.Parameters.Add("@contrasena", SqlDbType.VarChar).Value = password;
+
+                        //se prepara el parámetro de retorno del procedimiento almacenado
+                        cmd.Parameters.Add("@estado", SqlDbType.Bit).Direction = ParameterDirection.Output;
+
+                        /*Se abre la conexión*/
+                        con.Open();
+
+                        //Se ejecuta el procedimiento almacenado
+                        cmd.ExecuteNonQuery();
+
+                        /*Se convierte en un valor entero lo que se devuelve el procedimiento*/
+                        int value = Convert.ToInt32(cmd.Parameters["@estado"].Value);
+
+                        /*Si el procedimiento devuelve 1 es que si se encuentra en la BD*/
+                        if (value == 1)
+                        {
+                            return true;
+                        }
+
+                        /*Si devuelve 0 es que no se encuentra en la BD*/
+                        else
+                        {
+                            return false;
+                        }
+
+                    }
+                    catch (SqlException ex)
+                    {
+                        return false;
+                    }
+                }
+            }
+
+        }
+
+        public int Rol(string email)
+        {
+            int rol = 0;
+            using (SqlConnection con = new SqlConnection(conexion))
+            {
+                /*El sqlCommand recibe como primer parámetro el nombre del procedimiento almacenado, 
+                 * de segundo parámetro recibe el sqlConnection
+                */
+                using (SqlCommand cmd = new SqlCommand("Rol", con))
+                {
+                    try
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        //Se preparan los parámetros que recibe el procedimiento almacenado
+                        cmd.Parameters.Add("@email", SqlDbType.VarChar).Value = email;
+                 
+
+                        //se prepara el parámetro de retorno del procedimiento almacenado
+                        cmd.Parameters.Add("@rol", SqlDbType.Int).Direction = ParameterDirection.Output;
+
+                        /*Se abre la conexión*/
+                        con.Open();
+
+                        //Se ejecuta el procedimiento almacenado
+                        cmd.ExecuteNonQuery();
+
+                        /*Se convierte en un valor entero lo que se devuelve el procedimiento*/
+                        rol = Convert.ToInt32(cmd.Parameters["@rol"].Value);
+
+                    }
+                    catch (SqlException ex)
+                    {
+                        /*Se capta el número de error si no se pudo insertar*/
+                       
+                    }
+                }
+            }
+            return rol;
+        }
         /*Método para llamar al procedimiento almacenado para comprobar que un usuario está en la base de datos
          Recibe: El usuario y contraseña que se desea verificar que está en la base de datos
          Modifica: Busca el usuario con esa contraseña en la base de datos

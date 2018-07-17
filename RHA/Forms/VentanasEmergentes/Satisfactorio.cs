@@ -14,8 +14,9 @@ namespace RHA.Forms.VentanasEmergentes
     {
         public Satisfactorio(string mensaje)
         {
-            lblMensaje.Text = mensaje;
             InitializeComponent();
+            lblmsj.Text = mensaje;
+
         }
 
 

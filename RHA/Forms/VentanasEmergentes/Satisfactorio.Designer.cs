@@ -33,7 +33,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblMensaje = new System.Windows.Forms.Label();
             this.btnOK = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblmsj = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // panel1
@@ -79,16 +79,16 @@
             this.btnOK.UseVisualStyleBackColor = false;
             this.btnOK.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // label1
+            // lblmsj
             // 
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label1.Location = new System.Drawing.Point(33, 125);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(354, 77);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "¿Está seguro de que desea eliminar al asistente?";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblmsj.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblmsj.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblmsj.Location = new System.Drawing.Point(33, 125);
+            this.lblmsj.Name = "lblmsj";
+            this.lblmsj.Size = new System.Drawing.Size(354, 77);
+            this.lblmsj.TabIndex = 16;
+            this.lblmsj.Text = "¿Está seguro de que desea eliminar al asistente?";
+            this.lblmsj.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Satisfactorio
             // 
@@ -96,7 +96,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(420, 278);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblmsj);
             this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.panel1);
@@ -113,6 +113,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblMensaje;
         private System.Windows.Forms.Button btnOK;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblmsj;
     }
 }
