@@ -82,5 +82,9 @@ namespace RHA
 
             return retorno;
         }
+        public bool cambiarPassword(string email, string password) {
+            return db.cambiarPassword(email, password);
+
+        }
     }
 }

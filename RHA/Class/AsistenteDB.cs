@@ -32,5 +32,20 @@ namespace RHA.Class
             
         }
 
+       public SqlDataReader obtenerBalance()
+        {
+            SqlDataReader datos = null;
+            try
+            {
+                datos = db.ejecutarConsulta("SELECT Asi.Email, Asi.Cedula, Emp.NombreEmp, Emp.Apellido1, Asi.HorasAcumuladas FROM Asistente as Asi JOIN Empleado as Emp on Emp.Email = Asi.Email");
+            }
+            catch
+            (SqlException ex)
+            {
+                Console.WriteLine("GG ObtenerNombre");
+            }
+            return datos;
+        }
+
     }
 }

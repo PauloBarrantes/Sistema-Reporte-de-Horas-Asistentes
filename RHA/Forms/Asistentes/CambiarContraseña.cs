@@ -35,7 +35,18 @@ namespace RHA.Forms.Asistentes
 
                 if (password1 == passwordConfi)
                 {
-
+                   bool retorno =  empleado.cambiarPassword(this.asistente.usuarioActual, password1);
+                    if (retorno == true) {
+                        VentanasEmergentes.Satisfactorio mensaje = new VentanasEmergentes.Satisfactorio("La contraseña ha sido cambiada con éxito");
+                        mensaje.Show();
+                        txtPassword.Clear();
+                        txtPasswordConfirmarcion.Clear();
+                    }
+                    else
+                    {
+                        VentanasEmergentes.VentanaError mensaje = new VentanasEmergentes.VentanaError("La contraseña no ha sido cambiada");
+                        mensaje.Show();
+                    }
                 }
                 else
                 {
