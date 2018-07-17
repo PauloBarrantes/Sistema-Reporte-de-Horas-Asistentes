@@ -422,7 +422,20 @@ CREATE PROCEDURE AgregarBloqueHorario
 	@anno int,
 	@dia varchar(25),
 	@horaInicio TIME,
-	@horaFinal TIME
+	@horaFinal TIME,
+	@estado int OUTPUT
+AS
+BEGIN
+	BEGIN TRY
+		INSERT INTO BloqueDeHorario(Email, Ciclo, Anno, Dia, HoraInicial, HoraFinal) VALUES(@email, @ciclo, @anno, @dia, @horaInicio, @horaFinal)
+		SET @estado = 1 
+	END TRY
+	BEGIN CATCH
+		SET @estado = ERROR_MESSAGE()
+		PRINT N'Eror'
+		
+	END CATCH
+END;
 
 ---------------------------------------------------------------------------------------------
 ------------------------------ Creacion de los TRIGGERS ------------------------------------
