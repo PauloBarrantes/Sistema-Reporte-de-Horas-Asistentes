@@ -36,8 +36,11 @@ namespace RHA.Forms.Asistentes
                    
                 //    boton[i, j].BackColor = Color.FromArgb(255, 242, 214);
                     panelButton.Controls.Add(boton[i, j]);
-                    
-                    
+
+                    horario[i, j] = false;
+
+
+
                 }
             }
         }
@@ -50,15 +53,26 @@ namespace RHA.Forms.Asistentes
         private void btnMatrix(object sender, EventArgs e)
         {
             Button clickedButton = (Button)sender;
+            int iFila = 0;
+            int jColumna = 0;
+            for (int i = 0; i < 5; ++i)
+            {
+                for(int j = 0; j < 10; ++j){
+                    if (boton[i, j] == clickedButton) {
+                        iFila = i;
+                        jColumna = j;
+                    }
+                }
+            }
             if(clickedButton.BackColor == Color.FromArgb(255, 194, 23))
             {
                 clickedButton.BackColor = Color.FromKnownColor(KnownColor.Control);
-                
+                horario[iFila, jColumna] = false;
             }
             else
             {
                 clickedButton.BackColor = Color.FromArgb(255, 194, 23);
-
+                horario[iFila, jColumna] = true;
             }
 
 
@@ -67,6 +81,52 @@ namespace RHA.Forms.Asistentes
         private void btnVolver_Click(object sender, EventArgs e)
         {
             asistente.TraerHorario();
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            string[] dias = new string[5];
+            dias[0] = "Lunes";
+            dias[1] = "Martes";
+            dias[2] = "Miércoles";
+            dias[3] = "Jueves";
+            dias[4] = "Viernes";
+
+            TimeSpan[] times = new TimeSpan[10];
+            times[0] = new TimeSpan(08, 0, 0);
+            times[1] = new TimeSpan(09, 0, 0);
+            times[2] = new TimeSpan(10, 0, 0);
+            times[3] = new TimeSpan(11, 0, 0);
+            times[4] = new TimeSpan(12, 0, 0);
+            times[5] = new TimeSpan(13, 0, 0);
+            times[6] = new TimeSpan(14, 0, 0);
+            times[7] = new TimeSpan(15, 0, 0);
+            times[8] = new TimeSpan(16, 0, 0);
+            times[9] = new TimeSpan(17, 0, 0);
+            Console.WriteLine(times[0].ToString());     // Displays "02:14:18".
+            Console.WriteLine(times[1].ToString());     // Displays "02:14:18".
+
+            bool bloque = false;
+            for (int i = 0; i < 5; i++)
+            {
+                for (j = 0; j < 10; j++)
+                {
+                    if (horario[i, j] == true && bloque == true)
+                    {
+
+
+                    }
+                    else if (horario[i, j] == true && bloque == false)
+                    {
+
+                    }
+                    else if (horario[i, j] == false && bloque == true)
+                    {
+
+                    }
+                }
+            }
+
         }
     }
 }
