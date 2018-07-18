@@ -363,10 +363,10 @@ namespace RHA
                         cmd.CommandType = CommandType.StoredProcedure;
 
                         cmd.Parameters.Add("@email", SqlDbType.VarChar).Value = email;
-                        cmd.Parameters.Add("@ciclo", SqlDbType.VarChar).Value = nombreProyecto;
-                        cmd.Parameters.Add("@anno", SqlDbType.Date).Value = fecha;
-                        cmd.Parameters.Add("@dia", SqlDbType.Time).Value = horaInicio;
-                        cmd.Parameters.Add("@horaInicio", SqlDbType.Time).Value = horaFinal;
+                        cmd.Parameters.Add("@ciclo", SqlDbType.VarChar).Value = ciclo;
+                        cmd.Parameters.Add("@anno", SqlDbType.Date).Value = anno;
+                        cmd.Parameters.Add("@dia", SqlDbType.Time).Value = dia;
+                        cmd.Parameters.Add("@horaInicio", SqlDbType.Time).Value = horaInicio;
                         cmd.Parameters.Add("@horaFinal", SqlDbType.Time).Value = horaFinal;
 
                         //se prepara el parámetro de retorno del procedimiento almacenado

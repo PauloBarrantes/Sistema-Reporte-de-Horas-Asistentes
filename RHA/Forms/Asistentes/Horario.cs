@@ -16,12 +16,34 @@ namespace RHA.Forms.Asistentes
         Empleado empleado;
         Class.AsistenteDB asistenteDB;
         Asistente asistente;
-
+        Panel[,] panels = new Panel[5, 10];
         public Horario()
         {
             empleado = new Empleado();
             asistenteDB = new Class.AsistenteDB();
             InitializeComponent();
+
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    panels[i, j] = new Panel();
+                    panels[i, j].Width = 62;
+                    panels[i, j].Height = 47;
+                    panels[i, j].Text = "-";
+                    panels[i, j].Top = i * 50;
+                    panels[i, j].Left = j * 65;
+                  
+
+                    panels[i, j].BackColor = Color.FromArgb(255, 255, 255);
+                    panelButton.Controls.Add(panels[i, j]);
+
+                    if (j>=2 && j<8 && i >=1 && i <3) {
+                        panels[i, j].BackColor = Color.FromArgb(255, 194, 23);
+
+                    }
+                }
+            }
         }
 
         public void SetAsistente(Asistente asistente)
